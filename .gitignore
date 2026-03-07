@@ -1,0 +1,72 @@
+# 🛡️ LF-RISKROSI Git Ignore
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production Build
+dist/
+dist-ssr/
+*.local
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs & System Files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+CVS/
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Other
+temp/
+/brain/
+task.md.resolved
+review_report.md.resolved
+final_review_report.md
+security_controls_spec.md.resolved
+reliability_manual.md
+incident_response_plan.md
+instrumentation_plan.md
+platform_maturity_plan.md
+riskrosi_alignment_report.md
+riskrosi_end_to_end_customer_review.md
+riskrosi_feedback_report.md
+riskrosi_risk_rosi_alignment.md
+riskrosi_technical_spec.md
+vexpert-alignment.md
+vexpert-onboarding-admin.md
+vexpert-onboarding-design.md
+vexpert-onboarding-integration.md
+vexpert-onboarding-v2.md
+vexpert-onboarding.md
+vexpert_compliance_audit.md
+vexpert_platform_audit.md
+vexpert_technical_report.md
+visual_identity_guide.md
+workflow_orchestrator_spec.md
+roadmap.md
+*.png
+*.webp
+*.jpg
+*.jpeg

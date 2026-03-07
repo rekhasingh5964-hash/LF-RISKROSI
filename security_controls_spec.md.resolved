@@ -1,0 +1,49 @@
+# Security Control Integration Specification
+
+This document defines the standard interface and architecture for integrating third-party security controls (specifically open-source tools) into the ROSI platform.
+
+## 1. Interface Definition
+
+Each security control integration must implement the following structure:
+
+```javascript
+{
+  id: "wazuh-edr",
+  name: "Wazuh EDR",
+  type: "EDR", // EDR, Scanner, IDS, SIEM, etc.
+  provider: "Open Source",
+  status: "active", // active, inactive, error
+  health: 98, // 0-100
+  capabilities: [
+    { id: "threat_detection", name: "Threat Detection", enabled: true },
+    { id: "integrity_monitoring", name: "File Integrity", enabled: true },
+    { id: "vulnerability_audit", name: "Vulnerability Audit", enabled: false }
+  ],
+  stats: {
+    alerts24h: 124,
+    lastSync: "2026-03-06T20:15:00Z"
+  }
+}
+```
+
+## 2. Integration Registry
+
+A centralized `IntegrationManager` will maintain the state of all connected controls.
+
+### Registry Functions:
+- `registerControl(config)`: Adds a new tool to the dashboard.
+- `toggleCapability(controlId, capabilityId)`: Enable/Disable specific features of a tool.
+- `getControlStatus(controlId)`: Fetch live health and alert data.
+
+## 3. Supported Open Source Tools (Initial Phase)
+
+| Tool | Integration Method | Primary Capability |
+| :--- | :--- | :--- |
+| **Wazuh** | API / Webhook | Endpoint Security & XDR |
+| **OpenVAS** | OMP / API | Vulnerability Management |
+| **Suricata** | Log Ingestion | Network IDS |
+| **TheHive** | API | Case & Incident Management |
+
+## 4. UI Component: Capability Control
+
+The dashboard will feature a "Capability Matrix" where users can toggle features ON/OFF for each tool, providing granular control over the security posture.
