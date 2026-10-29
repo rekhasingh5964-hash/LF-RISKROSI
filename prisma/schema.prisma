@@ -1,0 +1,575 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrganizationKind {
+  PROVIDER
+  CUSTOMER
+}
+
+enum UserRole {
+  MSSP_ADMIN
+  SUPER_ADMIN
+  MSSP_ANALYST
+  TENANT_ADMIN
+  RISK_MANAGER
+  AUDITOR
+}
+
+enum RiskSeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum RiskStatus {
+  OPEN
+  IN_PROGRESS
+  CLOSED
+}
+
+enum ConsentStatus {
+  ACTIVE
+  REVOKED
+  ERASED
+  EXPIRED
+  RESTRICTED
+}
+
+enum StatutoryBreachType {
+  DPDP_SEC8_CROSS_BORDER_VIOLATION
+  DPDP_SEC9_CHILD_DATA_PROTECTION
+  DPDP_SEC5_DEFECTIVE_NOTICE
+  DPDP_SEC12_RETENTION_BREACH
+}
+
+enum EndpointOperatingSystem {
+  WINDOWS
+  LINUX
+}
+
+enum EndpointTelemetryType {
+  AGENT_STARTED
+  HEARTBEAT_FAILED
+  HEARTBEAT_RESTORED
+}
+
+enum EndpointIncidentCategory {
+  RANSOMWARE_SUSPECTED
+  DATA_EXFILTRATION_SUSPECTED
+  WIPER_SUSPECTED
+  LATERAL_MOVEMENT
+  EXPLOITATION
+  OTHER
+}
+
+enum EndpointIncidentSeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum EndpointIncidentStatus {
+  OPEN
+  CONTAINED
+  MONITORING
+  RESOLVED
+  FALSE_POSITIVE
+}
+
+enum ContainmentAction {
+  QUARANTINE
+  RELEASE
+}
+
+enum ContainmentCommandStatus {
+  PENDING
+  APPROVED
+  DELIVERED
+  APPLIED
+  FAILED
+  EXPIRED
+  CANCELLED
+}
+
+enum ProductTier {
+  STARTER
+  GROWTH
+  BUSINESS
+}
+
+enum SubscriptionStatus {
+  TRIAL
+  ACTIVE
+  PAST_DUE
+  CANCELLED
+}
+
+enum WebhookStatus {
+  QUEUED
+  DELIVERED
+  RETRYING
+  FAILED
+}
+
+model Organization {
+  id               String                 @id @default(cuid())
+  parentId         String?
+  parent           Organization?          @relation("ProviderCustomers", fields: [parentId], references: [id], onDelete: Restrict)
+  children         Organization[]         @relation("ProviderCustomers")
+  name             String
+  industry         String?
+  kind             OrganizationKind
+  status           String                 @default("ACTIVE")
+  region           String                 @default("IN-SOUTH-01")
+  processingPaused Boolean                @default(false)
+  createdAt        DateTime               @default(now())
+  users            User[]
+  risks            Risk[]
+  riskEvaluations  RiskEvaluationRecord[]
+  endpointTokens   EndpointEnrollmentToken[]
+  endpoints        EndpointDevice[]
+  endpointTelemetryEvents EndpointTelemetryEvent[]
+  endpointIncidents EndpointIncident[]
+  containmentCommands ContainmentCommand[]
+  containmentAuditRecords ContainmentAuditRecord[]
+  securityControlConfigurations SecurityControlConfiguration[]
+  channelPartners ChannelPartner[]
+  partnerAssignments PartnerCustomerAssignment[]
+  productSubscription ProductSubscription?
+  consentPurposes  ConsentPurpose[]
+  consents         ConsentArtifact[]
+  consentAudits    ConsentAudit[]
+  notices          PrivacyNotice[]
+  webhooks         WebhookEndpoint[]
+  webhookEvents    WebhookDelivery[]
+  auditEvents      AuditEvent[]
+
+  @@index([parentId, kind, status])
+  @@index([region])
+}
+
+model User {
+  id             String       @id @default(cuid())
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  email          String       @unique
+  name           String
+  role           UserRole
+  passwordSalt   String
+  passwordHash   String
+  active         Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  sessions       Session[]
+  auditEvents    AuditEvent[]
+  reportedIncidents EndpointIncident[] @relation("IncidentReporter")
+  requestedContainmentCommands ContainmentCommand[] @relation("ContainmentRequester")
+  approvedContainmentCommands ContainmentCommand[] @relation("ContainmentApprover")
+  updatedContainmentPolicies GlobalContainmentPolicy[]
+
+  @@index([organizationId, role])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([expiresAt])
+}
+
+model Risk {
+  id                 String                 @id @default(cuid())
+  organizationId     String
+  organization       Organization           @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  name               String
+  description        String                 @default("")
+  category           String
+  likelihood         Int
+  impact             Int
+  exposure           Int                    @default(0)
+  score              Int
+  baseScore          Int
+  severity           RiskSeverity
+  status             RiskStatus             @default(OPEN)
+  statutoryTrigger   Boolean                @default(false)
+  statutoryReference String?
+  statutoryOverride  String?
+  owner              String                 @default("")
+  evaluationRecords  RiskEvaluationRecord[]
+  aleBefore          Decimal                @default(0) @db.Decimal(18, 2)
+  aleAfter           Decimal                @default(0) @db.Decimal(18, 2)
+  treatmentCost      Decimal                @default(0) @db.Decimal(18, 2)
+  createdAt          DateTime               @default(now())
+  updatedAt          DateTime               @updatedAt
+
+  @@unique([organizationId, id])
+  @@index([organizationId, status, severity])
+  @@index([organizationId, score])
+}
+
+model RiskEvaluationRecord {
+  id                String                @id @default(cuid())
+  organizationId    String
+  organization      Organization          @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  riskId            String
+  risk              Risk                  @relation(fields: [organizationId, riskId], references: [organizationId, id], onDelete: Cascade)
+  calculatedScore   Float
+  statutoryOverride Boolean               @default(false)
+  triggeredBreaches StatutoryBreachType[] @default([])
+  vectorPayloadJson Json
+  engineEvaluator   String
+  evaluatedAt       DateTime              @default(now())
+
+  @@index([organizationId, riskId, evaluatedAt])
+  @@index([organizationId, evaluatedAt])
+}
+
+model EndpointEnrollmentToken {
+  id             String       @id @default(cuid())
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  tokenHash      String       @unique
+  createdById    String
+  expiresAt      DateTime
+  usedAt         DateTime?
+  createdAt      DateTime     @default(now())
+
+  @@index([organizationId, expiresAt])
+  @@index([organizationId, createdAt])
+}
+
+model EndpointDevice {
+  id               String                  @id @default(cuid())
+  organizationId   String
+  organization     Organization            @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  name             String
+  operatingSystem  EndpointOperatingSystem
+  architecture     String
+  agentVersion     String
+  deviceTokenHash  String                  @unique
+  commandKeyFingerprint String?
+  active           Boolean                 @default(true)
+  enrolledAt       DateTime                @default(now())
+  lastSeenAt       DateTime?
+  createdAt        DateTime                @default(now())
+  updatedAt        DateTime                @updatedAt
+  telemetryEvents  EndpointTelemetryEvent[]
+  incidents        EndpointIncident[]
+  containmentCommands ContainmentCommand[]
+
+  @@unique([organizationId, id])
+  @@index([organizationId, active])
+  @@index([organizationId, lastSeenAt])
+}
+
+model EndpointTelemetryEvent {
+  id             String                @id @default(cuid())
+  organizationId String
+  organization   Organization          @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  deviceId       String
+  device         EndpointDevice        @relation(fields: [organizationId, deviceId], references: [organizationId, id], onDelete: Cascade)
+  eventId        String
+  eventType      EndpointTelemetryType
+  occurredAt     DateTime
+  receivedAt     DateTime              @default(now())
+  expiresAt      DateTime
+  details        Json
+
+  @@unique([deviceId, eventId])
+  @@index([organizationId, receivedAt])
+  @@index([organizationId, expiresAt])
+  @@index([deviceId, receivedAt])
+}
+
+model EndpointIncident {
+  id                    String                   @id @default(cuid())
+  organizationId        String
+  organization          Organization             @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  deviceId              String
+  device                EndpointDevice           @relation(fields: [organizationId, deviceId], references: [organizationId, id], onDelete: Cascade)
+  reportedById          String
+  reportedBy            User                     @relation("IncidentReporter", fields: [reportedById], references: [id], onDelete: Restrict)
+  category              EndpointIncidentCategory
+  severity              EndpointIncidentSeverity
+  status                EndpointIncidentStatus   @default(OPEN)
+  summary               String
+  firstObservedAt       DateTime
+  reportedAt            DateTime                 @default(now())
+  reportingDeadlineAt   DateTime
+  resolvedAt            DateTime?
+  containmentCommands  ContainmentCommand[]
+
+  @@unique([organizationId, id])
+  @@index([organizationId, status, reportedAt])
+  @@index([organizationId, reportingDeadlineAt])
+  @@index([deviceId, reportedAt])
+}
+
+model ContainmentCommand {
+  id             String                  @id @default(cuid())
+  organizationId String
+  organization   Organization            @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  deviceId       String
+  device         EndpointDevice          @relation(fields: [organizationId, deviceId], references: [organizationId, id], onDelete: Cascade)
+  incidentId     String?
+  incident       EndpointIncident?       @relation(fields: [organizationId, incidentId], references: [organizationId, id], onDelete: Restrict)
+  requestedById  String
+  requestedBy    User                    @relation("ContainmentRequester", fields: [requestedById], references: [id], onDelete: Restrict)
+  approvedById   String?
+  approvedBy     User?                   @relation("ContainmentApprover", fields: [approvedById], references: [id], onDelete: Restrict)
+  action         ContainmentAction
+  status         ContainmentCommandStatus @default(PENDING)
+  reason         String
+  requestedAt    DateTime                @default(now())
+  approvedAt     DateTime?
+  expiresAt      DateTime?
+  leaseExpiresAt DateTime?
+  acknowledgedAt DateTime?
+  completedAt    DateTime?
+  commandSignature String?
+  result         String?
+
+  @@index([organizationId, status, requestedAt])
+  @@index([deviceId, status, requestedAt])
+  @@index([incidentId, requestedAt])
+}
+
+model ContainmentAuditRecord {
+  id             String       @id @default(cuid())
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  incidentId     String?
+  commandId      String?
+  actorId        String
+  action         String
+  payload        Json
+  previousHash   String?
+  eventHash      String
+  signature      String
+  keyVersion     String
+  createdAt      DateTime     @default(now())
+
+  @@index([organizationId, createdAt])
+  @@index([incidentId, createdAt])
+  @@index([commandId, createdAt])
+}
+
+model GlobalContainmentPolicy {
+  id                       String   @id @default("global")
+  controlPlaneHostname     String   @default("")
+  pinnedControlPlaneIps    String[] @default([])
+  allowedManagementCidrs  String[] @default([])
+  updatedById              String
+  updatedBy                User     @relation(fields: [updatedById], references: [id], onDelete: Restrict)
+  updatedAt                DateTime @updatedAt
+
+  @@index([updatedById])
+}
+
+model SecurityControlConfiguration {
+  id                     String       @id @default(cuid())
+  organizationId         String
+  organization           Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  controlId              String
+  enabledCapabilities    String[]     @default([])
+  updatedAt              DateTime     @updatedAt
+
+  @@unique([organizationId, controlId])
+  @@index([organizationId])
+}
+
+model ChannelPartner {
+  id                   String       @id @default(cuid())
+  providerOrganizationId String
+  providerOrganization Organization @relation(fields: [providerOrganizationId], references: [id], onDelete: Cascade)
+  name                 String
+  contactEmail         String
+  marginBasisPoints    Int          @default(2000)
+  active               Boolean      @default(true)
+  createdAt            DateTime     @default(now())
+  assignments          PartnerCustomerAssignment[]
+
+  @@unique([providerOrganizationId, contactEmail])
+  @@index([providerOrganizationId, active])
+}
+
+model PartnerCustomerAssignment {
+  id                    String       @id @default(cuid())
+  partnerId             String
+  partner               ChannelPartner @relation(fields: [partnerId], references: [id], onDelete: Restrict)
+  customerOrganizationId String      @unique
+  customerOrganization  Organization @relation(fields: [customerOrganizationId], references: [id], onDelete: Cascade)
+  assignedAt            DateTime     @default(now())
+
+  @@index([partnerId, assignedAt])
+}
+
+model ProductSubscription {
+  id                 String             @id @default(cuid())
+  organizationId     String             @unique
+  organization       Organization       @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  tier               ProductTier
+  status             SubscriptionStatus @default(TRIAL)
+  monthlyAmount      Decimal            @db.Decimal(10, 2)
+  currency           String             @default("INR")
+  seatsIncluded      Int
+  startsAt           DateTime           @default(now())
+  renewsAt           DateTime?
+  cancelledAt        DateTime?
+  billingReference   String?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  @@index([status, renewsAt])
+}
+
+model ConsentPurpose {
+  id             String            @id @default(cuid())
+  organizationId String
+  organization   Organization      @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  code           String
+  label          String
+  description    String
+  retentionDays  Int
+  lawfulBasis    String
+  active         Boolean           @default(true)
+  createdAt      DateTime          @default(now())
+  consents       ConsentArtifact[]
+  notices        PrivacyNotice[]
+
+  @@unique([organizationId, code])
+  @@unique([organizationId, id])
+  @@index([organizationId, active])
+}
+
+model PrivacyNotice {
+  id             String            @id @default(cuid())
+  organizationId String
+  organization   Organization      @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  purposeId      String
+  purpose        ConsentPurpose    @relation(fields: [organizationId, purposeId], references: [organizationId, id], onDelete: Restrict)
+  version        Int
+  language       String
+  content        String
+  contentHash    String
+  section        String            @default("DPDP Act 2023 Section 5")
+  createdById    String
+  createdAt      DateTime          @default(now())
+  consents       ConsentArtifact[]
+
+  @@unique([organizationId, purposeId, version, language])
+  @@unique([organizationId, purposeId, id])
+  @@index([organizationId, createdAt])
+}
+
+model ConsentArtifact {
+  id                 String            @id @default(cuid())
+  organizationId     String
+  organization       Organization      @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  purposeId          String
+  purpose            ConsentPurpose    @relation(fields: [organizationId, purposeId], references: [organizationId, id], onDelete: Restrict)
+  dataPrincipalRef   String
+  noticeId           String
+  notice             PrivacyNotice     @relation(fields: [organizationId, purposeId, noticeId], references: [organizationId, purposeId, id], onDelete: Restrict)
+  noticeVersion      Int
+  language           String
+  choices            Json
+  status             ConsentStatus     @default(ACTIVE)
+  evidenceHash       String
+  signature          String
+  receiptSignature   String?
+  keyVersion         String
+  consentedAt        DateTime          @default(now())
+  revokedAt          DateTime?
+  revocationNotes    String?
+  erasedAt           DateTime?
+  retentionExpiresAt DateTime
+  createdAt          DateTime          @default(now())
+  auditEvents        ConsentAudit[]
+  webhookEvents      WebhookDelivery[]
+
+  @@index([organizationId, status, retentionExpiresAt])
+  @@index([organizationId, dataPrincipalRef])
+}
+
+model ConsentAudit {
+  id             String           @id @default(cuid())
+  organizationId String
+  organization   Organization     @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  consentId      String?
+  consent        ConsentArtifact? @relation(fields: [consentId], references: [id], onDelete: SetNull)
+  eventType      String
+  actorId        String
+  payload        Json
+  previousHash   String?
+  eventHash      String
+  signature      String
+  keyVersion     String
+  createdAt      DateTime         @default(now())
+
+  @@index([organizationId, createdAt])
+  @@index([consentId, createdAt])
+}
+
+model WebhookEndpoint {
+  id             String            @id @default(cuid())
+  organizationId String
+  organization   Organization      @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  url            String
+  secret         String
+  events         String[]          @default([])
+  enabled        Boolean           @default(true)
+  createdAt      DateTime          @default(now())
+  deliveries     WebhookDelivery[]
+
+  @@index([organizationId, enabled])
+}
+
+model WebhookDelivery {
+  id             String           @id @default(cuid())
+  organizationId String
+  organization   Organization     @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  endpointId     String
+  endpoint       WebhookEndpoint  @relation(fields: [endpointId], references: [id], onDelete: Restrict)
+  consentId      String?
+  consent        ConsentArtifact? @relation(fields: [consentId], references: [id], onDelete: SetNull)
+  eventType      String
+  payload        Json
+  status         WebhookStatus    @default(QUEUED)
+  attempts       Int              @default(0)
+  responseCode   Int?
+  lastError      String?
+  nextAttemptAt  DateTime?
+  deliveredAt    DateTime?
+  createdAt      DateTime         @default(now())
+
+  @@index([organizationId, status, createdAt])
+}
+
+model AuditEvent {
+  id             String       @id @default(cuid())
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  actorId        String
+  action         String
+  entityType     String
+  entityId       String
+  details        Json
+  createdAt      DateTime     @default(now())
+  user           User?        @relation(fields: [userId], references: [id])
+  userId         String?
+
+  @@index([organizationId, createdAt])
+  @@index([entityType, entityId])
+}

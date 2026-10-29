@@ -47,3 +47,11 @@ A centralized `IntegrationManager` will maintain the state of all connected cont
 ## 4. UI Component: Capability Control
 
 The dashboard will feature a "Capability Matrix" where users can toggle features ON/OFF for each tool, providing granular control over the security posture.
+
+## 5. Repository implementation status
+
+The current repository implements a tenant-scoped catalog and capability-preference registry for Wazuh, OpenVAS, Suricata, and TheHive. Preference changes require an authorized tenant administrator and are recorded in the application audit log.
+
+These settings are configuration preferences only. No connector credentials, API clients, webhook receivers, scanner jobs, security-event ingestion, alert synchronization, live health checks, or downstream actions are implemented. The registry therefore reports `NOT_CONNECTED` and returns no health or alert statistics rather than presenting simulated values as live telemetry. Enabling a capability preference does not activate the third-party tool or claim that a security control is operating.
+
+Production integration work requires separately reviewed connector-specific authentication, secret storage/rotation, network policy, input validation, replay/idempotency handling, operational monitoring, and reproducible integration tests before a status may be reported as active.

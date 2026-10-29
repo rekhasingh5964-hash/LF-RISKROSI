@@ -1,0 +1,61 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: lf_riskrosi
+          POSTGRES_PASSWORD: ci-password
+          POSTGRES_DB: lf_riskrosi
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U lf_riskrosi -d lf_riskrosi"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      DATABASE_URL: postgresql://lf_riskrosi:ci-password@localhost:5432/lf_riskrosi?schema=public
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npx prisma validate
+      - run: npm run db:migrate
+      - run: npm run build
+
+  agent:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: agent/go.mod
+          cache-dependency-path: agent/go.sum
+      - run: go test ./...
+        working-directory: agent
+      - name: Cross-build supported targets
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          GOOS=linux GOARCH=amd64 go build -o /tmp/lf-agent-linux-amd64 ./cmd/agent
+          GOOS=windows GOARCH=amd64 go build -o /tmp/lf-agent-windows-amd64.exe ./cmd/agent
+        working-directory: agent

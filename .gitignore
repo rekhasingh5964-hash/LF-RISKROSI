@@ -12,6 +12,12 @@ coverage/
 dist/
 dist-ssr/
 *.local
+/data/
+.next/
+coverage/
+.env
+.env.*
+!.env.example
 
 # Environment Variables
 .env
@@ -67,6 +73,7 @@ visual_identity_guide.md
 workflow_orchestrator_spec.md
 roadmap.md
 *.png
+!app/icon.png
 *.webp
 *.jpg
 *.jpeg

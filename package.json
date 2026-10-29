@@ -1,25 +1,35 @@
 {
-    "name": "rosi-dashboard",
+    "name": "lf-riskrosi",
     "private": true,
     "version": "0.1.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "test": "node src/tests/rosi_math.test.js",
-        "preview": "vite preview"
+        "dev": "next dev --hostname 0.0.0.0",
+        "dev:worker": "node workers/dpdp-worker.js",
+        "start": "next start --hostname 0.0.0.0",
+        "start:worker": "node workers/dpdp-worker.js",
+        "build": "prisma generate && next build",
+        "test": "node --test tests/*.test.js",
+        "probe:health": "node scripts/ops/probe-health.js",
+        "db:migrate": "prisma migrate deploy",
+        "db:dev": "prisma migrate dev",
+        "db:seed": "node prisma/seed.js",
+        "db:studio": "prisma studio"
     },
     "dependencies": {
-        "framer-motion": "^10.16.4",
-        "jimp": "^1.6.0",
+        "@prisma/client": "^6.19.0",
+        "bullmq": "^5.63.0",
+        "ioredis": "^5.8.2",
         "lucide-react": "^0.300.0",
+        "next": "^15.5.6",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^7.13.1",
-        "recharts": "^2.10.3"
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@vitejs/plugin-react": "^4.2.1",
-        "vite": "^5.0.10"
+        "prisma": "^6.19.0"
+    },
+    "overrides": {
+        "deepmerge-ts": "^8.0.2",
+        "postcss": "^8.5.32"
     }
 }

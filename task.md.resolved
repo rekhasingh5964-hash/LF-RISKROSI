@@ -1,26 +1,252 @@
-# 🏁 Task Status: LF-RISKROSI Platform Readiness
+# LF-RISKROSI Delivery Phase Status
 
-## ✅ Phase 1: Codebase Transformation
-- [x] Initial analysis of the codebase
-- [x] Modularize components (`NexusApp`, `AdminControlCenter`, etc.)
-- [x] Design and Implement Security Control Integration Engine (`IntegrationManager`)
-- [x] Establish Premium Aesthetic Design System
+> This status replaces the historical checklist that marked the platform production-ready. It is a repository-level implementation review, not a signed product requirements document or compliance attestation.
 
-## ✅ Phase 2: Instrumentation & Monitoring
-- [x] Performance Monitoring Instrumentation (`LoggerService`)
-- [x] Track Component Mount & Reporting Latency
-- [x] Log Strategic & Audit Report Exports
+## Phase plan provenance
 
-## ✅ Phase 3: Compliance & Resilience
-- [x] Legal Visibility Instrumentation (`IndianComplianceModule` - DPDP/NCIIPC)
-- [x] Board-Level Report Instrumentation (`RiskReportsTab`)
-- [x] Incident Response & Resilience Engine (`RecoveryService` / Chaos Triggers)
-- [x] Automated State Snapshots & Failure Handlers
+No approved, versioned Phase 0–9 plan or acceptance contract is present in the repository. Phase 0 is a proposed baseline reconstructed from current functionality and user-provided product direction; phases 5–9 are retrospective groupings for visibility. Phases 1–4 retain headings from the earlier checklist, but its completion claims were not supported by the current source tree.
 
-## ✅ Phase 4: Automation & Knowledge Transfer
-- [x] CI/CD Pipeline Setup (`.github/workflows/risk_rosi_ci_cd.yml`)
-- [x] Automated Unit Testing for Math Engine (`rosi_math.test.js`)
-- [x] Continuous Training Manual & Recovery Procedures (`reliability_manual.md`)
+## Phase 0: Baseline and scope — partial sign-off recorded; acceptance pending
 
----
-**Status:** ALL PHASES COMPLETE - PLATFORM READY FOR PRODUCTION DEPLOYMENT
+This section records the user's Phase 0 sign-off declarations received on 2026-10-28, including subsequent user-reported Product Owner and legal/privacy approvals by Rockey. It is not a signed document from the named individuals and does not include supporting deployment, legal, or operational evidence. Treat approvals as user-reported until their scope and evidence are attached; do not infer that a code-level control or compliance obligation has been satisfied.
+
+### Submitted baseline artifact metadata
+
+| Field | User-supplied value | Repository verification |
+|---|---|---|
+| Artifact title | LumeraVega SMB IN BOX — Phase 0 Defensible Baseline Specification, Deterministic Risk Calculation Engine, and Operational Audit Evidence Console | Recorded as supplied; artifact content is not attached as a separate signed specification. |
+| Artifact ID | `UNBEATABLE_PHASE0_BASELINE` | User-supplied identifier; no corresponding artifact manifest is present. |
+| Git ref | `fb4005d1` (`v0.1.0-phase0-baseline`) | Not verified: `fb4005d1` does not resolve in the current repository, and the named tag is not present. |
+| Requested branch | `feat/risk-engine-phase0` | Not found in the repository's local branch list. |
+| Declared status | `READY_FOR_EVIDENCE_ATTACHMENT` | User-supplied workflow status; not a Phase 0 acceptance or production-readiness decision. |
+| Sovereign zone | `IN-SOUTH-01 (Mumbai/Pune)` | Declared; provider, region, and network-boundary evidence remains outstanding. |
+
+### User-provided governance gate register
+
+The following gate definitions, target values, owners, and artifact paths were supplied by the user on 2026-10-28. A named path or claimed target is not evidence that the file, deployment, approval, or control exists. Verification below is against the current repository unless explicitly labeled an external deployment artifact.
+
+| Gate | Decision area and declared value | Accountable owner (as supplied) | Required evidence location (as supplied) | Current repository evidence / status |
+|---|---|---|---|---|
+| GATE-01 | Product and baseline scope; Git commit-hash anchored sign-off | Rockey (Product Owner) | GPG-signed `v0.1.0-phase0-baseline` tag on `feat/risk-engine-phase0` | Commit `fb4005d1`, tag, and branch are not present locally; approval remains reported, not cryptographically verified. |
+| GATE-02 | STRIDE evaluation for six boundaries; non-enforcement lock | Abhishek (Solutions Architect) | `docs/security/threat-model-phase0.md` | Draft six-boundary STRIDE inventory and non-enforcement invariant are present; a revision-bound review packet is prepared in `docs/security/phase0-gate-02-review.md`; signed security review and residual-risk acceptance are outstanding. |
+| GATE-03 | DPDP applicability and fiduciary versus processor roles | Rockey (DPO / Legal Reviewer) | `docs/compliance/dpdp-phase0-scope.md` | Draft data and evidence inventory maps current records and gaps; a revision-bound review packet is prepared in `docs/compliance/phase0-gate-03-review.md`; qualified review, role decisions, completed processing register, and signed revision-specific approval remain outstanding. This is not a legal interpretation or approval. |
+| GATE-04 | Hosting provider, region, and sovereign network boundary; Terraform state locking target declared as `ap-south-1` | Abhishek (Technical Lead) | Terraform/IaC configuration and state, provider/region attestation, and deployment evidence | No Terraform configuration is present. `IN-SOUTH-01` is an application default only; cloud provider, region, residency, state locking, and network boundary are unverified. A deployment evidence packet is prepared in `docs/delivery/phase0-gate-04-deployment-evidence.md`; external deployment evidence remains outstanding. |
+| GATE-05 | 99.9% uptime; P1 response <= 15 minutes; 24x7 high-severity incident coverage reported | Product / Ops Owner (TBD) | `docs/delivery/phase0-gate-05-service-objectives.md`, approved alert rules, synthetic measurement, and support rota evidence | A DB/Redis readiness endpoint, bounded point-in-time probe, and local Prometheus configuration exist but do not measure an SLA or establish deployed coverage. A service-objectives evidence packet is prepared; owner, definitions, alert delivery, measurement evidence, and rota remain outstanding. |
+| GATE-06 | RTO <= 4 hours; RPO <= 15 minutes; PITR verified | Abhishek (Technical Lead) | `scripts/ops/verify-pitr.sh` and witnessed restore evidence | Reproducible PostgreSQL 17 synthetic PITR test script exists; its result would not verify production WAL continuity, backups, Redis recovery, or RPO/RTO. A recovery evidence packet is prepared in `docs/delivery/phase0-gate-06-recovery-evidence.md`; production-equivalent witnessed recovery remains outstanding. |
+| GATE-07 | Management access restricted to approved Sovereign VPN CIDRs | Network Security Lead | Restricted CIDR allowlist, deployed route/firewall/proxy policy, and witnessed validation evidence; review packet at `docs/delivery/phase0-gate-07-vpn-access-evidence.md` | Referenced config and exact CIDRs are not present; no `nginx/conf.d/control-plane.conf` exists in the current repository snapshot. Restriction remains declared, not verified. |
+| GATE-08 | Host enforcement **DISABLED**; report `ENFORCEMENT_UNAVAILABLE` | Product Security Lead | Node/Go cross-platform suite asserting unavailable status; review packet at `docs/delivery/phase0-gate-08-enforcement-disabled-evidence.md` | Node and Go tests assert unavailable status; CI is configured to run Go tests on Linux and Windows and cross-build both targets. The revision-bound evidence packet is prepared; hosted CI evidence and independent implementation review are outstanding. No host enforcement is implemented. |
+
+**Phase 0 evidence rule:** no capability, security, compliance, residency, availability, recovery, or production-readiness assertion is accepted solely on the basis of prose, configuration intent, or a local demonstration. Each assertion must map to a version-controlled requirement, an exact source/configuration revision, and a reproducible automated or witnessed check. CI/CD run results and deployment evidence must identify the tested commit, environment, inputs, outcome, and artifact reference. If that evidence is absent or stale, mark the assertion **reported**, **unverified**, or **not implemented**—never passed.
+
+**Containment safety invariant:** this baseline authorizes only dual-control approval and cryptographic command delivery. Privileged Windows Filtering Platform/Linux `nftables` host containment and automated threat quarantine remain **DISABLED**. No OS-level isolation or automatic rollback is implemented. Keep enforcement unavailable until Phase 9 implementation, independent verification, operational testing, and signed authorization gates have all passed.
+
+### Draft scope baseline record
+
+A product-scope baseline for the current repository snapshot is recorded in [`docs/compliance/phase0-product-scope.md`](./docs/compliance/phase0-product-scope.md). This baseline captures the in-scope product surface, out-of-scope claims, explicit safety invariant, and the evidence still required before GATE-01 can pass.
+The revision-bound approval form is [`docs/compliance/phase0-gate-01-approval.md`](./docs/compliance/phase0-gate-01-approval.md); it is prepared but unsigned, so GATE-01 remains open.
+
+### Sign-off record (as provided)
+
+| Area | Named accountable party | Declared decision / target | Evidence state |
+|---|---|---|---|
+| Threat model and residual risks | Abhishek (Solutions Architect) | Sign-off reported | Sign-off is user-reported; signed threat model and residual-risk register not attached here. |
+| Legal and privacy review | Rockey (user-designated DPO / Legal owner; Super Admin designation reported) | Approval reported granted on 2026-10-28 | User reports approval; review scope, qualification/authority basis, and signed legal/privacy record are not supplied. |
+| Hosting and operational recovery | Technical Lead (Abhishek) | Sign-off reported | Sign-off is user-reported; recovery-test records not attached here. |
+| Provider, region, residency | MeitY-empaneled cloud; IN-SOUTH-01 (Mumbai/Pune); VPC sovereign boundary verified | Declared approved/verified | Provider attestations, region evidence, network-boundary evidence, and deployment configuration are not in this repository. |
+| Availability and support | Product/operations owner not named | 99.9% uptime; P1 response within 15 minutes; 24x7 coverage for high-severity statutory incidents | Targets are recorded as supplied; measurement window, exclusions, service scope, and incident definitions remain to be approved/documented. |
+| Recovery objectives | Technical Lead (Abhishek) | RTO <= 4 hours; RPO <= 15 minutes | Targets recorded; witnessed backup/restore and database recovery evidence is not attached. |
+| Containment network policy | Network/platform operations owner not named | Management IPs restricted to Sovereign VPN pool | Exact CIDRs, route/firewall configuration, and validation evidence were not supplied. |
+| Privileged host enforcement | Product/security/operations owner not named | **DISABLED**; report `ENFORCEMENT_UNAVAILABLE` | Consistent with current agent behavior; no privileged host enforcement is implemented or authorized. |
+
+Phase 0 therefore has **partial sign-off**, not full acceptance. The declared hosting and network claims are not independently validated by repository changes.
+
+### Product purpose and in-scope foundation
+
+- **Product:** LumeraVega SMB IN BOX, a multi-tenant security and compliance operations foundation for Indian MSMEs and provider/CA/MSP partners.
+- **System boundary:** Next.js web/control plane; PostgreSQL/Prisma application data; Redis/BullMQ erasure dispatch; Go Windows/Linux endpoint enrollment and lifecycle agent; operator-configured hosting and network edge.
+- **Implemented product surfaces:** Provider/customer tenancy, risk/ROSI records, privacy notices and consent, signed erasure webhook workflow, audit trails, endpoint inventory/enrollment/revocation, lifecycle telemetry, manually reported incident readiness, evidence CSV, commercial metadata, signed containment command workflow, and global containment-policy metadata.
+- **Current enforcement boundary:** Endpoint detection and host firewall/process enforcement are not implemented. The 180-second watchdog is tested helper logic, not an active endpoint watchdog. Policy settings are not delivered to agents or applied to hosts.
+
+### Explicit non-goals for this baseline
+
+- Do not claim autonomous threat detection, EDR, vulnerability scanning, active quarantine, automatic firewall rollback, or statutory incident filing.
+- Do not claim legal advice, statutory compliance, certification, MeitY empanelment, sovereign hosting, or data residency from application configuration alone.
+- Do not claim live billing, payment, commission payout, subscription entitlement, or calibrated ROSI forecasting.
+- Hosting, availability, support, response, and recovery targets are recorded in the sign-off table below; the deployment evidence and scope definitions remain outstanding.
+
+### Trust boundaries and threat assumptions
+
+| Boundary / asset | Threats to address | Minimum control / evidence gate |
+|---|---|---|
+| Authenticated user → tenant APIs | Cross-tenant reads/writes; privilege escalation; CSRF; credential stuffing; session theft | Server-side authorization on every tenant route; negative cross-tenant API tests; same-origin/CSRF controls; production MFA/SSO and centralized login throttling before production. |
+| Endpoint agent → control plane | Stolen/replayed device credentials; spoofed inventory/telemetry; untrusted endpoint; stale or revoked device | One-time enrollment and hashed device credentials are foundations; test replay/revocation and tenant binding. Add edge rate limits, secure credential storage, device identity hardening, and monitored revocation before production. |
+| Control plane → endpoint command | Compromised admin/key; command tampering/replay; false containment state; severed management path | Keep command execution disabled until independent security review, MFA-backed distinct approval, pinned deployment addresses, privileged OS adapter, idempotent verified rollback, and fault-injection tests pass. No current host enforcement. |
+| Webhook dispatch → external destination | SSRF, DNS rebinding, secret exposure, replay, duplicate delivery, dishonest receiver acknowledgment | HTTPS/public-address policy, signature verification, deduplication contract, bounded retries, and independent receiver validation. Delivery acknowledgment is not proof of deletion. |
+| Application → database/Redis/backups | Unauthorized operator access, data loss, tampering, secret compromise, retention/legal-hold conflict | Private network access, least privilege, managed secret/key storage and rotation, documented retention/legal decisions, tested backup restore, audit monitoring, and access review. |
+| Build/dependency/deployment pipeline | Malicious dependency/artifact, leaked secrets, unreviewed migration or release | Reproducible locked dependencies, secret scanning, reviewed CI gates, protected release process, artifact provenance/signing, and rollback procedure before production. |
+
+Assume the browser, endpoint host, third-party webhook receiver, and client-supplied tenant identifiers are untrusted. Treat provider/super administrators and signing keys as high-impact trust anchors. This is a minimum threat boundary, not a completed threat model; abuse cases and mitigations must be reviewed by the accountable security owner.
+
+### Data categories and deployment decisions
+
+- **Personal and account data:** usernames/names, corporate emails, roles, password hashes, session-token hashes/expiry, audit actor IDs, and data-principal references that may be linkable. The implementation uses scrypt password derivation and hashes session tokens before persistence; schema IDs are string identifiers, not necessarily UUIDs. Map purpose, role, access, notice, rights handling, and retention.
+- **Consent, notice, and rights evidence:** purposes/lawful-basis metadata, notice content and versions, language/choices, consent and withdrawal timestamps, signatures, retention expiry, erasure requests, and downstream delivery/verification records.
+- **Customer and governance data:** tenant/partner/subscription records, risk and ROSI inputs/outputs, user-entered incident summaries, audit details, and exports; minimize personal data in free-text and JSON fields.
+- **Endpoint and cyber-event data:** hostnames, OS/architecture/build, agent version, credential hashes, enrollment/revocation, heartbeat, incident timelines, command/approval records, and future security-log sources. Network-interface IP/MAC addresses, process trees, execution records, OS audit events, and comprehensive access/network/cloud/threat logs are not currently collected.
+- **Forensics and incident evidence:** potential process hashes, quarantine receipts, memory dumps, and CERT-In annexure/dossier materials require separate legal/security approval, collection authority, minimization, chain of custody, encryption, access, retention, disclosure, and deletion controls; these are not current product capabilities.
+- **Principal rights and grievance data:** correction/erasure requests, dispute/grievance records, nominee/delegate mappings, identity/authority checks, decisions, timelines, and completion evidence require a defined workflow and counsel-verified statutory scope; no complete grievance/nominee register exists.
+- **Commercial and tax data:** legal business names and manual subscription metadata exist; GSTIN, PAN, tax/invoice records, and transaction receipts are not represented in the current schema. The proposed “6+ years” retention period is unverified and requires tax/legal review before adoption.
+- **CERT-In incident and operational evidence:** detection/occurrence/awareness times, trusted clock evidence, triage and reportability rationale, decision/notification timelines, recipients/acknowledgments, event-source coverage, log integrity, retrieval, preservation, and closure records. The internal six-hour timer is not a statutory deadline assessment.
+- **Processors, transfers, and copies:** webhook destinations, recipients, processor/subprocessor roles, data-flow locations, backups, PITR/WAL, CSV exports, CI/CD artifacts, support access, and deletion/retention evidence. India-only relays, executed DPAs, and zero-international-routing are not established.
+- **Deployment decision gaps:** no verified CSIR-NPL/NIC time synchronization, WORM log vault, tenant-envelope encryption/cryptographic backup erasure, zero-international-route boundary, comprehensive security-event ingestion, or CERT-In/DPB reportability and notification pipeline exists. Proposed retention, notification triggers, and legal section references require counsel review.
+- **Sensitive operational material:** HMAC/signing keys, webhook secrets, device credentials, and database/Redis credentials. Never commit secrets; define managed storage, rotation, least-privilege access, audit, and revocation.
+- **Unresolved deployment/legal decisions:** fiduciary/controller and processor roles, lawful purposes, notice and rights procedures, applicable retention and incident duties, cross-border flow policy, subprocessor inventory, hosting/log/backup region, legal holds, deletion verification, and support access. See the draft [DPDP and cyber-incident data inventory](docs/compliance/dpdp-phase0-scope.md); it is not legal advice or an approval.
+
+### Candidate acceptance gates for Phase 0
+
+Phase 0 is complete only when evidence is recorded for every gate below. These are proposed gates; the business owner may amend them before approval.
+
+1. **Signed scope:** named product owner approves in-scope features, out-of-scope claims, target users, provider/customer roles, platform support matrix, and phase 1–9 deliverables.
+2. **Threat model:** security owner reviews the trust-boundary table, records prioritized abuse cases and mitigations, and signs the residual-risk register. No critical/high issue may be waived without a named risk owner, expiry/review date, and written approval.
+3. **Legal/privacy decision record:** qualified legal/privacy owner approves notices, lawful bases, processing purposes, retention/deletion rules, incident escalation responsibilities, and wording of compliance claims for the intended deployment.
+4. **Deployment decision record:** operator identifies hosting provider/region, public ingress and trusted proxy, private database/Redis exposure, secrets/KMS, backup location, subprocessors, and access-review owners. A metadata region string alone fails this gate.
+5. **Service objectives:** record service scope, measurement window, exclusions, monitoring source, on-call ownership, and escalation definitions for the declared 99.9% uptime, P1 response <= 15 minutes, 24x7 high-severity statutory incident coverage, RTO <= 4 hours, and RPO <= 15 minutes. Obtain named product/operations owner approval and operational test evidence; targets alone do not prove they are met.
+6. **Automated verification:** clean dependency install, production build, all Node tests, Go unit tests, Windows/Linux supported-target builds, Prisma validation, and all migrations against a fresh PostgreSQL database pass in CI. Failures block release; local-only output is not CI evidence.
+7. **Authorization and crypto verification:** automated negative tests prove cross-tenant denial and role boundaries for every API; signature/tamper/replay, credential revocation, webhook destination-policy, and audit-chain checks pass. Inventory the test cases and attach run output to the release.
+8. **Operational recovery:** documented and witnessed PostgreSQL/Redis backup restoration meets the approved RTO/RPO; worker retry/dead-letter behavior and key compromise/revocation procedures are exercised. Passing build/tests alone does not satisfy this gate.
+9. **Production security gate:** MFA/SSO, centralized rate limiting, monitored security events, secrets management/rotation, access review, vulnerability/dependency scanning, TLS/proxy configuration review, and incident-response ownership are implemented and independently reviewed.
+10. **Containment gate:** unless and until the separate controls in Phase 9 are met and signed, keep host command execution and firewall enforcement disabled. No acceptance may infer isolation from request creation, approval, command signing, or an agent acknowledgment.
+11. **Traceability and sign-off:** every approved requirement and externally visible capability claim maps to a source-controlled requirement, exact source/configuration revision, reproducible test or operational evidence artifact, accountable owner, and pass/fail result. CI/CD results identify the commit and environment; deployment claims include evidence from the deployed configuration. Attach written product, security, legal/privacy, and operations approvals to this baseline revision before production approval. Missing or stale evidence is not a pass.
+12. **Evidence provenance:** retain CI/CD run identifiers, test reports, configuration validation output, deployment/environment references, and witnessed operational results in source control or an access-controlled evidence store linked from the relevant revision. Define artifact retention and review ownership; do not treat screenshots or unrepeatable manual assertions as substitutes for required checks.
+
+### Remaining owner decisions and evidence gaps
+
+| Decision / evidence | Required accountable owner | Current value / status |
+|---|---|---|
+| Product owner and phase plan approval | Rockey (user-designated Product Owner; Super Admin designation reported) | Approval reported granted on 2026-10-28; approved revision/scope and signed record **not supplied** |
+| Threat model and residual-risk register | Abhishek (Solutions Architect) | Sign-off reported; attach signed artifact and residual-risk register. |
+| Legal/privacy decisions and approval | Rockey (user-designated DPO / Legal owner; Super Admin designation reported) | Approval reported granted on 2026-10-28; review scope, qualification/authority basis, and signed record **not supplied** |
+| Provider, region, residency, VPC evidence | Technical Lead (Abhishek) / cloud operator | MeitY-empaneled cloud, IN-SOUTH-01 (Mumbai/Pune), sovereign VPC declared verified; attach independent provider/network evidence. |
+| Availability target, scope, measurement and support rota | Named product/operations owner | 99.9%; P1 <= 15 minutes; 24x7 high-severity statutory incidents declared; owner and measurement details **TBD**. |
+| Recovery runbook and witnessed recovery test | Technical Lead (Abhishek) | RTO <= 4 hours; RPO <= 15 minutes declared; evidence **TBD**. |
+| Sovereign VPN pool CIDRs and deployed route/firewall evidence | Network/platform operations | Restriction declared; exact CIDRs and evidence **not supplied**. |
+| Privileged host enforcement authorization and Phase 9 evidence | Security/product/operations | **DISABLED; ENFORCEMENT_UNAVAILABLE**. |
+| Baseline approval record and revision | Rockey (user-designated Product Owner/Super Admin and DPO/legal review owner), security, operations | Product Owner and legal/privacy approvals reported; approved revision/scope and signed records **not supplied**. Security and technical-lead sign-offs also remain user-reported without attached artifacts. |
+
+### Approval evidence templates
+
+The following templates capture the details needed to substantiate the user-reported approvals. They are intentionally blank and do not change the approval status until completed and the signed records are attached or referenced.
+
+#### Product Owner / Phase 0 baseline approval
+
+- Approver: Rockey (user-designated Product Owner / Super Admin)
+- Baseline document and revision/hash:
+- Scope and decisions approved:
+- Exceptions, conditions, or deferred items:
+- Approval date and timezone:
+- Signed approval artifact location/reference:
+
+Approval statement: “I approve the Phase 0 baseline identified above, limited to the scope and conditions recorded in this approval.”
+
+#### Legal / privacy review
+
+- Reviewer: Rockey (user-designated DPO / Legal review owner)
+- Role, qualification, and authority basis for this review:
+- Baseline document and revision/hash reviewed:
+- Jurisdiction(s) and deployment context reviewed:
+- Materials and data-processing activities in scope:
+- Decisions, conditions, and unresolved matters:
+- Compliance claims or wording reviewed:
+- Review date and timezone:
+- Signed review artifact location/reference:
+
+Approval statement: “I confirm that I completed the legal/privacy review described above and record my conclusions, scope limits, and conditions in this review.”
+
+### Phase 0 close-out checklist
+
+Every row must be traceable to a versioned requirement and the exact code/configuration revision assessed. Evidence references should identify a CI/CD run or witnessed operational record and its environment; “not supplied” means the gate has not passed.
+
+| Gate | Accountable owner | Required evidence / completion criteria | Status | Evidence reference |
+|---|---|---|---|---|
+| GATE-01 — Product Owner baseline approval | Rockey | Complete approval template with verified commit/tag, baseline revision, scope, conditions, and dated approval. | Reported; supplied Git ref, tag, branch, and artifact details not verified | Not supplied |
+| GATE-02 — Threat model and residual risks | Abhishek (Solutions Architect) | Review `docs/security/threat-model-phase0.md`, complete the review packet in `docs/security/phase0-gate-02-review.md`, attach six-boundary STRIDE assessment and signed residual-risk register; preserve non-enforcement lock. | Draft threat-boundary inventory and review packet prepared; signed assessment and residual-risk acceptance outstanding | Not supplied |
+| GATE-03 — Legal/privacy review | Rockey (designated reviewer) | Review `docs/compliance/dpdp-phase0-scope.md`; complete the review packet in `docs/compliance/phase0-gate-03-review.md`, including the processing/role register, authority basis, applicable-law scope, conclusions, conditions, and dated signed record. | Draft inventory and review packet prepared; qualified legal/privacy review and signed approval outstanding | Not supplied |
+| Source-controlled requirement-to-check traceability | Product/security/release owners | Review `docs/delivery/phase0-requirement-traceability.md`; for each approved capability and claim, link requirement ID, source/config revision, repeatable check, owner, result, and evidence reference. | Draft matrix prepared; stakeholder approval and candidate-revision-bound check results remain outstanding | Not supplied |
+| CI/CD and configuration verification | Release owner | Add/run the reviewed `.github/workflows/verify.yml` on a clean candidate commit; retain run ID and reports for clean install, Node tests, Prisma validation, PostgreSQL migrations, production build, Go tests, and Windows/Linux cross-builds. See `docs/delivery/phase0-local-verification.md` for local results; local-only checks do not pass this gate. | Local Node tests (44/44), Prisma validation, and production build passed; disposable PostgreSQL migration attempt blocked by Docker read-only metadata; Go unavailable; GitHub Actions integration returned zero workflows/runs; clean install, successful migration, hosted CI, and cross-build evidence outstanding | Not supplied |
+| Evidence provenance and retention | Release/operations owner | Review `docs/delivery/phase0-evidence-provenance.md`; approve the access-controlled evidence location, classification/access model, retention/deletion rules, integrity/provenance method, review ownership, and links from source-controlled revisions; include deployment environment and tested commit. | Draft evidence index and handling proposal prepared; evidence system, policy decisions, and owner approvals remain outstanding | Not supplied |
+| GATE-04 — Hosting and sovereign boundary | Technical lead — Abhishek / cloud operator | Complete `docs/delivery/phase0-gate-04-deployment-evidence.md` with provider/region attestations, Terraform state-locking configuration, deployment configuration, data-flow, and sovereign VPC/network-boundary evidence; independently verify the exact deployed environment and revision. | Evidence packet prepared; Terraform/IaC and independent deployment verification absent | Not supplied |
+| GATE-05 — Availability and support objectives | Product / Ops Owner (TBD) | Complete `docs/delivery/phase0-gate-05-service-objectives.md`; approve 99.9% measurement, P1 scope, 24x7 coverage rota, incident definitions, monitoring source, alert rules, synthetic checks, escalation process, and retain witnessed end-to-end operational evidence. | Evidence packet prepared; owner/definitions, deployed alert delivery, measurement evidence, and rota test outstanding | Not supplied |
+| GATE-06 — Recovery objectives | Technical lead — Abhishek | Complete `docs/delivery/phase0-gate-06-recovery-evidence.md`; run `scripts/ops/verify-pitr.sh` only in an authorized, suitable test environment and attach revision-specific output, approved recovery runbook, and independently witnessed production-equivalent PostgreSQL/Redis restore results demonstrating approved RTO/RPO. | Evidence packet prepared; production backup/WAL continuity, Redis recovery, and witnessed production-equivalent restore evidence remain outstanding | Not supplied |
+| GATE-07 — Sovereign VPN policy | Named Network Security Lead | Complete `docs/delivery/phase0-gate-07-vpn-access-evidence.md`; keep exact VPN CIDRs in approved restricted storage; attach references to deployed route/firewall/proxy configuration and witnessed allowed/denied access tests. | Evidence packet prepared; accountable owner, configuration, CIDRs, and validation evidence absent | Not supplied |
+| GATE-08 — Privileged host enforcement | Product Security Lead | Complete `docs/delivery/phase0-gate-08-enforcement-disabled-evidence.md`; keep WFP/nftables enforcement and automated threat quarantine disabled; report `ENFORCEMENT_UNAVAILABLE` until Phase 9 implementation, independent verification, rollback, signed authorization, and operational test gates pass. | Disabled; Node/Go assertions and Linux/Windows CI are configured; hosted run and independent implementation review outstanding | Not supplied |
+| Phase 0 release decision | Named release owner and approving stakeholders | Complete `docs/delivery/phase0-release-decision.md`; link reviewed evidence for each gate, record dated pass/fail decisions, conditions, owners, and reassess unresolved risks. | Decision template prepared; `READY_FOR_EVIDENCE_ATTACHMENT` is reported metadata only; acceptance remains pending evidence review | Not supplied |
+
+**Phase 0 status: Partial sign-off reported; acceptance and production approval remain blocked** by missing approval scope/artifacts, deployment and operational evidence, and remaining acceptance gates. Product Owner and legal/privacy approvals are user-reported, not independently verified. Privileged host enforcement remains disabled. No production-readiness claim follows from these declarations.
+
+## Phase 1: Codebase transformation — partial; previous claim stale
+
+- Current product uses a Next.js App Router, Prisma/PostgreSQL, and a Go endpoint agent.
+- Legacy names map only approximately to current surfaces: `NexusApp` to the App Router shell (`app/layout.jsx`, `app/page.jsx`); `AdminControlCenter` to authenticated role-gated dashboard views and tenant-scoped API routes; `IntegrationManager` to security-control registry/preferences (`lib/security-controls.js`, `app/api/security-controls/route.js`), not live connectors. `app/globals.css` is the styling foundation, but a reusable component design system is not established.
+- The containment request/approval handlers previously referenced React component state from outside the component. They now reside in component scope; browser sign-out and sign-in were exercised after the response-logging changes.
+- A design exists, but no acceptance evidence supports the previous blanket completion claim.
+
+## Phase 2: Instrumentation and monitoring — partial
+
+- Implemented: middleware-generated API request IDs returned in response headers; structured method/status/duration logs for shared JSON responses, readiness, and CSV evidence export; structured BullMQ job outcome and non-empty retention task logs with bounded counts and error classes; a bounded CLI synthetic readiness probe that validates HTTP 200 and database/Redis readiness; application audit events, allowlisted endpoint lifecycle telemetry, and a bounded database/Redis readiness endpoint used by the Compose web health check.
+- Implemented: opt-in `/api/metrics` endpoint with bearer-token authorization and fixed-cardinality process-local HTTP counters/duration buckets; optional loopback-only Prometheus/Grafana Compose profile with provisioned API dashboard. Production build, 44 tests, dashboard JSON parsing, and default/monitoring Compose configuration validation passed; a host-side smoke test verified HTTP 401 without a token and HTTP 200 with Prometheus exposition when authorized. The authorized unused-build-cache prune reclaimed 7.22 GB. WSL shutdown briefly restored the existing app and healthy dependencies, but rebuilding failed during image-layer extraction with a read-only filesystem. The requested Recycle Bin cleanup reclaimed about 250 MB; the Windows Update download cache was already empty. C: had about 72 MB free at the latest check; Redis was unhealthy and `/api/health` returned HTTP 503 with both database and Redis checks false. Monitoring startup/scraping remains unverified; containers and volumes were preserved.
+- Log field bounds are covered by automated tests; request bodies, URL paths, tenant identifiers, webhook/delivery identifiers, and exception messages are omitted from the new API/worker log records. Live API correlation IDs and container response logs were verified locally.
+- Missing/not evidenced: successful local Prometheus scraping and Grafana dashboard rendering; external/durable log and metric collection, alert rules/routing, scheduled synthetic-probe coverage, component mount metrics, and an operational availability measurement. Process-local metrics reset on web restart and a single local probe does not establish an SLA.
+
+## Phase 3: Compliance and resilience — partial
+
+- Implemented foundations: deterministic risk scoring, consent evidence and audit signatures, downstream erasure webhook dispatch, manual incident readiness, containment audit trail, and bounded evidence export.
+- Missing: automated legal/reportability determination, statutory filing/escalation/notification, named legacy compliance and board-report modules, automated snapshots, recovery service, chaos triggers, and tested recovery procedures.
+
+## Phase 4: Automation and knowledge transfer — partial
+
+- Implemented: Node and Go tests, checked-in Prisma migrations, Docker Compose, and `.github/workflows/verify.yml` for CI validation of install, tests, schema/migrations, production build, Go tests, and Windows/Linux cross-builds.
+- Implemented: drafted a local reliability and operations manual at `reliability_manual.md`, covering startup/readiness, non-destructive storage triage, local monitoring, and recovery evidence limits.
+- Missing/not evidenced: hosted CI run evidence, the legacy checklist's named `rosi_math.test.js`, production owner review/approval of the manual, release/deployment automation, and witnessed backup/restore drills remain outstanding.
+
+## Phase 5: Risk and consent foundation — implemented foundation
+
+- Implemented: bounded deterministic risk and ROSI calculations, tenant-scoped consent records, signed evidence/audit, kill switch, and signed downstream webhook delivery.
+- Missing: a separate deployable risk service, actual AI inference, independently calibrated risk model, production key-management/rotation, legal review, and proof that downstream systems performed deletion.
+
+## Phase 6: Multi-tenant platform and commercial metadata — partial
+
+- Implemented: provider/customer tenancy, partner metadata, manual subscription records, `MSSP_ADMIN` and `SUPER_ADMIN` roles, and audited global containment network settings.
+- Missing: MFA/SSO, payment processing, invoicing/tax, commissions/payouts, entitlement enforcement, full site/asset hierarchy, verified sovereign hosting/residency, and production deployment evidence. Containment policy settings are stored only and are not applied to endpoints.
+
+## Phase 7: Endpoint enrollment and telemetry — basic foundation
+
+- Implemented: single-use enrollment, tenant-bound device credentials, inventory, heartbeat, allowlisted lifecycle events, and revocation for the Windows/Linux command-line agent; a tenant-scoped catalog for Wazuh, OpenVAS, Suricata, and TheHive with audited capability-preference storage.
+- Missing: verified third-party connector adapters, credential provisioning/rotation, event ingestion, live health/alert data, OS security-event collection, threat detection, EDR, vulnerability scanning, installer/service supervision, offline buffering, mutual TLS, edge rate limiting, secure updates, and hardware-backed agent identity. Catalog status remains `NOT_CONNECTED`; preferences do not activate controls.
+
+## Phase 8: Incident readiness and partner workflows — partial
+
+- Implemented: manually reported incidents, internal six-hour readiness timer, closure notes, audit-chain verification, bounded CSV evidence, partner attribution, and manual tier metadata.
+- Missing: CERT-In reportability assessment or submission, deadline escalation/notification, validated CA audit/certification workflow, live billing, and payment-backed commercial operation. The timer is not a determination of statutory obligations.
+
+## Phase 9: Containment, watchdog, and rollback — not an isolation capability
+
+- Implemented foundation: second-admin approval/rejection, Ed25519 signed command delivery, administrative pin/allowlist settings, and unit-tested watchdog deadline/rollback-callback logic with a 180-second timeout.
+- Blocking gaps: no active host quarantine lifecycle; no privileged Windows/Linux firewall adapter; no rollback callback wired into an agent runtime; no real rule application, recovery or lease handling; no deployment-approved pinned IPs/allowlists; no MFA-backed approval; and no trusted detector.
+- Safety invariant: the baseline provides dual-control authorization and cryptographic command delivery only. Privileged Windows Filtering Platform/Linux `nftables` host containment and automated threat quarantine remain **DISABLED** by default until the Phase 9 implementation, independent verification, operational tests, and signed authorization gates have all passed.
+- Therefore, no host firewall or process action occurs, and no automatic host rollback currently runs. Do not market or operate this phase as endpoint containment.
+
+## Verification recorded for the current implementation
+
+- Node unit tests passed: 44 tests, rerun on 2026-10-29.
+- Go agent tests passed; Windows and Linux agent cross-builds passed.
+- Prisma schema validation passed, rerun on 2026-10-29.
+- All checked-in migrations applied to a fresh PostgreSQL database.
+- Next.js production build passed.
+- Docker Compose default and monitoring-profile configuration validation passed; the monitoring services have not been verified running.
+- Latest environment check: C: had approximately 72 MB free; PostgreSQL's container health check was healthy, while Redis was unhealthy and `/api/health` returned HTTP 503 with both dependency checks false. Docker Desktop storage previously reported read-only errors. No volumes were removed.
+
+These are local code/build checks only. They do not prove production security, compliance, availability, data residency, or effective endpoint enforcement.
+
+## Overall status
+
+**Not production-ready.** Complete Phase 0 requirements and deployment gates, implement and independently validate the missing operational/security controls, and define acceptance evidence before making a production-readiness claim.

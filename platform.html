@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>LF-RiskRosi - GRC Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢â€”
+   Ã¢â€¢â€˜  LF-RiskRosi Ã‚Â· 3 Themes Ã‚Â· Brighter Fonts             Ã¢â€¢â€˜
+   Ã¢â€¢â€˜  Theme 1: Midnight Dark (default)                    Ã¢â€¢â€˜
+   Ã¢â€¢â€˜  Theme 2: Glacier Light (clean white/blue)           Ã¢â€¢â€˜
+   Ã¢â€¢â€˜  Theme 3: Sunrise Warm (cream/amber)                 Ã¢â€¢â€˜
+   Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ THEME 1: MIDNIGHT DARK Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+:root, [data-theme="dark"] {
+  --bg:       #0A0C12;
+  --dark:     #0E111A;
+  --navy:     #111622;
+  --card:     #121826;
+  --card2:    #161C2C;
+
+  --red:      #F43F5E;
+  --red2:     #E11D48;
+  --steel:    #7C3AED;
+  --steel2:   #8B5CF6;
+  --ice:      #38BDF8;
+  --green:    #22C55E;
+  --amber:    #F59E0B;
+  --purple:   #7C3AED;
+
+  --white:    #F8FAFC;
+  --text:     #E6E8EE;
+  --muted:    #B7C0CF;
+  --dim:      #7D879B;
+
+  --border:   rgba(255,255,255,0.08);
+  --border2:  rgba(255,255,255,0.04);
+  --sb-bg:    linear-gradient(180deg,#0E111A 0%,#0A0C12 100%);
+  --sb-border:rgba(255,255,255,0.08);
+  --tb-bg:    rgba(12,15,22,0.9);
+  --content-bg:radial-gradient(900px 500px at 15% 0%,rgba(124,58,237,0.18),transparent 55%),radial-gradient(900px 500px at 85% 0%,rgba(56,189,248,0.12),transparent 60%),#0A0C12;
+  --overlay:  rgba(0,0,0,0.7);
+  --input-bg: rgba(255,255,255,0.04);
+  --input-border:rgba(255,255,255,0.12);
+  --row-bg:   rgba(255,255,255,0.03);
+  --row-hover:rgba(255,255,255,0.06);
+  --shadow:   0 10px 30px rgba(0,0,0,0.55);
+  --shadow-lg:0 24px 70px rgba(0,0,0,0.65);
+  --fc:'JetBrains Mono',monospace;
+}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ THEME 2: GLACIER LIGHT Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+[data-theme="light"] {
+  --bg:       #F8FAF8;
+  --dark:     #F1F6F2;
+  --navy:     #E9F1EB;
+  --card:     #FFFFFF;
+  --card2:    #F9FBF9;
+
+  --red:      #C2410C;
+  --red2:     #EA580C;
+  --steel:    #0F766E;
+  --steel2:   #10B981;
+  --ice:      #0F766E;
+  --green:    #15803D;
+  --amber:    #B45309;
+  --purple:   #64748B;
+
+  --white:    #FFFFFF;
+  --text:     #0B1A12;
+  --muted:    #2E4A3B;
+  --dim:      #627B6B;
+
+  --border:   rgba(11,26,18,0.08);
+  --border2:  rgba(11,26,18,0.04);
+  --sb-bg:    linear-gradient(180deg,#FFFFFF 0%,#F3F8F4 100%);
+  --sb-border:rgba(11,26,18,0.08);
+  --tb-bg:    rgba(255,255,255,0.92);
+  --content-bg:#F8FAF8;
+  --overlay:  rgba(11,26,18,0.28);
+  --input-bg: rgba(11,26,18,0.03);
+  --input-border:rgba(11,26,18,0.12);
+  --row-bg:   rgba(11,26,18,0.02);
+  --row-hover:rgba(11,26,18,0.05);
+  --shadow:   0 6px 16px rgba(11,26,18,0.08);
+  --shadow-lg:0 14px 30px rgba(11,26,18,0.12);
+}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ THEME 3: SUNRISE WARM Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+
+[data-theme="glass"] {
+  --bg:       #0B1115;
+  --dark:     #0E161C;
+  --navy:     #0F1B22;
+  --card:     rgba(18,31,40,0.55);
+  --card2:    rgba(22,37,49,0.55);
+
+  --red:      #E24B2B;
+  --red2:     #FF6B4A;
+  --steel:    #2F7E8A;
+  --steel2:   #3FA9B2;
+  --ice:      #8ED7D9;
+  --green:    #19C37D;
+  --amber:    #F0A12E;
+  --purple:   #64748B;
+
+  --white:    #F8FAFC;
+  --text:     #F1F5F9;
+  --muted:    #C7D2DE;
+  --dim:      #8AA0B2;
+
+  --border:   rgba(248,250,252,0.16);
+  --border2:  rgba(248,250,252,0.08);
+  --sb-bg:    linear-gradient(180deg,rgba(13,20,27,0.85) 0%,rgba(10,15,20,0.9) 100%);
+  --sb-border:rgba(248,250,252,0.12);
+  --tb-bg:    rgba(11,17,21,0.65);
+  --content-bg:radial-gradient(1200px 600px at 20% -10%,rgba(63,169,178,0.18),transparent 60%),radial-gradient(900px 500px at 90% 0%,rgba(226,75,43,0.14),transparent 60%),#0B1115;
+  --overlay:  rgba(0,0,0,0.7);
+  --input-bg: rgba(248,250,252,0.06);
+  --input-border:rgba(248,250,252,0.18);
+  --row-bg:   rgba(248,250,252,0.05);
+  --row-hover:rgba(248,250,252,0.08);
+  --shadow:   0 8px 28px rgba(0,0,0,0.5);
+  --shadow-lg:0 24px 70px rgba(0,0,0,0.65);
+}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ BASE Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+:root{--fd:'Space Grotesk',sans-serif;--fb:'Sora',sans-serif;--fm:'JetBrains Mono',monospace;--fc:'JetBrains Mono',monospace;}
+html,body{height:100%;background:var(--content-bg);color:var(--text);font-family:var(--fb);overflow:hidden;font-size:14px;line-height:1.5}
+body{transition:background .28s,color .28s}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:rgba(196,30,58,.3);border-radius:4px}
+::-webkit-scrollbar-track{background:transparent}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:translateX(0)}}
+.skeleton{background:linear-gradient(90deg,rgba(255,255,255,.03) 25%,rgba(255,255,255,.07) 50%,rgba(255,255,255,.03) 75%);background-size:200%;animation:shimmer 1.4s infinite;border-radius:6px}
+[data-theme="light"] .skeleton,[data-theme="warm"] .skeleton{background:linear-gradient(90deg,rgba(0,0,0,.04) 25%,rgba(0,0,0,.08) 50%,rgba(0,0,0,.04) 75%);background-size:200%;animation:shimmer 1.4s infinite}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ LAYOUT Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+.app{display:flex;height:100vh;overflow:hidden}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SIDEBAR Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+.sidebar{\n  width:246px;flex-shrink:0;\n  background:var(--sb-bg);\n  border-right:1px solid var(--sb-border);\n  display:flex;flex-direction:column;\n  position:relative;z-index:50;overflow-y:auto;overflow-x:hidden;\n  transition:background .28s;\n  box-shadow:inset -1px 0 0 rgba(255,255,255,0.03)\n}
+.sb-mark{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;
+  background:radial-gradient(120% 120% at 20% 20%,rgba(255,255,255,.9),transparent 40%),
+             conic-gradient(from 45deg,rgba(14,138,102,.45),rgba(14,138,102,.15),rgba(14,138,102,.45));
+  border:1px solid rgba(14,138,102,.35);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fd);font-size:13px;font-weight:800;color:var(--text);
+  box-shadow:0 10px 20px rgba(14,138,102,.15), inset 0 1px 0 rgba(255,255,255,.7);
+  position:relative
+}.sb-mark::after{
+  content:'';position:absolute;inset:-6px;border-radius:14px;
+  background:conic-gradient(from 120deg,rgba(63,169,178,.15),rgba(226,75,43,.12),transparent 60%);
+  filter:blur(8px);opacity:.6;
+  animation:logoGlow 4s ease-in-out infinite
+}
+.sb-mark-dot{position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:var(--steel2);box-shadow:0 0 8px var(--steel2);animation:pulse 2s ease-in-out infinite}
+.sb-mark span{position:relative;z-index:2;letter-spacing:.6px}
+.sb-name{font-family:var(--fd);font-size:16px;font-weight:800;color:var(--text);line-height:1.1;letter-spacing:.3px}
+.sb-ver{font-family:var(--fm);font-size:8px;letter-spacing:2.5px;color:var(--dim);text-transform:uppercase;margin-top:1px}
+.org-chip{
+  display:flex;align-items:center;gap:9px;padding:8px 10px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:9px;cursor:pointer;
+  transition:all .15s
+}
+.org-chip:hover{background:rgba(255,255,255,.07);border-color:rgba(196,30,58,.2)}
+.org-av{width:24px;height:24px;border-radius:6px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--red),var(--steel));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fd);font-size:11px;font-weight:900;color:#fff}
+.org-n{font-size:12px;font-weight:600;color:rgba(255,255,255,.88);line-height:1.3}
+.org-p{font-family:var(--fm);font-size:8px;color:rgba(245,158,11,.85);letter-spacing:.5px;text-transform:uppercase}
+
+/* NAV */
+.nav{flex:1;padding:8px 9px;overflow-y:auto}
+.nav-sec{
+  font-family:var(--fm);font-size:8px;letter-spacing:3px;
+  color:rgba(255,255,255,.32);
+  padding:12px 9px 5px;text-transform:uppercase;user-select:none
+}
+.nav-item{\n  display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:12px;\n  font-size:12.5px;font-weight:500;\n  color:rgba(241,245,249,.78);\n  cursor:pointer;transition:all .18s;margin-bottom:3px;\n  border:1px solid transparent;user-select:none;letter-spacing:.2px\n}
+.nav-item:hover{color:#FFFFFF;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.06)}
+.nav-item.active{\n  color:#FFFFFF;font-weight:600;\n  background:linear-gradient(135deg,rgba(63,169,178,.18),rgba(226,75,43,.16));\n  border-color:rgba(255,255,255,.12);\n  box-shadow:0 6px 16px rgba(0,0,0,.25)\n}
+.ni{width:17px;text-align:center;font-size:13px;flex-shrink:0}
+.nb{margin-left:auto;font-family:var(--fm);font-size:8px;padding:2px 7px;border-radius:99px;background:rgba(196,30,58,.22);color:#FF8099;border:1px solid rgba(196,30,58,.35)}
+.nb.green{background:rgba(18,201,144,.12);color:#12C990;border-color:rgba(18,201,144,.3)}
+.nb.amber{background:rgba(251,170,26,.12);color:#FBAA1A;border-color:rgba(251,170,26,.3)}
+
+/* SIDEBAR BOTTOM */
+.sb-bot{padding:10px 11px 13px;border-top:1px solid rgba(255,255,255,.07);flex-shrink:0}
+.sb-user{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:9px;cursor:pointer;transition:all .15s}
+.sb-user:hover{background:rgba(255,255,255,.05)}
+.su-av{width:30px;height:30px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--steel),var(--ice));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fd);font-size:13px;font-weight:800;color:#fff}
+.su-name{font-size:12px;font-weight:600;color:rgba(255,255,255,.88)}
+.su-role{font-family:var(--fm);font-size:8px;color:rgba(255,255,255,.4);margin-top:1px}
+.su-dot{margin-left:auto;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green)}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ MAIN Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ TOPBAR Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+.topbar{\n  height:60px;flex-shrink:0;padding:0 22px;\n  display:flex;align-items:center;gap:10px;\n  background:var(--tb-bg);backdrop-filter:blur(18px);\n  border-bottom:1px solid var(--border);position:relative;z-index:40;\n  transition:background .28s\n}
+.icon-btn:hover{color:var(--text);background:var(--row-hover)}
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ THEME SWITCHER (improved) Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+.theme-switcher{
+  display:flex;align-items:center;gap:4px;
+  padding:4px 6px;
+  background:var(--row-bg);border:1px solid var(--border);border-radius:10px
+}
+.theme-btn{width:22px;height:22px;border-radius:7px;border:2px solid transparent;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.theme-btn::after{content:'';position:absolute;inset:0;border-radius:5px;opacity:0;transition:opacity .2s}
+.theme-btn:hover::after{opacity:1;background:rgba(255,255,255,.15)}
+.theme-btn:hover{transform:scale(1.15)}
+.theme-btn.active{border-color:var(--red2);box-shadow:0 0 0 2px rgba(63,169,178,.25)}
+.theme-btn[data-t="dark"]{background:linear-gradient(135deg,#0E1117 50%,#6D28D9 50%)}
+.theme-btn[data-t="light"]{background:linear-gradient(135deg,#FFFFFF 50%,#0EA5A5 50%)}
+.theme-btn[data-t="warm"]{background:linear-gradient(135deg,#FAF6EF 50%,#B45309 50%)}
+.theme-btn[data-t="glass"]{background:linear-gradient(135deg,rgba(255,255,255,.6) 50%,rgba(63,169,178,.9) 50%)}
+
+
+/* Ã¢â€â‚¬Ã¢â€â‚¬ DASHBOARD ANIMATIONS Ã¢â€â‚¬Ã¢â€â‚¬ */
+.dash-anim .card,
+.dash-anim .stat-card,
+.dash-anim .sec-label,
+.dash-anim table.tbl{
+  animation:dashFade .6s ease both;
+}
+.dash-anim .stat-card{\n  background:var(--card);border:1px solid var(--border);border-radius:14px;\n  padding:16px 18px;position:relative;overflow:hidden;transition:all .22s;\n  box-shadow:var(--shadow)\n}
+.stat-card::after{content:'';position:absolute;left:12px;right:12px;top:8px;height:3px;border-radius:99px;background:linear-gradient(90deg,rgba(16,185,129,.15),rgba(16,185,129,.55),rgba(16,185,129,.15))}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Toast Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+function toast(msg, type='s', dur=3000) {
+  const wrap = document.getElementById('toasts');
+  const t = document.createElement('div');
+  t.className = `toast toast-${type}`;
+  t.innerHTML = `<span>${type==='s'?'Ã¢Å“â€¦':type==='e'?'Ã¢ÂÅ’':'Ã¢â€žÂ¹Ã¯Â¸Â'}</span> ${msg}`;
+  wrap.appendChild(t);
+  setTimeout(()=>t.style.opacity='0', dur-300);
+  setTimeout(()=>t.remove(), dur);
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Nav Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+function nav(el, page) {
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  el.classList.add('active');
+  showPage(page);
+}
+
+const pageMeta = {
+  dashboard:   {title:'Dashboard',        sub:'LumeraVault Live Ã‚Â· Security Overview',      a1:'+ New Risk', a2:'Export PDF'},
+    execdash:    {title:'Executive Dashboard', sub:'Dashboard shell Ã‚Â· KPIs Ã¢â€ â€™ trends Ã¢â€ â€™ breakdown', a1:'Refresh', a2:'Export'},
+  risks:       {title:'Risk Register',     sub:'All risks sorted by score',                 a1:'+ New Risk', a2:'Filter'},
+  rosi:        {title:'ROSI Calculator',     sub:'Return on Security Investment',             a1:'+ Scenario', a2:'Export'},
+  assets:      {title:'Asset Registry',   sub:'All assets tracked in LumeraVault',         a1:'+ Asset',    a2:'Export'},
+  compliance:  {title:'Compliance',       sub:'5 Frameworks Ã‚Â· ISOÃ‚Â·NISTÃ‚Â·PCIÃ‚Â·DPDPÃ‚Â·RBI',     a1:'Run Audit',  a2:'Export'},
+  tasks:       {title:'Action Tasks',     sub:'Assigned tasks and remediations',            a1:'+ Task',     a2:'Filter'},
+  vendors:     {title:'Third-Party Trust',      sub:'Third-party risk management',               a1:'+ Vendor',   a2:'Export'},
+  ccm:         {title:'Control Monitoring', sub:'24/7 automated control testing',a1:'Run Now',   a2:'Configure'},
+  trust:       {title:'Trust Center',     sub:'Customer-facing security portal',           a1:'Publish',    a2:'Settings'},
+  regchanges:  {title:'Regulatory Feed',sub:'RBI Ã‚Â· SEBI Ã‚Â· DPDP Ã‚Â· CERT-In monitoring',  a1:'Scan Now',   a2:'All Sources'},
+  crq:         {title:'CRQ Monte Carlo',  sub:'Cyber Risk Quantification Ã‚Â· Financial Impact',a1:'Run Simulation',a2:'Board Report'},
+  agentic:     {title:'Autonomous Guard',     sub:'AI-powered automated actions',              a1:'Configure',  a2:'Action Log'},
+  asm:         {title:'Attack Surface Lighthouse', sub:'External threat intelligence',     a1:'Scan All',   a2:'Schedule'},
+  devsecops:   {title:'Shift-Left / DevSecOps',        sub:'Shift-Left compliance Ã‚Â· GitHub integration',a1:'Connect Repo',a2:'Findings'},
+  esg:         {title:'ESG Intelligence',      sub:'Environmental Ã‚Â· Social Ã‚Â· Governance',       a1:'Update',     a2:'Export'},
+  auditlog:    {title:'Audit Log',           sub:'Full platform activity trail',                   a1:'Export',       a2:'Filter'},
+  consent:     {title:'Consent Manager',     sub:'DPDP Act 2023 Ã‚Â· Request-Artifact-Audit Cycle',    a1:'New Notice',   a2:'Audit Trail'},
+  tvm:         {title:'TVM Hub',             sub:'Threat & Vulnerability Management Ã‚Â· CVSS scoring', a1:'Scan Now',     a2:'Export'},
+  threats:     {title:'Threat Intelligence', sub:'MITRE ATT&CK Ã‚Â· IOC feeds Ã‚Â· Threat actors',         a1:'Refresh Feed', a2:'Hunt'},
+  redteam:     {title:'Red Team Command',    sub:'Adversary simulation Ã‚Â· Purple team exercises',      a1:'New Campaign', a2:'Report'},
+  cloud:       {title:'Cloud Matrix',        sub:'Multi-cloud posture Ã‚Â· AWS Ã‚Â· Azure Ã‚Â· GCP',           a1:'Sync Now',     a2:'Alerts'},
+  zerotrust:   {title:'Zero Trust Control',  sub:'Identity Ã‚Â· Access Ã‚Â· Micro-segmentation',            a1:'Run Check',    a2:'Policy'},
+  certs:       {title:'Cert Lighthouse',     sub:'Certificate inventory Ã‚Â· Expiry tracking',           a1:'Scan Certs',   a2:'Alerts'},
+  auditmaturity:{title:'Audit Maturity',      sub:'CMMI Ã‚Â· Maturity scoring Ã‚Â· Gap analysis',            a1:'Run Assessment',a2:'Report'},
+  platformsettings:{title:'Settings',         sub:'Profile Ã‚Â· Notifications Ã‚Â· Integrations Ã‚Â· Security',  a1:'Save Changes',  a2:'API Keys'},
+  ecosystem:   {title:'Ecosystem Hub',       sub:'Supply chain Ã‚Â· Partner risk Ã‚Â· Dependency graph',    a1:'Map Ecosystem', a2:'Export'},
+  predictive:  {title:'Predictive Risk Alpha',sub:'LUMA ML Ã‚Â· 90-day risk forecast Ã‚Â· Anomaly detection',a1:'Run Forecast', a2:'Tune Model'},
+  board:       {title:'Board Intelligence',  sub:'Executive pack Ã‚Â· Cyber risk in Ã¢â€šÂ¹ Ã‚Â· Board-ready',    a1:'Generate Pack', a2:'Schedule'},
+  lumaacademy: {title:'LUMA Academy',        sub:'Security training Ã‚Â· Certifications Ã‚Â· Team scores',  a1:'Assign Course', a2:'View Progress'},
+  reports:     {title:'Reports',             sub:'Custom reports Ã‚Â· Scheduled delivery Ã‚Â· All modules',  a1:'New Report',    a2:'Schedule'},
+  crisis:      {title:'Crisis War Room',     sub:'Incident command Ã‚Â· Playbooks Ã‚Â· Stakeholder comms',   a1:'Activate IR',   a2:'Playbooks'},
+  nexus:       {title:'Nexus Command',       sub:'Platform overview Ã‚Â· All modules Ã‚Â· Executive view',   a1:'Refresh',       a2:'Fullscreen'},
+  remediation: {title:'Remediation Ops',     sub:'Ticket tracking Ã‚Â· SLA management Ã‚Â· Evidence vault',  a1:'New Ticket',    a2:'Dashboard'},
+  tenantadmin: {title:'Tenant Admin',        sub:'Organisations Ã‚Â· Users Ã‚Â· Billing Ã‚Â· API keys',         a1:'Add Org',       a2:'Invite User'},
+  onboarding:  {title:'Onboarding',          sub:'Setup wizard Ã‚Â· Data import Ã‚Â· Integration guide',     a1:'Resume Setup',  a2:'Checklist'},
+  revops:      {title:'RevOps Health',       sub:'MRR Ã‚Â· Churn Ã‚Â· Feature usage Ã‚Â· Customer health',      a1:'Refresh',       a2:'Export'},
+  supportfaq:  {title:'Support & FAQ',       sub:'Documentation Ã‚Â· Tickets Ã‚Â· Community Ã‚Â· Status',       a1:'New Ticket',    a2:'Docs'},
+  helpcenter:  {title:'Help Center',         sub:'Guides Ã‚Â· Video tutorials Ã‚Â· Release notes Ã‚Â· Roadmap', a1:'Search',        a2:'Contact'},
+  secops:      {title:'SecOps Hub', sub:'Ã°Å¸Å¡Â¨ RED TEAM ACTIVE Ã‚Â· Live Intelligence Ingestion Ã‚Â· Autonomous Playbooks', a1:'Global Sync', a2:'Lateral Movement'},
+};
+
+async function showPage(page) {
+  currentPage = page;
+  const meta = pageMeta[page] || {title:page,sub:'',a1:'',a2:''};
+  document.getElementById('page-title').textContent = meta.title;
+  document.getElementById('page-sub').textContent = meta.sub;
+  document.getElementById('tb-action1').textContent = meta.a1;
+  document.getElementById('tb-action2').textContent = meta.a2;
+  const c = document.getElementById('content');
+  c.innerHTML = `<div style="text-align:center;padding:60px 20px"><div class="loading-ring"></div><div style="font-family:var(--fm);font-size:9px;color:var(--dim);margin-top:10px;letter-spacing:2px">LOADING...</div></div>`;
+  c.style.animation = 'none';
+  void c.offsetWidth;
+  c.style.animation = 'fadeIn .3s ease';
+  const renders = {
+    dashboard, execdash, risks, rosi, crq, secops, asm, tvm, threats, redteam, assets, cloud, zerotrust,
+    compliance, ccm, regchanges, certs, auditmaturity, consent, vendors, ecosystem,
+    devsecops, remediation, predictive, board, agentic, lumaacademy, trust, esg,
+    reports, auditlog, crisis, nexus, tasks, tenantadmin, onboarding, revops,
+    platformsettings, supportfaq, helpcenter
+  };
+  if(renders[page]) await renders[page]();
+}
+
+function topAction1() {
+  if(currentPage==='risks'||currentPage==='dashboard') openModal('risk-modal');
+  else if(currentPage==='secops') secopsSync();
+  else toast(`Action for ${currentPage}`, 'i');
+}
+function topAction2() {
+  if(currentPage==='secops') secopsLateral();
+  else toast('Exporting... (coming soon)', 'i');
+}
+function refreshData() { showPage(currentPage); toast('Refreshed from LumeraVault', 's'); }
+
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â PAGES Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+
+async function dashboard() {
+  const d = await api('/api/dashboard');
+  if(!d) return;
+  dashData = d.data||d;
+  const s = dashData;
+  const score = s.security_score;
+  const pct = (score/10)*100;
+  const circ = 245 - (245*(pct/100));
+  const strokeColor = score>=7?'#10B98A':score>=5?'#F59E0B':'#EF4444';
+  const trend = s.score_trend || [6.9,7.1,7.3,7.6,7.8,8.0,7.9,8.1];
+  const trendPath = (() => {
+    const max = Math.max(...trend), min = Math.min(...trend);
+    return trend.map((v,i)=>{
+      const x = (i/(trend.length-1))*100;
+      const norm = max===min?50:100-(((v-min)/(max-min))*70+15);
+      return `${i?'L':'M'}${x.toFixed(1)},${norm.toFixed(1)}`;
+    }).join(' ');
+  })();
+
+  document.getElementById('content').innerHTML = `\n  <div class="dash-anim">\n  <div class="g5" style="margin-bottom:18px">
+    <div class="stat-card sc-amber">
+      <div class="stat-label">Security Score</div>
+      <div class="stat-val sv-amber">${score}</div>
+      <div class="stat-chg chg-fl">/10 Â· Moderate Risk</div>
+      <div class="stat-icon">ðŸ›¡ï¸</div>
+    </div>
+    <div class="stat-card sc-red">
+      <div class="stat-label">Critical Risks</div>
+      <div class="stat-val sv-red">${s.critical_risks}</div>
+      <div class="stat-chg chg-up">â†‘ 1 this week</div>
+      <div class="stat-icon"><svg class="kpi-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3l9-16z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+    </div>
+    <div class="stat-card sc-green">
+      <div class="stat-label">Avg ROSI</div>
+      <div class="stat-val sv-green">${s.avg_rosi}%</div>
+      <div class="stat-chg chg-dn">â†‘ vs benchmark 245%</div>
+      <div class="stat-icon">ðŸ“ˆ</div>
+    </div>
+    <div class="stat-card sc-steel">
+      <div class="stat-label">ISO 27001</div>
+      <div class="stat-val sv-ice">${s.iso_coverage}%</div>
+      <div class="stat-chg chg-dn">â†‘ 13pts this quarter</div>
+      <div class="stat-icon">ðŸ“‹</div>
+    </div>
+    <div class="stat-card sc-red">
+      <div class="stat-label">Overdue Tasks</div>
+      <div class="stat-val sv-red">${s.overdue_tasks}</div>
+      <div class="stat-chg chg-up">${s.open_tasks} open total</div>
+      <div class="stat-icon">âš¡</div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div>
+      <div class="card" style="margin-bottom:14px;padding:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--text)">Posture Trend (assumed weekly)</div>
+          <div style="font-family:var(--fm);font-size:10px;color:var(--dim)">Data: score_trend[] or demo placeholder</div>
+        </div>
+        <svg viewBox="0 0 100 100" width="100%" height="160" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="trendFill" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="rgba(16,185,138,.25)"/>
+              <stop offset="100%" stop-color="rgba(16,185,138,0)"/>
+            </linearGradient>
+          </defs>
+          <path d="${trendPath} L100,100 L0,100 Z" fill="url(#trendFill)" stroke="none"/>
+          <path d="${trendPath}" fill="none" stroke="var(--green)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          ${trend.map((v,i)=>`<circle cx="${(i/(trend.length-1))*100}" cy="${(() => {const max=Math.max(...trend),min=Math.min(...trend);const norm=max===min?50:100-(((v-min)/(max-min))*70+15);return norm.toFixed(1);})()}" r="1.9" fill="var(--green)"></circle>`).join('')}
+        </svg>
+        <div style="display:flex;gap:14px;margin-top:8px;font-family:var(--fm);font-size:11px;color:var(--muted)">
+          <div>Latest: <span style="color:var(--text);font-weight:700">${trend[trend.length-1]}</span></div>
+          <div>High: <span style="color:var(--text);font-weight:700">${Math.max(...trend)}</span></div>
+          <div>Low: <span style="color:var(--text);font-weight:700">${Math.min(...trend)}</span></div>
+        </div>
+      </div>
+
+      <div class="sec-label">Top Risks</div>
+      <div class="card" style="padding:0;overflow:hidden">
+        <table class="tbl">
+          <thead><tr><th>RISK</th><th>SEV</th><th>SCORE</th><th>OWNER</th><th>STATUS</th></tr></thead>
+          <tbody id="dash-risk-body">
+            <tr><td colspan="5" style="padding:14px;font-family:var(--fm);color:var(--muted)">Loading from /api/risks...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="score-ring-wrap">
+          <div class="score-ring">
+            <svg viewBox="0 0 88 88" width="88" height="88">
+              <circle class="ring-bg" cx="44" cy="44" r="39"/>
+              <circle class="ring-fill" cx="44" cy="44" r="39"
+                stroke="${strokeColor}"
+                style="stroke-dashoffset:${circ}"/>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-val">${score}</div>
+              <div class="ring-of">/10</div>
+            </div>
+          </div>
+          <div class="ring-info">
+            <div class="ri-name">Moderate Risk</div>
+            <div class="ri-desc">
+              ${s.total_risks} risks Â· ${s.critical_risks} critical<br>
+              ${s.active_vendors} vendors Â· ${s.vendor_overdue} overdue<br>
+              DPDP coverage: <span style="color:#EF4444">${s.dpdp_coverage}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:14px;padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <div style="font-family:var(--fd);font-size:13px;font-weight:800;color:var(--text)">ROSI Pulse</div>
+          <div style="font-family:var(--fm);font-size:10px;color:var(--dim)">Assumed monthly Â· replace with /api/rosi trend</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;align-items:end;height:90px">
+          ${[40,55,70,64,78,85].map(v=>`<div style="background:rgba(16,185,138,.15);border:1px solid rgba(16,185,138,.25);border-radius:6px 6px 3px 3px;height:${v}%;min-height:22px;position:relative">
+            <span style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:9px;color:var(--muted)">${v}%</span>
+          </div>`).join('')}
+        </div>
+      </div>
+
+      <div class="sec-label">Compliance Overview</div>
+      <div id="dash-comp">
+        <div class="skeleton" style="height:22px;margin-bottom:8px"></div>
+        <div class="skeleton" style="height:22px;margin-bottom:8px"></div>
+        <div class="skeleton" style="height:22px;margin-bottom:8px"></div>
+        <div class="skeleton" style="height:22px;margin-bottom:8px"></div>
+        <div class="skeleton" style="height:22px"></div>
+      </div>
+
+      <div class="sec-label" style="margin-top:18px">Assumptions & TODOs</div>
+      <div style="background:rgba(255,255,255,.03);border:1px dashed var(--border);border-radius:10px;padding:10px 12px;font-family:var(--fm);font-size:11px;color:var(--muted)">
+        Trend sparkline uses demo array; wire to score_trend[] from API when available. ROSI bars use placeholder monthly data; swap with /api/rosi timeseries. Risks/compliance pull from existing endpoints.
+      </div>
+    </div>
+  </div>\n  </div>`;
+
+  // Load risks
+  const riskData = await api('/api/risks');
+  if(riskData) {
+    const risks = (riskData.data||riskData).slice(0,5);
+    document.getElementById('dash-risk-body').innerHTML = risks.map(r=>`
+      <tr onclick="showPage('risks')">
+        <td><div class="rid">${r.risk_id}</div><div class="rname">${r.name}</div></td>
+        <td><span class="sev s-${r.severity==='critical'?'crit':r.severity==='high'?'high':'med'}">SEV  ${r.severity.toUpperCase()}</span></td>
+        <td><div class="bar-wrap"><div class="bar"><div class="bf ${r.severity==='critical'?'bf-r':r.severity==='high'?'bf-a':'bf-p'}" style="width:${(r.score/25)*100}%"></div></div><div class="bnum">${r.score}</div></div></td>
+        <td style="font-size:12px;color:var(--text)">${r.owner||'â€”'}</td>
+        <td style="font-family:var(--fm);font-size:10px;color:var(--muted)">${r.status||'open'}</td>
+      </tr>`).join('');
+  }
+
+  // Load compliance
+  const compData = await api('/api/compliance');
+  if(compData) {
+    const comp = compData.data||compData;
+    document.getElementById('dash-comp').innerHTML = comp.map(c=>`
+    <div class="comp-row">
+      <div class="comp-name">${c.framework}</div>
+      <div class="comp-track"><div class="comp-fill ${c.score<60?'danger':''}" style="width:${c.score}%"></div></div>
+      <div class="comp-pct ${c.score<60?'danger':''}">${c.score}%</div>
+      <div class="cbadge ${c.score>=80?'cb-ok':c.score<60?'cb-crit':'cb-gap'}">${c.score>=80?'READY':c.score<60?'CRITICAL':'GAP'}</div>
+    </div>`).join('');
+  }
+}
+
+async function execdash() {
+  const [dashRes, riskRes, compRes] = await Promise.all([
+    api('/api/dashboard'),
+    api('/api/risks'),
+    api('/api/compliance')
+  ]);
+  const dash = dashRes ? (dashRes.data||dashRes) : null;
+  const risks = riskRes ? (riskRes.data||riskRes) : [];
+  const comp = compRes ? (compRes.data||compRes) : [];
+  const clean = (v) => String(v ?? '-').replace(/[^\\x20-\\x7E]/g, '');
+  const clean = (v) => String(v ?? '-').replace(/[^\\x20-\\x7E]/g, '');
+
+  const trend = (dash && dash.score_trend) ? dash.score_trend : [6.4,6.7,6.8,7.1,7.2,7.4,7.3,7.6];
+  const trendPath = (() => {
+    const max = Math.max(...trend), min = Math.min(...trend);
+    return trend.map((v,i)=>{
+      const x = (i/(trend.length-1))*100;
+      const norm = max===min?50:100-(((v-min)/(max-min))*70+15);
+      return `${i?'L':'M'}${x.toFixed(1)},${norm.toFixed(1)}`;
+    }).join(' ');
+  })();
+
+  const compScores = comp.length ? comp.map(c=>c.score) : [72,78,81,66,74];
+  const compLabels = comp.length ? comp.map(c=>c.framework) : ['ISO27001','SOC2','DPDP','PCI','NIST'];
+  const avgComp = comp.length ? Math.round(compScores.reduce((s,v)=>s+v,0)/compScores.length) : 74;
+
+  const totalRisks = clean(risks.length || (dash && dash.total_risks) || '-');
+  const critRisks = clean(risks.filter(r=>r.severity==='critical').length || (dash && dash.critical_risks) || '-');
+  const openTasks = clean(dash && dash.open_tasks ? dash.open_tasks : '-');
+  const vendors = clean(dash && dash.active_vendors ? dash.active_vendors : '-');
+
+  const topRisks = risks
+    .slice()
+    .sort((a,b)=>(b.score||0)-(a.score||0))
+    .slice(0,6);
+
+  document.getElementById('content').innerHTML = `\n  <div class="dash-anim">\n  <div class="g5" style="margin-bottom:18px">
+    <div class="stat-card sc-amber">
+      <div class="stat-label">Total Risks</div>
+      <div class="stat-val sv-amber">${totalRisks}</div>
+      <div class="stat-chg chg-fl">Assumed from /api/risks</div>
+      <div class="stat-icon"><svg class="kpi-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-3z"/></svg></div>
+    </div>
+    <div class="stat-card sc-red">
+      <div class="stat-label">Critical Risks</div>
+      <div class="stat-val sv-red">${critRisks}</div>
+      <div class="stat-chg chg-up">Focus list</div>
+      <div class="stat-icon"><svg class="kpi-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3l9-16z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+    </div>
+    <div class="stat-card sc-steel">
+      <div class="stat-label">Compliance Avg</div>
+      <div class="stat-val sv-ice">${avgComp}%</div>
+      <div class="stat-chg chg-dn">/api/compliance</div>
+      <div class="stat-icon"><svg class="kpi-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l4 4v14H5V3h4z"/><path d="M9 11l2 2 4-4"/></svg></div>
+    </div>
+    <div class="stat-card sc-green">
+      <div class="stat-label">Open Tasks</div>
+      <div class="stat-val sv-green">${openTasks}</div>
+      <div class="stat-chg chg-up">/api/dashboard</div>
+      <div class="stat-icon"><svg class="kpi-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6"/><path d="M9 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/><path d="M9 10h6"/><path d="M9 14h6"/></svg></div>
+    </div>
+    <div class="stat-card sc-steel">
+      <div class="stat-label">Active Vendors</div>
+      <div class="stat-val sv-ice">${vendors}</div>
+      <div class="stat-chg chg-fl">/api/dashboard</div>
+      <div class="stat-icon"><svg class="kpi-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h12v12H6z"/><path d="M12 6v12"/><path d="M6 12h12"/></svg></div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div>
+      <div class="card" style="margin-bottom:14px;padding:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--text)">Security Posture Trend</div>
+          <div style="font-family:var(--fm);font-size:10px;color:var(--dim)">TODO: wire score_trend[]</div>
+        </div>
+        <svg viewBox="0 0 100 100" width="100%" height="160" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="execTrendFill" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="rgba(16,185,138,.25)"/>
+              <stop offset="100%" stop-color="rgba(16,185,138,0)"/>
+            </linearGradient>
+          </defs>
+          <path d="${trendPath} L100,100 L0,100 Z" fill="url(#execTrendFill)" stroke="none"/>
+          <path d="${trendPath}" fill="none" stroke="var(--green)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          ${trend.map((v,i)=>`<circle cx="${(i/(trend.length-1))*100}" cy="${(() => {const max=Math.max(...trend),min=Math.min(...trend);const norm=max===min?50:100-(((v-min)/(max-min))*70+15);return norm.toFixed(1);})()}" r="1.9" fill="var(--green)"></circle>`).join('')}
+        </svg>
+        <div style="display:flex;gap:14px;margin-top:8px;font-family:var(--fm);font-size:11px;color:var(--muted)">
+          <div>Latest: <span style="color:var(--text);font-weight:700">${trend[trend.length-1]}</span></div>
+          <div>High: <span style="color:var(--text);font-weight:700">${Math.max(...trend)}</span></div>
+          <div>Low: <span style="color:var(--text);font-weight:700">${Math.min(...trend)}</span></div>
+        </div>
+      </div>
+
+      <div class="sec-label">Breakdown: Top Risks</div>
+      <div class="card" style="padding:0;overflow:hidden">
+        <table class="tbl">
+          <thead><tr><th>RISK</th><th>SEV</th><th>SCORE</th><th>OWNER</th><th>STATUS</th></tr></thead>
+          <tbody>
+            ${topRisks.length ? topRisks.map(r=>`
+              <tr onclick="showPage('risks')">
+                <td><div class="rid">${r.risk_id||'-'}</div><div class="rname">${r.name||'Unnamed Risk'}</div></td>
+                <td><span class="sev s-${r.severity==='critical'?'crit':r.severity==='high'?'high':'med'}">SEV  ${(r.severity||'medium').toUpperCase()}</span></td>
+                <td><div class="bar-wrap"><div class="bar"><div class="bf ${r.severity==='critical'?'bf-r':r.severity==='high'?'bf-a':'bf-p'}" style="width:${((r.score||0)/25)*100}%"></div></div><div class="bnum">${r.score||'-'}</div></div></td>
+                <td style="font-size:12px;color:var(--text)">${r.owner||'-'}</td>
+                <td style="font-family:var(--fm);font-size:10px;color:var(--muted)">${r.status||'open'}</td>
+              </tr>`).join('') : `<tr><td colspan="5" style="padding:14px;font-family:var(--fm);color:var(--muted)">No risk data yet. TODO: connect /api/risks.</td></tr>`}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:14px;padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <div style="font-family:var(--fd);font-size:13px;font-weight:800;color:var(--text)">Compliance Trend</div>
+          <div style="font-family:var(--fm);font-size:10px;color:var(--dim)">TODO: time series per framework</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;align-items:end;height:90px">
+          ${compScores.slice(0,5).map((v,i)=>`<div style="background:rgba(126,200,227,.15);border:1px solid rgba(126,200,227,.25);border-radius:6px 6px 3px 3px;height:${v}%;min-height:22px;position:relative">
+            <span style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:9px;color:var(--muted)">${v}%</span>
+            <span style="position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:8px;color:var(--dim)">${compLabels[i]||''}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+
+      <div class="sec-label">Assumptions & TODOs</div>
+      <div style="background:rgba(255,255,255,.03);border:1px dashed var(--border);border-radius:10px;padding:10px 12px;font-family:var(--fm);font-size:11px;color:var(--muted)">
+        KPIs read from /api/dashboard and /api/risks when present. Trends use placeholders if time-series is missing. Replace the compliance bars with a proper history feed (e.g., /api/compliance/trend).
+      </div>
+    </div>
+  </div>\n  </div>`;
+}
+async function risks() {
+  const d = await api('/api/risks');
+  if(!d) return;
+  const risks = d.data||d;
+  document.getElementById('content').innerHTML = `
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+    <div class="stat-card sc-red" style="flex:1;padding:12px 16px">
+      <div class="stat-label">Total</div><div class="stat-val sv-white" style="font-size:24px">${risks.length}</div>
+    </div>
+    <div class="stat-card sc-red" style="flex:1;padding:12px 16px">
+      <div class="stat-label">Critical</div><div class="stat-val sv-red" style="font-size:24px">${risks.filter(r=>r.severity==='critical').length}</div>
+    </div>
+    <div class="stat-card sc-amber" style="flex:1;padding:12px 16px">
+      <div class="stat-label">High</div><div class="stat-val sv-amber" style="font-size:24px">${risks.filter(r=>r.severity==='high').length}</div>
+    </div>
+    <div class="stat-card sc-green" style="flex:1;padding:12px 16px">
+      <div class="stat-label">Open</div><div class="stat-val sv-ice" style="font-size:24px">${risks.filter(r=>r.status==='open').length}</div>
+    </div>
+  </div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr>
+        <th>RISK</th><th>SEVERITY</th><th>SCORE</th><th>TREATMENT</th><th>OWNER</th><th>ASSET</th>
+      </tr></thead>
+      <tbody>
+        ${risks.map(r=>`<tr onclick="toast('${r.risk_id}: ${r.name.replace(/'/g,'')} - Score ${r.score}','i')">
+          <td><div class="rid">${r.risk_id}</div><div class="rname">${r.name}</div><div class="rcat">${r.category}</div></td>
+          <td><span class="sev s-${r.severity==='critical'?'crit':r.severity==='high'?'high':r.severity==='medium'?'med':'low'}">SEV  ${r.severity.toUpperCase()}</span></td>
+          <td><div class="bar-wrap"><div class="bar"><div class="bf ${r.severity==='critical'?'bf-r':r.severity==='high'?'bf-a':'bf-p'}" style="width:${(r.score/25)*100}%"></div></div><div class="bnum">${r.score}</div></div></td>
+          <td style="font-family:var(--fm);font-size:10px;color:var(--muted);text-transform:uppercase">${r.treatment||'-'}</td>
+          <td style="font-size:12px;color:var(--text)">${r.owner||'-'}</td>
+          <td style="font-family:var(--fm);font-size:9.5px;color:var(--dim)">${(r.asset||'-').slice(0,22)}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+  </div>\n  </div>`;
+}
+
+async function rosi() {
+  const d = await api('/api/rosi');
+  if(!d) return;
+  const items = d.data||d;
+  const avg = d.avg_rosi || Math.round(items.reduce((s,x)=>s+x.rosi,0)/items.length);
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-green"><div class="stat-label">Avg ROSI</div><div class="stat-val sv-green">${avg}%</div><div class="stat-chg chg-dn">vs 245% benchmark</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">Total Invested</div><div class="stat-val sv-ice" style="font-size:24px">Ã¢â€šÂ¹${(items.reduce((s,x)=>s+x.cost,0)/100000).toFixed(0)}L</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">Risk Reduced</div><div class="stat-val sv-green" style="font-size:24px">Ã¢â€šÂ¹${(items.reduce((s,x)=>s+(x.ale_before-x.ale_after),0)/10000000).toFixed(1)}Cr</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Scenarios</div><div class="stat-val sv-amber">${items.length}</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px">
+    ${items.map((r,i)=>`
+    <div class="rosi-card ${r.rosi>1000?'best':''}">
+      <div class="rc-tag">${r.rosi>1000?'Ã¢Â­Â BEST PERFORMER':r.status.toUpperCase()} Ã‚Â· ${r.category}</div>
+      <div class="rc-name">${r.name}</div>
+      <div class="rc-nums">
+        <div><div class="rcn-l">ALE Before</div><div class="rcn-v r">Ã¢â€šÂ¹${(r.ale_before/10000000).toFixed(2)}Cr</div></div>
+        <div><div class="rcn-l">ALE After</div><div class="rcn-v g">Ã¢â€šÂ¹${(r.ale_after/100000).toFixed(1)}L</div></div>
+        <div><div class="rcn-l">ROSI</div><div class="rcn-v ${r.rosi>1000?'big':'g'}">${r.rosi}%</div></div>
+      </div>
+    </div>`).join('')}
+  </div>\n  </div>`;
+}
+
+async function assets() {
+  const d = await api('/api/assets');
+  if(!d) return;
+  const assets = d.data||d;
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-steel"><div class="stat-label">Total Assets</div><div class="stat-val sv-ice">${assets.length}</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">Critical</div><div class="stat-val sv-red">${assets.filter(a=>a.criticality==='critical').length}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Total Value</div><div class="stat-val sv-amber" style="font-size:20px">Ã¢â€šÂ¹${(assets.reduce((s,a)=>s+a.value,0)/10000000).toFixed(0)}Cr</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">Types</div><div class="stat-val sv-green">${[...new Set(assets.map(a=>a.type))].length}</div></div>
+  </div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>ASSET</th><th>TYPE</th><th>CRITICALITY</th><th>OWNER</th><th>VALUE</th></tr></thead>
+      <tbody>${assets.map(a=>`<tr>
+        <td><div class="rname">${a.name}</div></td>
+        <td style="font-family:var(--fm);font-size:10px;color:var(--muted)">${a.type}</td>
+        <td><span class="sev s-${a.criticality==='critical'?'crit':a.criticality==='high'?'high':'med'}">SEV  ${a.criticality.toUpperCase()}</span></td>
+        <td style="font-size:12px;color:var(--text)">${a.owner}</td>
+        <td style="font-family:var(--fd);font-size:16px;font-weight:700;color:var(--ice)">Ã¢â€šÂ¹${(a.value/10000000).toFixed(2)}Cr</td>
+      </tr>`).join('')}</tbody>
+    </table>
+  </div>\n  </div>`;
+}
+
+async function compliance() {
+  const d = await api('/api/compliance');
+  if(!d) return;
+  const comp = d.data||d;
+  const avg = Math.round(comp.reduce((s,c)=>s+c.score,0)/comp.length);
+  const ready = comp.filter(c=>c.score>=80).length;
+  const critical = comp.filter(c=>c.score<60).length;
+  const inGap = comp.length - ready - critical;
+  const nextAudit = comp.map(c=>c.next_audit).filter(Boolean)[0] || 'TBD';
+  const state = { filter:'all', sort:'risk' };
+
+  function applyFilter(list) {
+    if(state.filter==='critical') return list.filter(c=>c.score<60);
+    if(state.filter==='gap') return list.filter(c=>c.score>=60 && c.score<80);
+    if(state.filter==='ready') return list.filter(c=>c.score>=80);
+    return list;
+  }
+  function applySort(list) {
+    if(state.sort==='alpha') return [...list].sort((a,b)=>a.framework.localeCompare(b.framework));
+    if(state.sort==='score_desc') return [...list].sort((a,b)=>b.score-a.score);
+    return [...list].sort((a,b)=>a.score-b.score);
+  }
+  function renderSections() {
+    const filtered = applySort(applyFilter(comp));
+    document.getElementById('comp-board').innerHTML = filtered.map(c=>`
+      <div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="min-width:120px;font-size:12px;font-weight:700;color:var(--text)">${c.framework}</div>
+          <div style="flex:1" class="comp-track"><div class="comp-fill ${c.score<60?'danger':''}" style="width:${c.score}%"></div></div>
+          <div style="min-width:52px;text-align:right" class="comp-pct ${c.score<60?'danger':''}">${c.score}%</div>
+          <div class="cbadge ${c.score>=80?'cb-ok':c.score<60?'cb-crit':'cb-gap'}">${c.score>=80?'READY':c.score<60?'CRITICAL':'GAP'}</div>
+        </div>
+        <div style="display:flex;gap:16px;margin-top:6px;font-family:var(--fm);font-size:9px;color:var(--dim)">
+          <div>${c.total_controls} controls</div>
+          <div>${c.implemented} implemented</div>
+          <div>Next audit: ${c.next_audit}</div>
+        </div>
+      </div>`).join('');
+
+    document.getElementById('comp-actions').innerHTML = applySort(comp).filter(c=>c.score<75).slice(0,4).map((c,i)=>`
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="width:26px;height:26px;border-radius:8px;background:rgba(196,30,58,.15);color:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:12px;font-weight:800">${i+1}</div>
+          <div style="flex:1">
+            <div style="font-size:12px;font-weight:700;color:var(--text)">${c.framework}</div>
+            <div style="font-family:var(--fm);font-size:9.5px;color:var(--dim)">Close ${(100-c.score)}% gap before ${c.next_audit}</div>
+          </div>
+          <span class="cbadge ${c.score<60?'cb-crit':'cb-gap'}">${c.score<60?'CRITICAL':'GAP'}</span>
+        </div>`).join('');
+
+    document.getElementById('comp-evidence').innerHTML = applySort(comp).map(c=>`
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="flex:1;font-size:12px;color:var(--text)">${c.framework}</div>
+          <div style="font-family:var(--fm);font-size:9px;color:var(--dim)">${c.implemented}/${c.total_controls}</div>
+          <div class="cbadge ${c.score>=80?'cb-ok':c.score<60?'cb-crit':'cb-gap'}">${c.score>=80?'READY':c.score<60?'CRITICAL':'GAP'}</div>
+        </div>`).join('');
+  }
+
+  window.setCompFilter = f => { state.filter = f; renderSections(); };
+  window.setCompSort = s => { state.sort = s; renderSections(); };
+
+  document.getElementById('content').innerHTML = `
+  <div class="dash-anim">
+  <div class="g5" style="margin-bottom:18px">
+    <div class="stat-card sc-steel"><div class="stat-label">Avg Coverage</div><div class="stat-val sv-ice">${avg}%</div><div class="stat-chg chg-fl">Portfolio view</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">Critical Gaps</div><div class="stat-val sv-red">${critical}</div><div class="stat-chg chg-up">Immediate focus</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">In Progress</div><div class="stat-val sv-amber">${inGap}</div><div class="stat-chg chg-fl">Remediation ongoing</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">Ready</div><div class="stat-val sv-green">${ready}</div><div class="stat-chg chg-dn">Audit ready</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Next Audit</div><div class="stat-val sv-ice" style="font-size:16px">${nextAudit}</div><div class="stat-chg chg-fl">Calendar target</div></div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+        <div>
+          <div class="card-title">Compliance Board</div>
+          <div style="font-family:var(--fm);font-size:10px;color:var(--dim)">Filter + sort to focus the backlog</div>
+        </div>
+        <div style="display:flex;gap:6px">
+          <button onclick="setCompSort('risk')" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;cursor:pointer">Risk</button>
+          <button onclick="setCompSort('score_desc')" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;cursor:pointer">Score</button>
+          <button onclick="setCompSort('alpha')" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;cursor:pointer">A-Z</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:12px">
+        <button onclick="setCompFilter('all')" style="padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;cursor:pointer">All</button>
+        <button onclick="setCompFilter('critical')" style="padding:6px 10px;border-radius:999px;border:1px solid rgba(196,30,58,.4);background:rgba(196,30,58,.08);color:var(--red);font-size:10px;cursor:pointer">Critical</button>
+        <button onclick="setCompFilter('gap')" style="padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.4);background:rgba(245,158,11,.08);color:var(--amber);font-size:10px;cursor:pointer">Gap</button>
+        <button onclick="setCompFilter('ready')" style="padding:6px 10px;border-radius:999px;border:1px solid rgba(16,185,138,.35);background:rgba(16,185,138,.08);color:var(--green);font-size:10px;cursor:pointer">Ready</button>
+      </div>
+      <div id="comp-board"></div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="card-title" style="margin-bottom:12px">Priority Actions</div>
+        <div id="comp-actions"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="margin-bottom:12px">Evidence Readiness</div>
+        <div id="comp-evidence"></div>
+      </div>
+    </div>
+  </div>
+  </div>`;
+
+  renderSections();
+}
+
+async function tasks() {
+  const d = await api('/api/tasks');
+  if(!d) return;
+  const tasks = d.data||d;
+  const overdue = tasks.filter(t=>t.status==='overdue');
+  const open = tasks.filter(t=>t.status==='open' || t.status==='in_progress');
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-red"><div class="stat-label">Overdue</div><div class="stat-val sv-red">${overdue.length}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Open</div><div class="stat-val sv-amber">${open.length}</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Total</div><div class="stat-val sv-ice">${tasks.length}</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">Closed</div><div class="stat-val sv-green">${tasks.filter(t=>t.status==='closed').length}</div></div>
+  </div>
+  ${tasks.map(t=>`<div class="task-item t-${t.priority}">
+    <div class="ti-num">${t.task_id}</div>
+    <div class="ti-body">
+      <div class="ti-title">${t.title}</div>
+      <div class="ti-meta">
+        <span class="ti-chip owner">Ã°Å¸â€˜Â¤ ${t.owner}</span>
+        <span class="ti-chip due">Ã°Å¸â€œâ€¦ ${t.due}</span>
+        <span class="ti-chip ${t.status==='overdue'?'urg':''}">${t.status}</span>
+        <span class="ti-chip">${t.priority}</span>
+      </div>
+    </div>
+    <button onclick="updateTask('${t.task_id}')" style="padding:5px 12px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer">Mark Done</button>
+  </div>`).join('')}`;
+}
+
+async function vendors() {
+  const d = await api('/api/vendors');
+  if(!d) return;
+  const vendors = d.data||d;
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-steel"><div class="stat-label">Total Vendors</div><div class="stat-val sv-ice">${vendors.length}</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">High Risk</div><div class="stat-val sv-red">${vendors.filter(v=>v.risk_score>=50).length}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Review Due</div><div class="stat-val sv-amber">${vendors.filter(v=>v.status==='overdue'||v.status==='review').length}</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">Approved</div><div class="stat-val sv-green">${vendors.filter(v=>v.status==='approved').length}</div></div>
+  </div>
+  <div class="g2">
+    ${vendors.map(v=>`<div class="vendor-row">
+      <div style="width:34px;height:34px;border-radius:8px;flex-shrink:0;background:linear-gradient(135deg,${v.risk_score>=50?'#DC2626,#991B1B':'#2D6A9F,#1A3D5C'});display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:13px;font-weight:900;color:#fff">${v.name.slice(0,2).toUpperCase()}</div>
+      <div style="flex:1">
+        <div class="vr-name">${v.name}</div>
+        <div class="vr-cat">${v.category} Ã‚Â· ${v.access_level} access</div>
+      </div>
+      <div class="vr-score ${v.risk_score>=50?'vs-high':v.risk_score>=30?'vs-med':'vs-low'}">${v.risk_score}</div>
+      <div class="vr-badge ${v.status==='approved'?'vb-ok':v.status==='overdue'?'vb-ov':'vb-rev'}">${v.status}</div>
+    </div>`).join('')}
+  </div>\n  </div>`;
+}
+
+function ccm() {
+  const ccmItems = [
+    {label:'SSL Certificate',status:'pass',detail:'Valid Ã‚Â· 287 days remaining',host:'api.acmefintech.com'},
+    {label:'Port Scan',status:'warn',detail:'Port 3389 exposed (RDP)',host:'10.0.2.15'},
+    {label:'MFA - Admin',status:'fail',detail:'25 admin accounts without MFA',host:'Azure AD'},
+    {label:'Backup Recency',status:'pass',detail:'Last backup: 4 hours ago',host:'CloudBackup'},
+    {label:'Firewall Rules',status:'pass',detail:'147 rules Ã‚Â· No anomalies',host:'AWS Security Groups'},
+    {label:'Password Policy',status:'warn',detail:'3 accounts with 90+ day passwords',host:'Active Directory'},
+  ];
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-green"><div class="stat-label">Passing</div><div class="stat-val sv-green">${ccmItems.filter(c=>c.status==='pass').length}</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">Failing</div><div class="stat-val sv-red">${ccmItems.filter(c=>c.status==='fail').length}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Warning</div><div class="stat-val sv-amber">${ccmItems.filter(c=>c.status==='warn').length}</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Last Run</div><div class="stat-val sv-ice" style="font-size:14px">09:00 IST</div><div class="stat-chg chg-fl">Every 15 min</div></div>
+  </div>
+  <div class="luma-card" style="margin-bottom:16px">
+    <div class="lc-head"><div class="lc-av">L</div><div><div class="lc-lbl">Ã¢Å“Â¦ LUMA CCM Alert</div><div class="lc-time">Today 09:00 IST Ã‚Â· Automated Scan</div></div></div>
+    <div class="lc-body">Ã¢Å¡Â Ã¯Â¸Â <strong>MFA missing on 25 admin accounts</strong> - yeh RSK-008 ka committed treatment tha. Aaj tak implement nahi hua. <em>Immediate action required.</em></div>
+  </div>
+  <div class="ccm-grid">
+    ${ccmItems.map(c=>`<div class="ccm-item ${c.status}">
+      <div class="ccm-label">${c.host}</div>
+      <div class="ccm-status">${c.status==='pass'?'Ã¢Å“â€¦ PASS':c.status==='fail'?'Ã¢ÂÅ’ FAIL':'Ã¢Å¡Â Ã¯Â¸Â WARN'}</div>
+      <div class="ccm-detail">${c.detail}</div>
+      <div style="font-family:var(--fd);font-size:13px;font-weight:700;margin-top:6px;color:var(--muted)">${c.label}</div>
+    </div>`).join('')}
+  </div>\n  </div>`;
+}
+
+function trust() {
+  const fw = [{fw:'ISO 27001',pct:67,status:'gap'},{fw:'PCI-DSS v4',pct:82,status:'live'},{fw:'DPDP Act',pct:55,status:'gap'},{fw:'SOC 2 Type I',pct:90,status:'live'}];
+  document.getElementById('content').innerHTML = `
+  <div class="g2">
+    <div>
+      <div class="luma-card" style="margin-bottom:16px">
+        <div class="lc-head"><div class="lc-av">L</div><div><div class="lc-lbl">Ã¢Å“Â¦ Trust Center Status</div><div class="lc-time">Live Ã‚Â· 47 visitors this month</div></div></div>
+        <div class="lc-body">Trust Center <strong>live hai</strong> - <em>47 visitors</em> is month. 3 prospects ne NDA sign kiya. PCI-DSS aur SOC 2 badges show ho rahe hain.</div>
+      </div>
+      <div class="sec-label">Compliance Badges</div>
+      ${fw.map(f=>`<div class="tc-badge">
+        <div><div class="tc-fw">${f.fw}</div></div>
+        <div class="tc-pct ${f.pct<70?'':''}" style="color:${f.pct>=80?'var(--green)':f.pct<60?'#EF4444':'var(--amber)'}">${f.pct}%</div>
+        <div class="tc-status ${f.pct>=75?'tc-live':'tc-gap'}">${f.pct>=75?'Live':'Gap'}</div>
+      </div>`).join('')}
+      <div class="tc-url">
+        <span>Ã°Å¸Å’Â trust.lumerafoundry.com/acme-fintech</span>
+        <span style="font-family:var(--fm);font-size:9px;color:var(--green);background:rgba(16,185,138,.1);padding:2px 8px;border-radius:99px">LIVE</span>
+      </div>
+    </div>
+    <div>
+      <div class="sec-label">Visitor Log</div>
+      ${[{email:'ciso@hdfc.com',time:'2h ago'},{email:'security@paytm.com',time:'1d ago'},{email:'risk@bajaj.com',time:'3d ago'}].map(v=>`
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 13px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:8px;margin-bottom:6px">
+        <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--steel),var(--ice));display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:12px;font-weight:800;color:#fff">${v.email[0].toUpperCase()}</div>
+        <div style="flex:1"><div style="font-size:12px;color:var(--text)">${v.email}</div><div style="font-family:var(--fm);font-size:9px;color:var(--dim)">NDA signed Ã‚Â· ${v.time}</div></div>
+        <div style="width:7px;height:7px;border-radius:50%;background:var(--green)"></div>
+      </div>`).join('')}
+      <div class="sec-label">Settings</div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <span style="font-size:13px;color:var(--text)">Public Visibility</span>
+          <div style="width:40px;height:22px;border-radius:99px;background:var(--green);position:relative;cursor:pointer"><div style="position:absolute;right:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff"></div></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;color:var(--text)">NDA Gating</span>
+          <div style="width:40px;height:22px;border-radius:99px;background:var(--steel2);position:relative;cursor:pointer"><div style="position:absolute;right:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>\n  </div>`;
+}
+
+function regchanges() {
+  const regs = [
+    {id:1,src:'RBI',title:'Master Direction on Cyber Resilience - NBFC Update',desc:'Section 4.2 mein incident reporting timeline 6 hours se 4 hours kar di gayi hai. Log monitoring mandatory.',impact:'high',status:'unread',date:'2025-03-08'},
+    {id:2,src:'DPDP',title:'Data Principal Rights - Implementation Deadline',desc:'Section 13 (erasure) aur Section 6 (consent) ke liye 90-day implementation window announce hua.',impact:'high',status:'unread',date:'2025-03-06'},
+    {id:3,src:'SEBI',title:'CSCRF Amendment - Cloud Security Controls',desc:'Cloud workloads ke liye additional controls mandatory. ISO 27017 adoption recommended.',impact:'medium',status:'read',date:'2025-02-28'},
+    {id:4,src:'CERT-In',title:'Vulnerability Disclosure Policy Update',desc:'New CVE reporting format mandatory for all financial entities from Q2 2025.',impact:'medium',status:'read',date:'2025-02-20'},
+  ];
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-amber"><div class="stat-label">Unread</div><div class="stat-val sv-amber">${regs.filter(r=>r.status==='unread').length}</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">High Impact</div><div class="stat-val sv-red">${regs.filter(r=>r.impact==='high').length}</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Sources Monitored</div><div class="stat-val sv-ice">8</div><div class="stat-chg chg-fl">RBIÃ‚Â·SEBIÃ‚Â·DPDPÃ‚Â·CERT-In+4</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">AI Analysis</div><div class="stat-val sv-green" style="font-size:14px">Active</div><div class="stat-chg chg-dn">Gemini powered</div></div>
+  </div>
+  ${regs.map(r=>`<div class="reg-item ${r.status}" onclick="this.classList.remove('unread')">
+    <div class="ri-head">
+      <span class="ri-src">${r.src}</span>
+      <span style="font-family:var(--fm);font-size:8.5px;color:var(--dim)">${r.date}</span>
+      ${r.status==='unread'?'<span style="width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 5px var(--amber);display:inline-block"></span>':''}
+    </div>
+    <div class="ri-title">${r.title}</div>
+    <div class="ri-desc">${r.desc}</div>
+    <div class="ri-foot">
+      <span class="ri-impact ${r.impact==='high'?'ri-hi':'ri-mid'}">${r.impact.toUpperCase()} IMPACT</span>
+      <span class="ri-ack" onclick="event.stopPropagation();this.textContent='Ã¢Å“â€œ Acknowledged';toast('Acknowledged: '+\`${r.src}\`,'s')">Acknowledge</span>
+    </div>
+  </div>`).join('')}`;
+}
+
+function crq() {
+  document.getElementById('content').innerHTML = `
+  <div class="g2">
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="card-title" style="margin-bottom:4px">Monte Carlo Simulation</div>
+        <div class="card-sub" style="margin-bottom:16px">10,000 runs Ã‚Â· FAIR Model</div>
+        <div class="form-group"><label class="form-label">Risk Scenario</label>
+          <select class="form-select" id="crq-risk"><option>Ransomware on Cloud Storage</option><option>Data Breach via API</option><option>Insider Threat</option></select>
+        </div>
+        <div class="g2" style="gap:10px">
+          <div class="form-group"><label class="form-label">Min Loss (Ã¢â€šÂ¹L)</label><input class="form-input" id="crq-min" type="number" value="50"/></div>
+          <div class="form-group"><label class="form-label">Max Loss (Ã¢â€šÂ¹L)</label><input class="form-input" id="crq-max" type="number" value="500"/></div>
+        </div>
+        <div class="g2" style="gap:10px">
+          <div class="form-group"><label class="form-label">Freq Min/yr</label><input class="form-input" id="crq-fmin" type="number" step="0.1" value="0.2"/></div>
+          <div class="form-group"><label class="form-label">Freq Max/yr</label><input class="form-input" id="crq-fmax" type="number" step="0.1" value="1.5"/></div>
+        </div>
+        <button class="btn btn-red" style="width:100%" onclick="runMonteCarlo()">Ã¢â€“Â¶ Run Simulation (10,000 runs)</button>
+      </div>
+    </div>
+    <div id="crq-result">
+      <div class="card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)">
+        <div class="card-title" style="margin-bottom:14px">Last Simulation Results</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
+          <div><div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-bottom:4px">P5 (Best)</div><div style="font-family:var(--fd);font-size:22px;font-weight:900;color:var(--green)">Ã¢â€šÂ¹28L</div></div>
+          <div><div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-bottom:4px">P50 (Most Likely)</div><div style="font-family:var(--fd);font-size:22px;font-weight:900;color:var(--amber)">Ã¢â€šÂ¹1.2Cr</div></div>
+          <div><div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-bottom:4px">P95 (Worst)</div><div style="font-family:var(--fd);font-size:22px;font-weight:900;color:#EF4444">Ã¢â€šÂ¹4.5Cr</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:12px;margin-bottom:14px">
+          <div style="font-family:var(--fm);font-size:9px;color:var(--dim);margin-bottom:8px">LOSS DISTRIBUTION</div>
+          <div style="display:flex;align-items:flex-end;gap:3px;height:60px">
+            ${[3,7,14,22,30,28,20,15,9,6].map((h,i)=>`<div style="flex:1;background:${i<3?'var(--green)':i<6?'var(--amber)':'#EF4444'};height:${h*2}px;border-radius:2px 2px 0 0;opacity:.8"></div>`).join('')}
+          </div>
+        </div>
+        <div class="luma-card" style="padding:12px 14px">
+          <div class="lc-head"><div class="lc-av">L</div><div><div class="lc-lbl">LUMA Board Recommendation</div></div></div>
+          <div class="lc-body" style="font-size:12px"><strong>85% probability</strong> mein Ã¢â€šÂ¹1.2CrÃ¢â‚¬â€œÃ¢â€šÂ¹4.5Cr loss hoga. Board ko recommend karo: Ã¢â€šÂ¹60L control investment karega - 340% ROSI milega.</div>
+        </div>
+      </div>
+    </div>
+  </div>\n  </div>`;
+}
+
+function runMonteCarlo() {
+  const min = parseFloat(document.getElementById('crq-min').value)*100000;
+  const max = parseFloat(document.getElementById('crq-max').value)*100000;
+  const fMin = parseFloat(document.getElementById('crq-fmin').value);
+  const fMax = parseFloat(document.getElementById('crq-fmax').value);
+  const runs = 10000;
+  const results = [];
+  for(let i=0;i<runs;i++){
+    const f = fMin + Math.random()*(fMax-fMin);
+    const l = min + Math.random()*(max-min);
+    results.push(f*l);
+  }
+  results.sort((a,b)=>a-b);
+  const p5 = results[Math.floor(runs*.05)];
+  const p50 = results[Math.floor(runs*.50)];
+  const p95 = results[Math.floor(runs*.95)];
+  const fmt = v => v>=10000000?`Ã¢â€šÂ¹${(v/10000000).toFixed(1)}Cr`:`Ã¢â€šÂ¹${(v/100000).toFixed(0)}L`;
+  document.getElementById('crq-result').innerHTML = `
+  <div class="card" style="background:rgba(16,185,138,.05);border-color:rgba(16,185,138,.2)">
+    <div class="card-title" style="margin-bottom:4px">Simulation Complete Ã¢Å“â€¦</div>
+    <div class="card-sub" style="margin-bottom:16px">${runs.toLocaleString()} runs completed</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
+      <div><div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-bottom:4px">P5 (Best Case)</div><div style="font-family:var(--fd);font-size:22px;font-weight:900;color:var(--green)">${fmt(p5)}</div></div>
+      <div><div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-bottom:4px">P50 (Most Likely)</div><div style="font-family:var(--fd);font-size:22px;font-weight:900;color:var(--amber)">${fmt(p50)}</div></div>
+      <div><div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-bottom:4px">P95 (Worst Case)</div><div style="font-family:var(--fd);font-size:22px;font-weight:900;color:#EF4444">${fmt(p95)}</div></div>
+    </div>
+    <div class="luma-card" style="padding:12px 14px">
+      <div class="lc-head"><div class="lc-av">L</div><div><div class="lc-lbl">LUMA Board Recommendation</div></div></div>
+      <div class="lc-body" style="font-size:12px"><strong>95% probability</strong> mein max loss ${fmt(p95)} hoga. P50 (most likely) ${fmt(p50)}. Board ko batao: control investment ab zaroori hai.</div>
+    </div>
+  </div>\n  </div>`;
+  toast('Monte Carlo simulation complete!', 's');
+}
+
+function agentic() {
+  const actions = [
+    {id:1,type:'TASK CREATED',title:'CVE-2024-1234 patch task auto-created',detail:'RSK-007 ke liye LUMA ne task create ki - IT Head ko assign, due 15 March.',done:false},
+    {id:2,type:'REMINDER SENT',title:'MFA implementation reminder sent',detail:'RSK-008 owner (IT Head) ko 3rd reminder bheja - 7 din se overdue.',done:false},
+    {id:3,type:'ESCALATED',title:'RSK-003 escalated to CISO',detail:'Insider threat 30+ days without treatment - auto-escalated.',done:true},
+    {id:4,type:'ZOMBIE DETECTED',title:'RSK-012 zombie acceptance flagged',detail:'BEC risk 400+ din se accepted - LUMA ne re-review request create ki.',done:true},
+  ];
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-steel"><div class="stat-label">Actions Today</div><div class="stat-val sv-ice">4</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">Completed</div><div class="stat-val sv-green">2</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Pending Confirm</div><div class="stat-val sv-amber">2</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">Tools Active</div><div class="stat-val sv-white" style="font-size:14px">5 Tools</div><div class="stat-chg chg-dn">Gemini Function Calling</div></div>
+  </div>
+  <div class="luma-card" style="margin-bottom:16px">
+    <div class="lc-head"><div class="lc-av">L</div><div><div class="lc-lbl">Ã¢Å“Â¦ Agentic LUMA - Available Actions</div><div class="lc-time">5 tools active: create_task Ã‚Â· send_reminder Ã‚Â· escalate_risk Ã‚Â· update_status Ã‚Â· notify_owner</div></div></div>
+    <div class="lc-body">Try: <strong>"LUMA, RSK-001 ke liye task create karo IT Head ko assign"</strong> - main confirm karunga phir execute karunga.</div>
+  </div>
+  ${actions.map(a=>`<div class="action-card">
+    <div class="ac-head">
+      <span class="ac-type">${a.type}</span>
+      <span class="ac-time">Today Ã‚Â· Auto-triggered</span>
+    </div>
+    <div class="ac-title">${a.title}</div>
+    <div class="ac-detail">${a.detail}</div>
+    <div class="ac-foot">
+      ${a.done?`<span class="ac-btn ac-done">Ã¢Å“â€œ Executed</span>`:`<button class="ac-btn ac-confirm" onclick="confirmAction(${a.id},this)">Ã¢Å“â€œ Confirm & Execute</button><button class="ac-btn ac-dismiss" onclick="this.parentElement.parentElement.style.opacity='.3'">Dismiss</button>`}
+    </div>
+  </div>`).join('')}`;
+}
+
+function confirmAction(id, btn) {
+  btn.textContent = 'Ã¢Å¸Â³ Executing...';
+  btn.disabled = true;
+  setTimeout(()=>{
+    btn.className = 'ac-btn ac-done';
+    btn.textContent = 'Ã¢Å“â€œ Executed';
+    btn.nextElementSibling?.remove();
+    toast('LUMA action executed successfully!', 's');
+  }, 1200);
+}
+
+function asm() {
+  const vendors = [
+    {name:'Razorpay',host:'razorpay.com',score:18,ports:['443','80'],breaches:0,ssl:'A+'},
+    {name:'AWS (Amazon)',host:'aws.amazon.com',score:12,ports:['443','80'],breaches:0,ssl:'A+'},
+    {name:'Infosys BPO',host:'infosys.com',score:52,ports:['443','80','8080','22'],breaches:1,ssl:'B'},
+    {name:'Local IT Support',host:'localit.in',score:74,ports:['443','80','3389','21'],breaches:2,ssl:'C'},
+  ];
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-green"><div class="stat-label">Low Risk</div><div class="stat-val sv-green">${vendors.filter(v=>v.score<30).length}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Medium Risk</div><div class="stat-val sv-amber">${vendors.filter(v=>v.score>=30&&v.score<60).length}</div></div>
+    <div class="stat-card sc-red"><div class="stat-label">High Risk</div><div class="stat-val sv-red">${vendors.filter(v=>v.score>=60).length}</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Sources</div><div class="stat-val sv-ice" style="font-size:14px">4 APIs</div><div class="stat-chg chg-fl">ShodanÃ‚Â·VTÃ‚Â·HIBPÃ‚Â·SSL</div></div>
+  </div>
+  <div class="g2">
+    ${vendors.map(v=>`<div class="asm-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div class="asm-host">${v.host}</div>
+        <div style="font-family:var(--fm);font-size:9px;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--dim)">SSL: ${v.ssl}</div>
+      </div>
+      <div style="font-family:var(--fd);font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px">${v.name}</div>
+      <div class="asm-ports">
+        ${v.ports.map(p=>`<span class="port-chip ${['3389','21','8080'].includes(p)?'pc-open':'pc-safe'}">${p}</span>`).join('')}
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div class="asm-score ${v.score>=60?'high':v.score>=30?'med':'low'}">${v.score}</div>
+          <div style="font-family:var(--fm);font-size:8.5px;color:var(--dim)">ASM Risk Score</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--fd);font-size:18px;font-weight:800;color:${v.breaches>0?'#EF4444':'var(--green)'}">${v.breaches}</div>
+          <div style="font-family:var(--fm);font-size:8.5px;color:var(--dim)">Breaches Found</div>
+        </div>
+      </div>
+    </div>`).join('')}
+  </div>\n  </div>`;
+}
+
+function devsecops() {
+  const findings = [
+    {repo:'acme-payment-api',file:'src/api/payments.js',line:142,sev:'critical',fw:'PCI-DSS',clause:'Req 6.3.1',msg:'Hardcoded API key detected in source code',pr:'#47'},
+    {repo:'acme-payment-api',file:'src/auth/login.js',line:89,sev:'high',fw:'ISO 27001',clause:'A.9.4.2',msg:'Password logged in plaintext - audit trail risk',pr:'#47'},
+    {repo:'acme-core',file:'config/database.js',line:34,sev:'high',fw:'DPDP',clause:'Section 8',msg:'Database credentials not using secrets manager',pr:'#52'},
+    {repo:'acme-core',file:'src/pii-handler.js',line:201,sev:'medium',fw:'DPDP',clause:'Section 4',msg:'PII data not encrypted before storage',pr:'#52'},
+  ];
+  document.getElementById('content').innerHTML = `
+  <div class="g4" style="margin-bottom:18px">
+    <div class="stat-card sc-red"><div class="stat-label">Critical</div><div class="stat-val sv-red">${findings.filter(f=>f.sev==='critical').length}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">High</div><div class="stat-val sv-amber">${findings.filter(f=>f.sev==='high').length}</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Repos</div><div class="stat-val sv-ice">${[...new Set(findings.map(f=>f.repo))].length}</div></div>
+    <div class="stat-card sc-green"><div class="stat-label">PRs Scanned</div><div class="stat-val sv-green">12</div></div>
+  </div>
+  <div class="luma-card" style="margin-bottom:16px">
+    <div class="lc-head"><div class="lc-av">L</div><div><div class="lc-lbl">Ã¢Å“Â¦ LUMA DevSecOps Alert</div><div class="lc-time">PR #47 Ã‚Â· acme-payment-api</div></div></div>
+    <div class="lc-body"><em>PR #47 block kiya gaya</em> - <strong>hardcoded API key</strong> detect hua PCI-DSS Req 6.3.1 violate karta hai. Developer ko notify kiya gaya.</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 14px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:9px">
+    <span style="font-size:18px">Ã¢Å¡â„¢Ã¯Â¸Â</span>
+    <div style="flex:1"><div style="font-family:var(--fd);font-size:13px;font-weight:700;color:var(--text)">GitHub Actions Connected</div>
+    <div style="font-family:var(--fm);font-size:9px;color:var(--dim)">lf-riskrosi-check.yml Ã‚Â· 2 repos active Ã‚Â· Webhook: connected</div></div>
+    <span style="font-family:var(--fm);font-size:9px;padding:2px 10px;border-radius:99px;background:rgba(16,185,138,.1);color:var(--green);border:1px solid rgba(16,185,138,.2)">LIVE</span>
+  </div>
+  ${findings.map(f=>`<div class="dev-finding">
+    <div class="df-head">
+      <span class="sev s-${f.sev==='critical'?'crit':f.sev==='high'?'high':'med'}">SEV  ${f.sev.toUpperCase()}</span>
+      <span class="df-file">${f.file}</span>
+      <span class="df-line">Line ${f.line}</span>
+      <span style="font-family:var(--fm);font-size:8.5px;color:var(--dim);margin-left:auto">PR ${f.pr}</span>
+    </div>
+    <div class="df-msg">${f.msg}</div>
+    <div class="df-clause">${f.fw} Ã‚Â· ${f.clause}</div>
+  </div>`).join('')}`;
+}
+
+async function esg() {
+  const d = await api('/api/esg');
+  if(!d) return;
+  const items = d.data||d;
+  const byC = {E:items.filter(x=>x.category==='E'),S:items.filter(x=>x.category==='S'),G:items.filter(x=>x.category==='G')};
+  const avg = c => Math.round(byC[c].reduce((s,x)=>s+x.score,0)/byC[c].length);
+  document.getElementById('content').innerHTML = `
+  <div class="g3" style="margin-bottom:18px">
+    <div class="stat-card sc-green"><div class="stat-label">Environmental Score</div><div class="stat-val sv-green">${avg('E')}</div></div>
+    <div class="stat-card sc-steel"><div class="stat-label">Social Score</div><div class="stat-val sv-ice">${avg('S')}</div></div>
+    <div class="stat-card sc-amber"><div class="stat-label">Governance Score</div><div class="stat-val sv-amber">${avg('G')}</div></div>
+  </div>
+  <div class="g3">
+    ${['E','S','G'].map(cat=>`<div class="card">
+      <div class="card-title" style="margin-bottom:12px">${cat==='E'?'Ã°Å¸Å’Â Environmental':cat==='S'?'Ã°Å¸â€˜Â¥ Social':'Ã¢Å¡â€“Ã¯Â¸Â Governance'}</div>
+      ${byC[cat].map(m=>`<div class="esg-metric">
+        <div class="em-name">${m.metric}</div>
+        <div class="em-val">${m.value}</div>
+        <div class="em-unit">${m.unit}</div>
+        <div class="em-score ${m.score>=80?'em-hi':m.score>=60?'em-md':'em-lo'}">${m.score}</div>
+      </div>`).join('')}
+    </div>`).join('')}
+  </div>\n  </div>`;
+}
+
+async function auditlog() {
+  document.getElementById('content').innerHTML = `
+  <div class="card" style="padding:0;overflow:hidden">
+    <div style="padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+      <div><div class="card-title">Audit Trail</div><div class="card-sub">All platform events</div></div>
+      <span style="font-family:var(--fm);font-size:9px;color:var(--green);padding:3px 10px;border-radius:99px;background:rgba(16,185,138,.1);border:1px solid rgba(16,185,138,.2)">LIVE</span>
+    </div>
+    ${[
+      {action:'risk_created',detail:'RSK-013 created: Cloud Config Drift',user:'Demo Admin',ts:'09:22 IST'},
+      {action:'luma_query',detail:'"critical risks dikhao" - 3 results',user:'LUMA',ts:'09:14 IST'},
+      {action:'task_updated',detail:'TSK-002 Ã¢â€ â€™ in_progress (MFA)',user:'IT Head',ts:'09:08 IST'},
+      {action:'risk_updated',detail:'RSK-001 score recalculated: 20',user:'System',ts:'08:45 IST'},
+      {action:'login',detail:'demo@lumerafoundry.com logged in',user:'Demo Admin',ts:'08:30 IST'},
+    ].map(e=>`<div style="display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.04);transition:all .15s" onmouseover="this.style.background='rgba(255,255,255,.02)'" onmouseout="this.style.background='transparent'">
+      <span style="font-size:16px">${e.action.includes('risk')?'Ã°Å¸â€ºÂ¡Ã¯Â¸Â':e.action.includes('luma')?'Ã¢Å“Â¦':e.action.includes('task')?'Ã¢Å“â€¦':'Ã°Å¸â€˜Â¤'}</span>
+      <div style="flex:1"><div style="font-size:12.5px;color:var(--text)">${e.detail}</div><div style="font-family:var(--fm);font-size:9px;color:var(--dim)">${e.action} Ã‚Â· ${e.user}</div></div>
+      <div style="font-family:var(--fm);font-size:9px;color:var(--dim)">${e.ts}</div>
+    </div>`).join('')}
+  </div>\n  </div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ LUMA CHAT Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+function toggleLuma() {
+  lumaOpen = !lumaOpen;
+  const panel = document.getElementById('luma-panel');
+  panel.style.display = lumaOpen ? 'flex' : 'none';
+  if(lumaOpen && document.getElementById('luma-msgs').children.length===0) {
+    addMsg('luma', 'Ã¢Å“Â¦ Namaste! Main LUMA hoon - LumeraFoundry ka AI Security Intelligence Engine.\n\nAbhi Acme Fintech ka data loaded hai:\nÃ¢â‚¬Â¢ Security Score: 6.8/10\nÃ¢â‚¬Â¢ Critical Risks: 3 (RSK-001, 002, 003)\nÃ¢â‚¬Â¢ ROSI Average: 766%\nÃ¢â‚¬Â¢ DPDP Coverage: 55% Ã¢Å¡Â Ã¯Â¸Â\n\nKya jaanna chahte ho?');
+  }
+}
+
+function addMsg(who, text) {
+  const msgs = document.getElementById('luma-msgs');
+  const div = document.createElement('div');
+  div.className = `lp-msg ${who}`;
+  const time = new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  div.innerHTML = `
+    <div class="msg-av ${who}">${who==='luma'?'L':'D'}</div>
+    <div>
+      <div class="msg-bubble ${who}">${text.replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\*(.*?)\*/g,'<em>$1</em>')}</div>
+      <div class="msg-time">${time}</div>
+    </div>\n  </div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+async function sendLuma() {
+  const inp = document.getElementById('luma-input');
+  const msg = inp.value.trim();
+  if(!msg) return;
+  inp.value = '';
+  addMsg('user', msg);
+  document.getElementById('luma-typing').style.display = 'flex';
+  const d = await api('/api/luma/chat', {method:'POST',body:JSON.stringify({message:msg})});
+  document.getElementById('luma-typing').style.display = 'none';
+  if(d) addMsg('luma', (d.data||d).message || 'Kuch hua - dobara try karo.');
+  else addMsg('luma', 'Backend se connect nahi ho paya. Demo server chal raha hai?');
+}
+
+document.getElementById('luma-input').addEventListener('keydown', e=>{
+  if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendLuma();}
+});
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ MODAL Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+function openModal(id) { document.getElementById(id).style.display='flex'; }
+function closeModal(id) { document.getElementById(id).style.display='none'; }
+
+async function submitRisk() {
+  const name = document.getElementById('f-name').value.trim();
+  if(!name) { toast('Risk name required','e'); return; }
+  const d = await api('/api/risks',{method:'POST',body:JSON.stringify({
+    name, category:document.getElementById('f-cat').value,
+    owner:document.getElementById('f-owner').value||'Unassigned',
+    likelihood:parseInt(document.getElementById('f-like').value),
+    impact:parseInt(document.getElementById('f-imp').value),
+    description:document.getElementById('f-desc').value,
+  })});
+  if(d) {
+    closeModal('risk-modal');
+    toast(`Risk added: ${name}`, 's');
+    document.getElementById('f-name').value='';
+    document.getElementById('f-owner').value='';
+    document.getElementById('f-desc').value='';
+    const nb = document.getElementById('nb-risks');
+    if(nb) nb.textContent = parseInt(nb.textContent)+1;
+    showPage('risks');
+  }
+}
+
+async function updateTask(taskId) {
+  const d = await api(`/api/tasks/${taskId}/status`,{method:'PATCH',body:JSON.stringify({status:'closed'})});
+  if(d) { toast(`Task ${taskId} marked done!`,'s'); showPage('tasks'); }
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ SECOPS ORCHESTRATOR Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+let selectedSig = null;
+
+async function secops() {
+  const d = await api('/api/secops/signals');
+  if(!d) { document.getElementById('content').innerHTML=`<div style="padding:40px;text-align:center;color:var(--dim)">Failed to load SecOps data</div>`; return; }
+  const signals = d.data||[];
+  const meta = d;
+
+  const sevColor = s => s==='CRITICAL'?'#c41e3a':s==='HIGH'?'#f59e0b':s==='MEDIUM'?'#3b82f6':'#10b981';
+  const sevBg    = s => s==='CRITICAL'?'rgba(196,30,58,.15)':s==='HIGH'?'rgba(245,158,11,.12)':s==='MEDIUM'?'rgba(59,130,246,.12)':'rgba(16,185,138,.1)';
+  const statusColor = s => s==='ACTIVE'?'#c41e3a':s==='REMEDIATING'?'#f59e0b':s==='CONTAINED'?'#10b981':'#64748b';
+  const typeIcon = t => ({ransomware:'Ã°Å¸â€â€™',hsm_intrusion:'Ã°Å¸â€â€˜',c2_traffic:'Ã°Å¸â€œÂ¡',brute_force:'Ã°Å¸â€Â¨',priv_escalation:'Ã¢Â¬â€ Ã¯Â¸Â',lateral_movement:'Ã¢â€ â€Ã¯Â¸Â',powershell:'Ã¢Å¡Â¡',kerberoasting:'Ã°Å¸Å½Â«',exfil_staging:'Ã°Å¸â€œÂ¦'}[t]||'Ã¢Å¡Â Ã¯Â¸Â');
+
+  const sinceMins = ts => { const m=Math.round((Date.now()-new Date(ts).getTime())/60000); return m<1?'Just now':m+'m ago'; };
+
+  document.getElementById('content').innerHTML = `
+  <!-- RED TEAM BANNER -->
+  <div style="background:linear-gradient(135deg,rgba(196,30,58,.2),rgba(196,30,58,.06));border:1px solid rgba(196,30,58,.4);border-radius:12px;padding:14px 20px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:10px;height:10px;border-radius:50%;background:#c41e3a;animation:pulse 1s infinite;box-shadow:0 0 8px #c41e3a"></div>
+      <div>
+        <div style="font-family:var(--fm);font-size:11px;color:#c41e3a;letter-spacing:2px;font-weight:700">Ã°Å¸Å¡Â¨ RED TEAM SIMULATION - ACME FINTECH NODE</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:2px">5 critical signals injected Ã‚Â· LUMA autonomous response enabled Ã‚Â· Last sync: ${new Date(meta.last_sync||Date.now()).toLocaleTimeString('en-IN')}</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button onclick="secopsSync()" style="background:rgba(196,30,58,.15);border:1px solid rgba(196,30,58,.35);color:#c41e3a;padding:6px 14px;border-radius:7px;cursor:pointer;font-family:var(--fm);font-size:10px;letter-spacing:1px" onmouseover="this.style.background='rgba(196,30,58,.25)'" onmouseout="this.style.background='rgba(196,30,58,.15)'">Ã¢Å¡Â¡ GLOBAL SYNC</button>
+      <button onclick="secopsLateral()" style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);color:#f59e0b;padding:6px 14px;border-radius:7px;cursor:pointer;font-family:var(--fm);font-size:10px;letter-spacing:1px" onmouseover="this.style.background='rgba(245,158,11,.2)'" onmouseout="this.style.background='rgba(245,158,11,.1)'">Ã¢â€ â€Ã¯Â¸Â LATERAL MOVEMENT</button>
+    </div>
+  </div>
+
+  <!-- STATS ROW -->
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px">
+    ${[
+      {label:'Total Signals',val:signals.length,col:'#c41e3a'},
+      {label:'Critical',val:signals.filter(x=>x.severity==='CRITICAL').length,col:'#c41e3a'},
+      {label:'High',val:signals.filter(x=>x.severity==='HIGH').length,col:'#f59e0b'},
+      {label:'Active',val:signals.filter(x=>x.status==='ACTIVE').length,col:'#7ec8e3'},
+      {label:'Remediating',val:signals.filter(x=>x.status==='REMEDIATING').length,col:'#10b981'},
+    ].map(s=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center">
+      <div style="font-family:var(--fm);font-size:22px;font-weight:700;color:${s.col}">${s.val}</div>
+      <div style="font-size:10px;color:var(--dim);margin-top:3px">${s.label}</div>
+    </div>`).join('')}
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <!-- SIGNAL FEED -->
+    <div>
+      <div style="font-family:var(--fm);font-size:10px;color:var(--dim);letter-spacing:2px;margin-bottom:10px">LIVE INTELLIGENCE FEED</div>
+      <div id="signal-feed" style="display:flex;flex-direction:column;gap:8px">
+        ${signals.map(sig=>`
+        <div id="card-${sig.id}" onclick="selectSignal('${sig.id}')"
+          style="background:var(--card);border:1px solid ${selectedSig===sig.id?sevColor(sig.severity):'var(--border)'};border-left:3px solid ${sevColor(sig.severity)};border-radius:10px;padding:13px 14px;cursor:pointer;transition:all .2s"
+          onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='var(--card)'">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+              <span style="font-size:16px">${typeIcon(sig.type)}</span>
+              <div style="min-width:0">
+                <div style="font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${sig.title}</div>
+                <div style="font-size:10px;color:var(--dim);margin-top:2px">${sig.node} Ã‚Â· ${sig.source} Ã‚Â· ${sinceMins(sig.ts)}</div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0">
+              <span style="background:${sevBg(sig.severity)};color:${sevColor(sig.severity)};padding:2px 7px;border-radius:5px;font-family:var(--fm);font-size:9px;letter-spacing:1px">${sig.severity}</span>
+              <span style="color:${statusColor(sig.status)};font-size:9px;font-family:var(--fm)">${sig.status}</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+            <div style="font-size:10px;color:var(--dim)">${sig.mitre_technique}</div>
+            <button onclick="event.stopPropagation();remediate('${sig.id}')" style="background:rgba(196,30,58,.12);border:1px solid rgba(196,30,58,.3);color:#c41e3a;padding:3px 10px;border-radius:5px;cursor:pointer;font-family:var(--fm);font-size:9px" onmouseover="this.style.background='rgba(196,30,58,.22)'" onmouseout="this.style.background='rgba(196,30,58,.12)'">REMEDIATE Ã¢â€“Â¶</button>
+          </div>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <!-- DETAIL PANEL -->
+    <div>
+      <div style="font-family:var(--fm);font-size:10px;color:var(--dim);letter-spacing:2px;margin-bottom:10px">SIGNAL DETAIL & PLAYBOOK</div>
+      <div id="secops-detail" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;min-height:400px">
+        <div style="text-align:center;padding:60px 20px;color:var(--dim)">
+          <div style="font-size:28px;margin-bottom:12px">Ã°Å¸â€ºÂ¡Ã¯Â¸Â</div>
+          <div style="font-family:var(--fm);font-size:10px;letter-spacing:2px">SELECT A SIGNAL TO VIEW DETAILS</div>
+          <div style="font-size:11px;margin-top:8px">Click any signal card to see IOCs, MITRE ATT&CK mapping, and available playbooks</div>
+        </div>
+      </div>
+    </div>
+  </div>\n  </div>`;
+
+  // Store signals for detail panel
+  window._secopsSignals = signals;
+}
+
+async function selectSignal(id) {
+  const sig = (window._secopsSignals||[]).find(x=>x.id===id);
+  if(!sig) return;
+  selectedSig = id;
+  const sevColor = s => s==='CRITICAL'?'#c41e3a':s==='HIGH'?'#f59e0b':s==='MEDIUM'?'#3b82f6':'#10b981';
+  const stepColor = s => s==='DONE'?'#10b981':s==='IN_PROGRESS'?'#f59e0b':s==='EXECUTING'?'#7ec8e3':'#4a5568';
+  const stepIcon  = s => s==='DONE'?'Ã¢Å“â€¦':s==='IN_PROGRESS'?'Ã°Å¸â€â€ž':s==='EXECUTING'?'Ã¢Å¡Â¡':'Ã¢ÂÂ³';
+
+  // Highlight selected card
+  document.querySelectorAll('[id^="card-"]').forEach(el => {
+    el.style.borderColor = el.id==='card-'+id ? sevColor(sig.severity) : 'var(--border)';
+    el.style.boxShadow   = el.id==='card-'+id ? `0 0 12px ${sevColor(sig.severity)}33` : 'none';
+  });
+
+  const playbookKey = {ransomware:'ransomware',hsm_intrusion:'hsm_intrusion',c2_traffic:'c2_traffic',brute_force:'brute_force',priv_escalation:'priv_escalation'}[sig.type]||'default';
+
+  document.getElementById('secops-detail').innerHTML = `
+    <!-- HEADER -->
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border)">
+      <div style="background:rgba(196,30,58,.1);border:1px solid rgba(196,30,58,.2);border-radius:8px;padding:8px;font-size:20px">${({ransomware:'Ã°Å¸â€â€™',hsm_intrusion:'Ã°Å¸â€â€˜',c2_traffic:'Ã°Å¸â€œÂ¡',brute_force:'Ã°Å¸â€Â¨',priv_escalation:'Ã¢Â¬â€ Ã¯Â¸Â',lateral_movement:'Ã¢â€ â€Ã¯Â¸Â',powershell:'Ã¢Å¡Â¡',kerberoasting:'Ã°Å¸Å½Â«',exfil_staging:'Ã°Å¸â€œÂ¦'}[sig.type]||'Ã¢Å¡Â Ã¯Â¸Â')}</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text)">${sig.title}</div>
+        <div style="font-size:10px;color:var(--dim)">${sig.id} Ã‚Â· ${sig.source} Ã¢â€ â€™ ${sig.node}</div>
+      </div>
+      <span style="margin-left:auto;background:rgba(196,30,58,.15);color:${sevColor(sig.severity)};padding:3px 10px;border-radius:6px;font-family:var(--fm);font-size:10px">${sig.severity}</span>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:14px">${sig.description}</div>
+
+    <!-- MITRE -->
+    <div style="background:rgba(126,200,227,.06);border:1px solid rgba(126,200,227,.15);border-radius:8px;padding:10px 12px;margin-bottom:14px">
+      <div style="font-family:var(--fm);font-size:9px;color:#7ec8e3;letter-spacing:1px;margin-bottom:4px">MITRE ATT&CK</div>
+      <div style="font-size:11px;color:var(--text)">Tactic: <strong>${sig.mitre_tactic}</strong></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:2px">${sig.mitre_technique}</div>
+    </div>
+
+    <!-- IOCs -->
+    <div style="margin-bottom:14px">
+      <div style="font-family:var(--fm);font-size:9px;color:var(--dim);letter-spacing:1px;margin-bottom:6px">INDICATORS OF COMPROMISE</div>
+      ${sig.ioc.map(i=>`<div style="font-family:var(--fc);font-size:10px;color:#7ec8e3;background:rgba(0,0,0,.3);border-radius:5px;padding:4px 8px;margin-bottom:3px">${i}</div>`).join('')}
+    </div>
+
+    <!-- AFFECTED ASSETS -->
+    <div style="margin-bottom:16px">
+      <div style="font-family:var(--fm);font-size:9px;color:var(--dim);letter-spacing:1px;margin-bottom:6px">AFFECTED ASSETS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px">
+        ${sig.affected_assets.map(a=>`<span style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);color:#f59e0b;padding:3px 8px;border-radius:5px;font-size:10px">${a}</span>`).join('')}
+      </div>
+    </div>
+
+    <!-- RISK SCORE -->
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="font-size:10px;color:var(--dim)">Risk Score</div>
+      <div style="flex:1;height:6px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden">
+        <div style="width:${sig.risk_score}%;height:100%;background:linear-gradient(90deg,#c41e3a,#f59e0b);border-radius:3px;transition:width .8s ease"></div>
+      </div>
+      <div style="font-family:var(--fm);font-size:12px;color:${sevColor(sig.severity)};font-weight:700">${sig.risk_score}</div>
+    </div>
+
+    <!-- PLAYBOOK BUTTON -->
+    <button onclick="remediate('${sig.id}')" style="width:100%;background:linear-gradient(135deg,rgba(196,30,58,.2),rgba(196,30,58,.08));border:1px solid rgba(196,30,58,.4);color:#c41e3a;padding:10px;border-radius:8px;cursor:pointer;font-family:var(--fm);font-size:11px;letter-spacing:1px;transition:all .2s" onmouseover="this.style.background='linear-gradient(135deg,rgba(196,30,58,.3),rgba(196,30,58,.15))'" onmouseout="this.style.background='linear-gradient(135deg,rgba(196,30,58,.2),rgba(196,30,58,.08))'">
+      Ã¢â€“Â¶ EXECUTE AUTONOMOUS PLAYBOOK
+    </button>`;
+}
+
+async function remediate(sigId) {
+  const sig = (window._secopsSignals||[]).find(x=>x.id===sigId);
+  if(!sig) return;
+  toast(`Ã°Å¸â€ºÂ¡Ã¯Â¸Â Triggering playbook for ${sigId}...`, 'i');
+  const r = await api(`/api/secops/remediate/${sigId}`, {method:'POST',body:JSON.stringify({})});
+  if(!r) { toast('Remediation failed - check server', 'e'); return; }
+  const d = r.data||r;
+  const stepColor = s => s==='DONE'?'#10b981':s==='IN_PROGRESS'?'#f59e0b':s==='EXECUTING'?'#7ec8e3':'#4a5568';
+  const stepIcon  = s => s==='DONE'?'Ã¢Å“â€¦':s==='IN_PROGRESS'?'Ã°Å¸â€â€ž':s==='EXECUTING'?'Ã¢Å¡Â¡':'Ã¢ÂÂ³';
+
+  // Update card badge
+  const card = document.getElementById('card-'+sigId);
+  if(card) {
+    const badge = card.querySelector('[style*="font-size:9px;font-family"]');
+    if(badge) badge.textContent = 'REMEDIATING';
+    badge && (badge.style.color = '#f59e0b');
+  }
+
+  document.getElementById('secops-detail').innerHTML = `
+    <div style="margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border)">
+      <div style="font-family:var(--fm);font-size:9px;color:#10b981;letter-spacing:2px;margin-bottom:4px">Ã¢â€“Â¶ PLAYBOOK EXECUTING</div>
+      <div style="font-size:14px;font-weight:600;color:var(--text)">${d.playbook_name}</div>
+      <div style="font-size:10px;color:var(--dim);margin-top:3px">Signal: ${sigId} Ã‚Â· ETA: ${d.estimated_time} Ã‚Â· Triggered by: ${d.triggered_by}</div>
+    </div>
+
+    <div style="font-size:11px;color:var(--muted);margin-bottom:16px">${d.message}</div>
+
+    <div style="font-family:var(--fm);font-size:9px;color:var(--dim);letter-spacing:1px;margin-bottom:10px">CONTAINMENT STEPS</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${(d.steps||[]).map(step=>`
+      <div style="background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.06);border-left:3px solid ${stepColor(step.status)};border-radius:8px;padding:10px 12px;display:flex;align-items:flex-start;gap:10px">
+        <span style="font-size:14px;flex-shrink:0">${stepIcon(step.status)}</span>
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
+            <span style="font-family:var(--fm);font-size:9px;color:${stepColor(step.status)};letter-spacing:1px">${step.action}</span>
+            <span style="font-size:10px;color:var(--dim)">Ã¢â€ â€™ ${step.target}</span>
+          </div>
+          <div style="font-size:10px;color:var(--muted)">${step.detail}</div>
+        </div>
+        <span style="font-family:var(--fm);font-size:9px;color:${stepColor(step.status)}">${step.status}</span>
+      </div>`).join('')}
+    </div>
+
+    <div style="margin-top:16px;padding:10px 12px;background:rgba(16,185,138,.06);border:1px solid rgba(16,185,138,.15);border-radius:8px">
+      <div style="font-size:10px;color:#10b981">Ã¢Å“â€¦ LUMA Autonomous Engine has taken control. Human analyst verification required to close incident.</div>
+    </div>\n  </div>`;
+
+  toast(`Ã¢Å“â€¦ Playbook "${d.playbook_name}" executing - ${d.steps?.length} steps`, 's');
+}
+
+async function secopsSync() {
+  toast('Ã°Å¸â€ºÂ°Ã¯Â¸Â Global Sync initiated...', 'i');
+  const r = await api('/api/secops/sync', {method:'POST',body:JSON.stringify({})});
+  if(!r) { toast('Sync failed', 'e'); return; }
+  const d = r.data||r;
+  toast(`Ã¢Å“â€¦ ${d.message} Ã‚Â· ${d.total_signals} signals`, 's');
+  // Update badge
+  const nb = document.getElementById('nb-secops');
+  if(nb) nb.textContent = d.total_signals;
+  // Reload page
+  await secops();
+}
+
+async function secopsLateral() {
+  toast('Ã¢â€ â€Ã¯Â¸Â Injecting lateral movement logs...', 'i');
+  const r = await api('/api/secops/lateral-movement', {method:'POST',body:JSON.stringify({})});
+  if(!r) { toast('Injection failed', 'e'); return; }
+  const d = r.data||r;
+  toast(`Ã°Å¸Å¡Â¨ ${d.injected} lateral movement signals injected!`, 'e');
+  const nb = document.getElementById('nb-secops');
+  if(nb) nb.textContent = parseInt(nb.textContent||0) + d.injected;
+  await secops();
+}
+
+
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+// CONSENT MANAGER - DPDP Act 2023 (Request-Artifact-Audit)
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+async function consent() {
+  const lc = document.getElementById('lc');
+  lc.innerHTML = `
+  <style>
+    .cm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+    .cm-stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px}
+    .cm-stat-label{color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+    .cm-stat-val{font-size:26px;font-weight:800;margin-bottom:2px}
+    .cm-stat-sub{color:var(--dim);font-size:11px}
+    .phase-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+    .phase-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+    .phase-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-bottom:10px}
+    .phase-title{color:var(--text);font-weight:700;font-size:13px;margin-bottom:4px}
+    .phase-sub{color:var(--muted);font-size:11px;line-height:1.5}
+    .artifact-row{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:flex;align-items:flex-start;gap:14px}
+    .art-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    .art-id{color:var(--dim);font-family:monospace;font-size:11px}
+    .art-principal{color:var(--text);font-weight:600;font-size:13px}
+    .art-purpose{color:var(--muted);font-size:12px;margin-top:2px}
+    .art-meta{color:var(--dim);font-size:10px;margin-top:4px}
+    .art-badge{display:inline-block;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;text-transform:uppercase}
+    .art-choices{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+    .choice-chip{background:rgba(126,200,227,.1);color:var(--ice);border:1px solid rgba(126,200,227,.2);border-radius:3px;padding:1px 6px;font-size:10px}
+    .shadow-row{background:rgba(196,30,58,.07);border:1px solid rgba(196,30,58,.25);border-radius:10px;padding:14px 18px;margin-bottom:8px}
+    .shadow-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px}
+    .shadow-table th{color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;padding:6px 10px;border-bottom:1px solid var(--border)}
+    .shadow-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text)}
+    .tabs-row{display:flex;gap:2px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:3px;margin-bottom:18px;width:fit-content}
+    .tab-btn{border:none;background:transparent;color:var(--muted);padding:7px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;transition:.15s}
+    .tab-btn.active{background:rgba(126,200,227,.15);color:var(--ice)}
+    .notice-gen{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+    .notice-output{background:rgba(126,200,227,.06);border:1px solid rgba(126,200,227,.2);border-radius:8px;padding:14px;font-size:13px;color:var(--text);line-height:1.6;min-height:80px;margin-top:12px}
+    .toggle-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .toggle-lbl{color:var(--text);font-size:13px;font-weight:500}
+    .toggle-sub{color:var(--dim);font-size:11px;margin-top:2px}
+    .toggle-sw{width:40px;height:22px;background:rgba(255,255,255,.1);border-radius:11px;border:none;cursor:pointer;position:relative;transition:.2s;flex-shrink:0}
+    .toggle-sw.on{background:var(--green)}
+    .toggle-sw::after{content:"";width:16px;height:16px;background:#fff;border-radius:50%;position:absolute;top:3px;left:3px;transition:.2s}
+    .toggle-sw.on::after{left:21px}
+    .grievance-row{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px}
+    .gri-id{color:var(--amber);font-family:monospace;font-size:11px;font-weight:700}
+    .sig-chip{background:rgba(126,200,227,.12);border:1px solid rgba(126,200,227,.3);border-radius:4px;padding:2px 7px;font-size:10px;color:var(--ice);font-family:monospace}
+  </style>
+
+  <!-- STATS ROW -->
+  <div class="cm-grid" id="cm-stats">
+    ${['...','...','...','...'].map((_,i)=>`<div class="cm-stat"><div class="cm-stat-label skeleton" style="height:10px;width:70%"></div><div class="cm-stat-val skeleton" style="height:28px;width:40%;margin:6px 0"></div></div>`).join('')}
+  </div>
+
+  <!-- PHASE CARDS -->
+  <div class="phase-row">
+    <div class="phase-card" style="border-color:rgba(126,200,227,.25)">
+      <div class="phase-num" style="background:rgba(126,200,227,.15);color:var(--ice)">1</div>
+      <div class="phase-title">Ã°Å¸â€œÂ¢ Notice Generation</div>
+      <div class="phase-sub">LUMA AI converts technical processing goals into plain-language notices in 5 Indian languages.<br><br><strong style="color:var(--ice)">DPDP Section 6</strong> - Consent must be free, specific, informed.</div>
+    </div>
+    <div class="phase-card" style="border-color:rgba(16,185,138,.25)">
+      <div class="phase-num" style="background:rgba(16,185,138,.15);color:var(--green)">2</div>
+      <div class="phase-title">Ã°Å¸â€Â Artifact Generation</div>
+      <div class="phase-sub">UUID assigned Ã¢â€ â€™ metadata tagged (Purpose, Retention, Timestamp) Ã¢â€ â€™ SHA-256 hashed Ã¢â€ â€™ signed with RISKROSI Private Key.<br><br><strong style="color:var(--green)">Immutable Record</strong> - tamper-evident chain.</div>
+    </div>
+    <div class="phase-card" style="border-color:rgba(245,158,11,.25)">
+      <div class="phase-num" style="background:rgba(245,158,11,.15);color:var(--amber)">3</div>
+      <div class="phase-title">Ã¢Å¡Â¡ Real-time Enforcement</div>
+      <div class="phase-sub">Webhooks fire to Database, CRM, Analytics. Withdrawal triggers Global Kill-Switch across all integrated stacks.<br><br><strong style="color:var(--amber)">DPDP Section 6(6)</strong> - Withdrawal must be easy as giving.</div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-row">
+    <button class="tab-btn active" onclick="cmTab(this,'artifacts')">Ã°Å¸â€œÅ“ Consent Artifacts</button>
+    <button class="tab-btn" onclick="cmTab(this,'notice')">Ã°Å¸â€œÂ¢ Notice Generator</button>
+    <button class="tab-btn" onclick="cmTab(this,'shadow')">Ã°Å¸â€Â Shadow Scan</button>
+    <button class="tab-btn" onclick="cmTab(this,'grievance')">Ã¢Å¡â€“Ã¯Â¸Â Grievance</button>
+  </div>
+
+  <!-- TAB: ARTIFACTS -->
+  <div id="cm-tab-artifacts">
+    <div style="display:flex;gap:10px;margin-bottom:16px;align-items:center">
+      <button onclick="cmNewConsent()" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">+ New Consent</button>
+      <button onclick="cmExpiryCheck()" style="background:rgba(245,158,11,.15);color:var(--amber);border:1px solid rgba(245,158,11,.3);border-radius:8px;padding:9px 14px;font-size:12px;font-weight:600;cursor:pointer">Ã¢ÂÂ±Ã¯Â¸Â Expiry Check</button>
+      <span style="color:var(--dim);font-size:11px;margin-left:auto">Signed with RISKROSI Private Key Ã‚Â· SHA-256 Ã‚Â· Immutable</span>
+    </div>
+    <div id="cm-artifacts-list"><div style="color:var(--dim);font-size:13px;padding:20px 0">Loading artifacts...</div></div>
+  </div>
+
+  <!-- TAB: NOTICE GENERATOR -->
+  <div id="cm-tab-notice" style="display:none">
+    <div class="notice-gen">
+      <div style="color:var(--text);font-weight:700;font-size:14px;margin-bottom:14px">Ã°Å¸Â¤â€“ LUMA AI Notice Engine</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <label style="color:var(--muted);font-size:11px;font-weight:700;display:block;margin-bottom:5px;text-transform:uppercase;letter-spacing:.6px">Purpose</label>
+          <select id="notice-purpose" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:8px 10px;color:var(--text);font-size:13px">
+            <option value="PRP-001">Account Registration</option>
+            <option value="PRP-002">Marketing</option>
+            <option value="PRP-003">Behavioral Analytics</option>
+            <option value="PRP-004">Third-party Sharing</option>
+            <option value="PRP-005">Loan Application</option>
+            <option value="PRP-006">KYC Verification</option>
+          </select>
+        </div>
+        <div>
+          <label style="color:var(--muted);font-size:11px;font-weight:700;display:block;margin-bottom:5px;text-transform:uppercase;letter-spacing:.6px">Language</label>
+          <select id="notice-lang" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:8px 10px;color:var(--text);font-size:13px">
+            <option value="en">English</option>
+            <option value="hi">Ã Â¤Â¹Ã Â¤Â¿Ã Â¤â€šÃ Â¤Â¦Ã Â¥â‚¬ (Hindi)</option>
+            <option value="ta">Ã Â®Â¤Ã Â®Â®Ã Â®Â¿Ã Â®Â´Ã Â¯Â (Tamil)</option>
+            <option value="te">Ã Â°Â¤Ã Â±â€ Ã Â°Â²Ã Â±ÂÃ Â°â€”Ã Â±Â (Telugu)</option>
+            <option value="mr">Ã Â¤Â®Ã Â¤Â°Ã Â¤Â¾Ã Â¤Â Ã Â¥â‚¬ (Marathi)</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:flex-end">
+          <button onclick="cmGenerateNotice()" style="width:100%;background:var(--red);color:#fff;border:none;border-radius:7px;padding:9px;font-size:13px;font-weight:700;cursor:pointer">Generate Notice Ã¢â€ â€™</button>
+        </div>
+      </div>
+
+      <!-- Granular toggles -->
+      <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Granular Consent Toggles</div>
+      ${[
+        ['email_updates','Email Marketing Updates','Promotional emails and product announcements'],
+        ['behavioral_analytics','Behavioral Analytics','Track page views, click patterns for UX improvement'],
+        ['third_party_sharing','Third-party Data Sharing','Share with CRM and analytics partners'],
+        ['sms_updates','SMS / WhatsApp Updates','Transaction alerts and promotional messages'],
+        ['device_fingerprint','Device Fingerprinting','Browser fingerprint for fraud prevention'],
+      ].map(([id,lbl,sub])=>`
+        <div class="toggle-row">
+          <div><div class="toggle-lbl">${lbl}</div><div class="toggle-sub">${sub}</div></div>
+          <button class="toggle-sw on" id="tgl-${id}" onclick="this.classList.toggle('on')"></button>
+        </div>
+      `).join('')}
+
+      <div class="notice-output" id="notice-output">
+        Notice will appear here after generation. LUMA AI generates DPDP-compliant plain-language notices in your preferred Indian language.
+      </div>
+    </div>
+
+    <!-- New Consent form -->
+    <div class="notice-gen">
+      <div style="color:var(--text);font-weight:700;font-size:14px;margin-bottom:14px">Ã°Å¸â€œâ€¹ Capture Consent & Generate Artifact</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <label style="color:var(--muted);font-size:11px;font-weight:600;display:block;margin-bottom:5px">Data Principal (Email / Phone / ID)</label>
+          <input id="new-principal" placeholder="user@example.com" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 12px;color:var(--text);font-size:13px">
+        </div>
+        <div>
+          <label style="color:var(--muted);font-size:11px;font-weight:600;display:block;margin-bottom:5px">Retention Period (days)</label>
+          <input id="new-retention" type="number" value="180" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 12px;color:var(--text);font-size:13px">
+        </div>
+      </div>
+      <button onclick="cmCaptureConsent()" style="background:var(--green);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:13px;font-weight:700;cursor:pointer">Ã°Å¸â€Â Capture & Sign Artifact</button>
+      <div id="cm-capture-result" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <!-- TAB: SHADOW SCAN -->
+  <div id="cm-tab-shadow" style="display:none">
+    <div class="notice-gen" style="border-color:rgba(196,30,58,.3)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div>
+          <div style="color:var(--text);font-weight:700;font-size:14px">Ã°Å¸â€Â Shadow Consent Detector</div>
+          <div style="color:var(--muted);font-size:12px;margin-top:3px">Scans your database for PII without a linked Consent Artifact - DPDP Section 4</div>
+        </div>
+        <button onclick="cmShadowScan()" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Ã°Å¸â€Â Run Shadow Scan</button>
+      </div>
+      <div id="cm-shadow-result">
+        <div style="color:var(--dim);font-size:13px;padding:10px 0">Click "Run Shadow Scan" to detect PII without consent coverage.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: GRIEVANCE -->
+  <div id="cm-tab-grievance" style="display:none">
+    <div class="notice-gen" style="margin-bottom:16px">
+      <div style="color:var(--text);font-weight:700;font-size:14px;margin-bottom:14px">Ã¢Å¡â€“Ã¯Â¸Â Grievance Redressal Portal - DPDP Section 13</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <label style="color:var(--muted);font-size:11px;font-weight:600;display:block;margin-bottom:5px">Data Principal</label>
+          <input id="gri-principal" placeholder="user@example.com" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 12px;color:var(--text);font-size:13px">
+        </div>
+        <div>
+          <label style="color:var(--muted);font-size:11px;font-weight:600;display:block;margin-bottom:5px">Linked Artifact ID</label>
+          <input id="gri-artifact" placeholder="CA-0001" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 12px;color:var(--text);font-size:13px">
+        </div>
+      </div>
+      <div style="margin-bottom:12px">
+        <label style="color:var(--muted);font-size:11px;font-weight:600;display:block;margin-bottom:5px">Complaint Description</label>
+        <textarea id="gri-complaint" rows="3" placeholder="Describe the consent misuse or grievance..." style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 12px;color:var(--text);font-size:13px;resize:vertical"></textarea>
+      </div>
+      <button onclick="cmFileGrievance()" style="background:var(--amber);color:#1A0800;border:none;border-radius:8px;padding:10px 22px;font-size:13px;font-weight:700;cursor:pointer">Ã¢Å¡â€“Ã¯Â¸Â File Grievance to DPO</button>
+      <div id="cm-grievance-result" style="margin-top:12px"></div>
+    </div>
+    <div id="cm-grievance-list">Loading tickets...</div>
+  </div>
+  `;
+
+  // Load data
+  await cmLoadArtifacts();
+}
+
+function cmTab(btn, tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  ['artifacts','notice','shadow','grievance'].forEach(t => {
+    const el = document.getElementById('cm-tab-'+t);
+    if(el) el.style.display = t===tab ? '' : 'none';
+  });
+  if(tab === 'grievance') cmLoadGrievances();
+}
+
+async function cmLoadArtifacts() {
+  const r = await api('/api/consent/artifacts');
+  if(!r) return;
+  const d = r.data||r;
+  const stats = d.meta||{};
+  const SEV_COLOR = {active:'#10B98A',revoked:'#C41E3A',expired:'#F59E0B'};
+
+  // Stats
+  document.getElementById('cm-stats').innerHTML = [
+    {label:'Total Artifacts',  val:stats.total||0,     sub:'All time records',              color:'var(--ice)'},
+    {label:'Active Consents',  val:stats.active||0,    sub:'Currently valid',               color:'var(--green)'},
+    {label:'Revoked',          val:stats.revoked||0,   sub:'Kill-switch fired',             color:'var(--red)'},
+    {label:'Shadow PII',       val:stats.shadow_count||0, sub:'No consent linked Ã¢Å¡Â Ã¯Â¸Â',       color:'var(--amber)'},
+  ].map(s=>`
+    <div class="cm-stat">
+      <div class="cm-stat-label">${s.label}</div>
+      <div class="cm-stat-val" style="color:${s.color}">${s.val}</div>
+      <div class="cm-stat-sub">${s.sub}</div>
+    </div>
+  `).join('');
+
+  // Artifacts list
+  const arts = d.artifacts||[];
+  document.getElementById('cm-artifacts-list').innerHTML = arts.length ? arts.map(a=>{
+    const sc = {active:'var(--green)',revoked:'var(--red)',expired:'var(--amber)'}[a.status]||'var(--dim)';
+    const choices = Object.entries(a.granular_choices||{}).filter(([,v])=>v).map(([k])=>k);
+    const exp = new Date(a.expires_at);
+    const daysLeft = Math.ceil((exp-Date.now())/86400000);
+    return `
+    <div class="artifact-row">
+      <div class="art-icon" style="background:${sc}22;font-size:18px">Ã°Å¸â€Â</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px">
+          <span class="art-badge" style="background:${sc}22;color:${sc};border:1px solid ${sc}44">${a.status.toUpperCase()}</span>
+          <span class="art-id">${a.id}</span>
+          <span class="sig-chip">SHA-256: ${a.hash?.slice(0,12)||'...'}...</span>
+        </div>
+        <div class="art-principal">${a.data_principal}</div>
+        <div class="art-purpose">${a.purpose_label} Ã‚Â· ${a.language?.toUpperCase()||'EN'}</div>
+        <div class="art-choices">${choices.map(c=>`<span class="choice-chip">${c.replace(/_/g,' ')}</span>`).join('')}</div>
+        <div class="art-meta">
+          Created: ${new Date(a.created_at).toLocaleDateString('en-IN')} Ã‚Â·
+          ${a.status==='active'?('Expires in '+daysLeft+' days'):a.status==='expired'?('Expired: '+new Date(a.expires_at).toLocaleDateString('en-IN')):('Revoked: '+(a.revoked_at?new Date(a.revoked_at).toLocaleDateString('en-IN'):'-'))} Ã‚Â·
+
+
+          Synced: ${(a.synced_systems||[]).join(', ')}
+          ${a.global_kill_switch?'<strong style="color:var(--red)"> Ã‚Â· Ã°Å¸â€Â´ KILL-SWITCH ACTIVE</strong>':''}
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0">
+        ${a.status==='active'?`<button onclick="cmRevoke('${a.uuid}')" style="background:rgba(196,30,58,.15);color:var(--red);border:1px solid rgba(196,30,58,.3);border-radius:6px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer">REVOKE</button>`:''}
+        <div style="color:var(--dim);font-size:10px;text-align:center">DPDP Ã‚Â§6</div>
+      </div>
+    </div>\n  </div>`;
+  }).join('') : '<div style="color:var(--dim);font-size:13px;padding:20px 0;text-align:center">No consent artifacts yet. Generate one from the Notice Generator tab.</div>';
+}
+
+async function cmRevoke(uuid) {
+  if(!confirm('Fire Global Kill-Switch? This will revoke consent and trigger data deletion across all integrated systems.')) return;
+  const r = await api(`/api/consent/artifacts/${uuid}/revoke`, {method:'POST',body:JSON.stringify({})});
+  if(!r) return;
+  toast('Ã°Å¸â€Â´ Kill-Switch fired! Consent revoked across Database, CRM & Analytics.', 'e');
+  await cmLoadArtifacts();
+}
+
+async function cmGenerateNotice() {
+  const purpose = document.getElementById('notice-purpose').value;
+  const lang = document.getElementById('notice-lang').value;
+  const out = document.getElementById('notice-output');
+  out.innerHTML = '<span style="color:var(--dim)">Ã°Å¸Â¤â€“ LUMA generating notice...</span>';
+  const r = await api('/api/consent/notice/generate', {method:'POST',body:JSON.stringify({purpose_id:purpose,language:lang})});
+  if(!r) return;
+  const d = r.data||r;
+  out.innerHTML = `
+    <div style="color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Generated Notice Ã‚Â· ${d.dpdp_section} Ã‚Â· ${d.generated_by}</div>
+    <div style="color:var(--text);font-size:13px;line-height:1.7">${d.notice?.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')||'Notice not generated.'}</div>
+    <div style="margin-top:10px;color:var(--dim);font-size:11px">Purpose: ${d.purpose?.label} Ã‚Â· Retention: ${d.purpose?.retention_days} days Ã‚Â· Lawful Basis: ${d.purpose?.lawful_basis}</div>
+  `;
+}
+
+async function cmCaptureConsent() {
+  const principal = document.getElementById('new-principal').value.trim();
+  const purpose = document.getElementById('notice-purpose').value;
+  const retention = parseInt(document.getElementById('new-retention').value)||180;
+  const res = document.getElementById('cm-capture-result');
+  if(!principal){res.innerHTML='<span style="color:var(--red)">Enter a data principal</span>';return;}
+
+  const choices = {};
+  ['email_updates','behavioral_analytics','third_party_sharing','sms_updates','device_fingerprint'].forEach(k=>{
+    const el = document.getElementById('tgl-'+k);
+    if(el) choices[k] = el.classList.contains('on');
+  });
+
+  res.innerHTML = '<span style="color:var(--dim)">Generating artifact...</span>';
+  const r = await api('/api/consent/artifacts',{method:'POST',body:JSON.stringify({data_principal:principal,purpose_id:purpose,granular_choices:choices,retention_days:retention,language:document.getElementById('notice-lang').value})});
+  if(!r){res.innerHTML='<span style="color:var(--red)">Failed</span>';return;}
+  const art = (r.data||r).artifact;
+  res.innerHTML = `
+    <div style="background:rgba(16,185,138,.1);border:1px solid rgba(16,185,138,.3);border-radius:8px;padding:12px 16px">
+      <div style="color:var(--green);font-weight:700;font-size:13px;margin-bottom:6px">Ã¢Å“â€¦ Consent Artifact Generated & Signed</div>
+      <div style="color:var(--text);font-size:12px">ID: <strong>${art.id}</strong> Ã‚Â· UUID: <span style="font-family:monospace;font-size:11px">${art.uuid}</span></div>
+      <div style="color:var(--muted);font-size:11px;margin-top:4px">Hash: <span style="font-family:monospace">${art.hash?.slice(0,32)||'...'}...</span></div>
+      <div style="color:var(--muted);font-size:11px;margin-top:2px">Signed Ã‚Â· Webhook synced Ã¢â€ â€™ ${art.synced_systems?.join(' Ã‚Â· ')} Ã‚Â· Expires in ${art.retention_days} days</div>
+    </div>
+  `;
+  document.getElementById('new-principal').value='';
+  await cmLoadArtifacts();
+}
+
+async function cmNewConsent() {
+  // Switch to notice tab
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-btn')[1].classList.add('active');
+  ['artifacts','notice','shadow','grievance'].forEach(t=>{
+    const el=document.getElementById('cm-tab-'+t);
+    if(el) el.style.display = t==='notice'?'':'none';
+  });
+}
+
+async function cmShadowScan() {
+  const res = document.getElementById('cm-shadow-result');
+  res.innerHTML = '<span style="color:var(--dim)">Ã°Å¸â€Â Scanning database for unconsented PII...</span>';
+  const r = await api('/api/consent/shadow-scan',{method:'POST',body:JSON.stringify({})});
+  if(!r) return;
+  const d = r.data||r;
+  if(!d.shadow_pii_found?.length){
+    res.innerHTML='<div style="color:var(--green);padding:10px 0">Ã¢Å“â€¦ No shadow PII found. All data has consent coverage.</div>';return;
+  }
+  res.innerHTML = `
+    <div style="background:rgba(196,30,58,.08);border:1px solid rgba(196,30,58,.3);border-radius:8px;padding:14px">
+      <div style="color:var(--red);font-weight:700;font-size:14px;margin-bottom:4px">Ã°Å¸Å¡Â¨ Shadow PII Detected - Compliance Gap: ${d.compliance_gap}</div>
+      <div style="color:var(--muted);font-size:12px;margin-bottom:10px">${d.total_records_at_risk?.toLocaleString()} records at risk Ã‚Â· DPDP Sections violated: ${d.dpdp_sections_violated?.join(', ')}</div>
+      <table class="shadow-table">
+        <thead><tr><th>Table</th><th>Column</th><th>Records at Risk</th><th>Risk Level</th><th>Finding</th></tr></thead>
+        <tbody>${d.shadow_pii_found.map(f=>{
+          const rc={CRITICAL:'var(--red)',HIGH:'var(--amber)',MEDIUM:'var(--ice)'}[f.risk]||'var(--dim)';
+          return `<tr>
+            <td style="font-family:monospace;font-size:11px">${f.table}</td>
+            <td style="font-family:monospace;font-size:11px">${f.column}</td>
+            <td style="font-weight:700">${f.records.toLocaleString()}</td>
+            <td><span class="art-badge" style="background:${rc}22;color:${rc};border:1px solid ${rc}44">${f.risk}</span></td>
+            <td style="color:var(--muted)">${f.reason}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07);color:var(--muted);font-size:11px">Scanned: ${new Date(d.scan_timestamp).toLocaleString('en-IN')} Ã‚Â· Immediate action required to avoid DPDP non-compliance penalty</div>
+    </div>
+  `;
+  await cmLoadArtifacts();
+}
+
+async function cmExpiryCheck() {
+  const r = await api('/api/consent/expiry-check',{method:'POST',body:JSON.stringify({})});
+  if(!r) return;
+  const d = r.data||r;
+  toast(`Ã¢ÂÂ±Ã¯Â¸Â ${d.message||'Expiry check complete'}`, d.auto_expired>0?'e':'s');
+  await cmLoadArtifacts();
+}
+
+async function cmLoadGrievances() {
+  const r = await api('/api/consent/grievance');
+  if(!r) return;
+  const tickets = r.data||r||[];
+  const list = document.getElementById('cm-grievance-list');
+  if(!list) return;
+  list.innerHTML = tickets.length ? tickets.map(t=>`
+    <div class="grievance-row">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+        <span class="gri-id">${t.id}</span>
+        <div style="display:flex;gap:8px;align-items:center">
+          ${t.dpo_notified?'<span style="color:var(--green);font-size:11px">Ã¢Å“â€œ DPO Notified</span>':''}
+          <span class="art-badge" style="background:${t.status==='open'?'rgba(245,158,11,.2)':'rgba(16,185,138,.2)'};color:${t.status==='open'?'var(--amber)':'var(--green)'};border:1px solid ${t.status==='open'?'rgba(245,158,11,.4)':'rgba(16,185,138,.4)'}">${t.status.toUpperCase()}</span>
+        </div>
+      </div>
+      <div style="color:var(--text);font-size:13px;font-weight:500;margin-bottom:3px">${t.data_principal}</div>
+      <div style="color:var(--muted);font-size:12px;margin-bottom:4px">${t.complaint}</div>
+      <div style="color:var(--dim);font-size:11px">Artifact: ${t.artifact_id||'-'} Ã‚Â· SLA: ${t.sla_hours}h Ã‚Â· Filed: ${new Date(t.created_at).toLocaleDateString('en-IN')} Ã‚Â· DPDP Ã‚Â§13</div>
+    </div>
+  `).join('') : '<div style="color:var(--dim);font-size:13px;padding:10px 0">No grievances filed.</div>';
+}
+
+async function cmFileGrievance() {
+  const principal = document.getElementById('gri-principal').value.trim();
+  const complaint = document.getElementById('gri-complaint').value.trim();
+  const artifact  = document.getElementById('gri-artifact').value.trim();
+  const res = document.getElementById('cm-grievance-result');
+  if(!principal||!complaint){res.innerHTML='<span style="color:var(--red)">Fill all fields</span>';return;}
+  const r = await api('/api/consent/grievance',{method:'POST',body:JSON.stringify({data_principal:principal,complaint,artifact_id:artifact||null})});
+  if(!r){res.innerHTML='<span style="color:var(--red)">Failed</span>';return;}
+  const ticket = (r.data||r).ticket;
+  res.innerHTML = `<div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:8px;padding:12px 16px;color:var(--amber)">Ã¢Å“â€¦ Grievance ${ticket?.id} filed. DPO notified. SLA: 72 hours.</div>`;
+  document.getElementById('gri-principal').value='';
+  document.getElementById('gri-complaint').value='';
+  document.getElementById('gri-artifact').value='';
+  await cmLoadGrievances();
+}
+
+
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+// NEW MODULE PAGES - LF-RiskRosi Platform Expansion
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+
+function moduleHtml(cfg) {
+  const cards = cfg.stats.map(s=>`
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 22px;flex:1;min-width:140px">
+      <div style="color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">${s.label}</div>
+      <div style="color:${s.color||'var(--ice)'};font-size:26px;font-weight:800;margin-bottom:2px">${s.val}</div>
+      <div style="color:var(--dim);font-size:11px">${s.sub||''}</div>
+    </div>`).join('');
+  const rows = (cfg.rows||[]).map(r=>`
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:14px">
+      <div style="flex:1">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
+          ${r.badge?`<span style="background:${r.bc||'rgba(126,200,227,.15)'};color:${r.bcolor||'var(--ice)'};border:1px solid ${r.bc||'rgba(126,200,227,.3)'};border-radius:4px;padding:2px 7px;font-size:10px;font-weight:700">${r.badge}</span>`:''}
+          <span style="color:var(--dim);font-size:11px;font-family:monospace">${r.id||''}</span>
+        </div>
+        <div style="color:var(--text);font-weight:600;font-size:13px;margin-bottom:2px">${r.title}</div>
+        <div style="color:var(--muted);font-size:12px">${r.sub||''}</div>
+      </div>
+      ${r.action?`<button style="background:rgba(126,200,227,.1);color:var(--ice);border:1px solid rgba(126,200,227,.2);border-radius:7px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap">${r.action}</button>`:''}
+    </div>`).join('');
+  return `<div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">${cards}</div>
+    ${cfg.section?`<div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">${cfg.section}</div>`:''}
+    ${rows}${cfg.extra||''}`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ TVM Hub Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function tvm() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Critical CVEs',   val:'23',  color:'var(--red)',   sub:'Patch SLA: 48h breached'},
+      {label:'High Severity',   val:'87',  color:'var(--amber)', sub:'7 asset-linked'},
+      {label:'MTTR (days)',      val:'4.2', color:'var(--ice)',   sub:'Benchmark: 3.0'},
+      {label:'Patch Coverage',  val:'91%', color:'var(--green)', sub:'Ã¢â€ â€˜ from 88%'},
+    ],
+    section:'Active Vulnerabilities - Priority Queue',
+    rows:[
+      {id:'CVE-2024-3094',  badge:'CRITICAL',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'XZ Utils backdoor - SWIFT-HSM-01, FileServer-02',sub:'CVSS 10.0 Ã‚Â· Exploitation detected Ã‚Â· Fix: Upgrade xz-utils 5.6.1',action:'Patch Now'},
+      {id:'CVE-2024-21762', badge:'CRITICAL',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'Fortinet SSL-VPN auth bypass - VPN-GW-01',sub:'CVSS 9.8 Ã‚Â· Remote exploit Ã‚Â· Fix: FortiOS 7.4.3+',action:'Patch Now'},
+      {id:'CVE-2024-1086',  badge:'HIGH',   bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'Linux kernel nftables UAF - DB-CORE-01',sub:'CVSS 7.8 Ã‚Â· Local privilege escalation Ã‚Â· Fix: Kernel 6.7.3+',action:'Schedule'},
+      {id:'CVE-2023-44487', badge:'HIGH',   bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'HTTP/2 Rapid Reset DoS - api-gateway',sub:'CVSS 7.5 Ã‚Â· DDoS amplification Ã‚Â· Fix: Update nghttp2',action:'Schedule'},
+      {id:'CVE-2024-0204',  badge:'MEDIUM', bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)', title:'GoAnywhere MFT auth bypass - FTP-ARCHIVE-01',sub:'CVSS 6.5 Ã‚Â· Patch available Ã‚Â· No active exploit',action:'Investigate'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Threat Intelligence Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function threats() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Threat Actors',    val:'4',   color:'var(--red)',   sub:'Targeting FinTech India'},
+      {label:'IOC Feeds',        val:'12',  color:'var(--ice)',   sub:'MISP Ã‚Â· OTX Ã‚Â· VirusTotal'},
+      {label:'New IOCs (24h)',   val:'347', color:'var(--amber)', sub:'Hashes Ã‚Â· IPs Ã‚Â· Domains'},
+      {label:'Feed Health',      val:'98%', color:'var(--green)', sub:'All feeds live'},
+    ],
+    section:'Threat Actor Profiles - Active Targeting India FinTech',
+    rows:[
+      {id:'TA-001',badge:'APT',   bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'APT41 - Double Dragon (CN-sponsored)',sub:'Targeting: Indian FinTech SWIFT Ã‚Â· TTP: Spear-phish Ã¢â€ â€™ pivot Ã¢â€ â€™ SWIFT fraud Ã‚Â· Active: 3d ago',action:'Hunt IOCs'},
+      {id:'TA-002',badge:'APT',   bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'Lazarus Group (DPRK) - SWIFT targeting',sub:'Targeting: Banking corridors Ã‚Â· $1.3Bn stolen globally Ã‚Â· India: 4 incidents 2024',action:'Hunt IOCs'},
+      {id:'TA-003',badge:'RaaS',  bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'LockBit 3.0 Affiliate - Ransomware-as-a-Service',sub:'Targeting: Unpatched VPNs Ã‚Â· India avg ransom Ã¢â€šÂ¹2.4Cr Ã‚Â· 8 FinTech hits 2024',action:'Hunt IOCs'},
+      {id:'TA-004',badge:'FIN',   bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'FIN7 / Carbanak - BEC + SWIFT manipulation',sub:'Targeting: CFO + treasury teams Ã‚Â· Spear-phish Ã¢â€ â€™ SWIFT manipulation',action:'Hunt IOCs'},
+    ],
+    extra:`<div style="background:var(--card);border:1px solid rgba(126,200,227,.2);border-radius:12px;padding:18px;margin-top:16px">
+      <div style="color:var(--text);font-weight:700;font-size:13px;margin-bottom:12px">Ã°Å¸â€¢ÂµÃ¯Â¸Â IOC Quick Hunt</div>
+      <div style="display:flex;gap:10px">
+        <input id="ioc-inp" placeholder="IP Ã‚Â· domain Ã‚Â· hash Ã‚Â· CVE..." style="flex:1;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 14px;color:var(--text);font-size:13px;font-family:monospace">
+        <button onclick="huntIOC()" style="background:var(--red);color:#fff;border:none;border-radius:7px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Ã°Å¸â€Â Hunt</button>
+      </div>
+      <div id="ioc-res" style="margin-top:10px"></div>
+    </div>`
+  });
+}
+function huntIOC(){
+  const v=document.getElementById('ioc-inp').value.trim();
+  const r=document.getElementById('ioc-res');
+  if(!v)return;
+  r.innerHTML=`<div style="background:rgba(196,30,58,.1);border:1px solid rgba(196,30,58,.3);border-radius:7px;padding:10px 14px;color:var(--amber);font-size:13px">Ã°Å¸â€Â´ IOC <strong style="font-family:monospace">${v}</strong> - VirusTotal: 24/72 engines flag Ã‚Â· ThreatFox: Active Ã‚Â· MISP: Linked to APT41 campaign India-2024</div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Red Team Command Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function redteam() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Active Campaigns', val:'2',    color:'var(--red)',   sub:'1 live, 1 planning'},
+      {label:'Findings (90d)',   val:'34',   color:'var(--amber)', sub:'8 critical findings'},
+      {label:'MITRE Coverage',   val:'67%',  color:'var(--ice)',   sub:'81/121 techniques tested'},
+      {label:'Mean Dwell Time',  val:'6.2h', color:'var(--green)', sub:'SOC benchmark: 24h Ã¢â€ â€˜'},
+    ],
+    section:'Campaign History - Adversary Simulation',
+    rows:[
+      {id:'RT-007',badge:'LIVE',     bc:'rgba(196,30,58,.2)',  bcolor:'var(--red)',   title:'Purple Team - SWIFT BEC simulation Ã‚Â· Phase 2/5',sub:'Lateral movement active Ã‚Â· MITRE TA0008 Ã‚Â· SOC detection rate: 78% Ã‚Â· Day 3 of 5',action:'View Live'},
+      {id:'RT-006',badge:'COMPLETE', bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'External Pentest - api-gateway + admin portal',sub:'14 findings: 2 Critical, 5 High Ã‚Â· Completed 2025-02-28 Ã‚Â· Remediation: 11/14 done',action:'Report'},
+      {id:'RT-005',badge:'COMPLETE', bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'Phishing Simulation - 400 staff Ã‚Â· All departments',sub:'Click rate: 18% (Ã¢â€ â€œ from 34%) Ã‚Â· Cred harvest: 7% Ã‚Â· Training assigned: 72 staff',action:'Report'},
+      {id:'RT-004',badge:'ARCHIVED', bc:'rgba(255,255,255,.08)',bcolor:'var(--dim)',  title:'Physical Pentest - Noida HQ + DR site',sub:'Badge cloning: Success Ã‚Â· Tailgating: 3/5 attempts Ã‚Â· Key gaps remediated',action:'Archive'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Cloud Matrix Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function cloud() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Cloud Accounts',  val:'7',     color:'var(--ice)',   sub:'AWS:3 Azure:3 GCP:1'},
+      {label:'Misconfigs',      val:'23',    color:'var(--red)',   sub:'4 public S3 buckets'},
+      {label:'CSPM Score',      val:'74/100',color:'var(--amber)', sub:'Ã¢â€ â€˜ from 68 last month'},
+      {label:'Spend MTD',       val:'Ã¢â€šÂ¹18.4L',color:'var(--green)', sub:'12% under budget'},
+    ],
+    section:'Cloud Security Posture Findings',
+    rows:[
+      {id:'CLD-001',badge:'CRITICAL',bc:'rgba(196,30,58,.2)',  bcolor:'var(--red)',   title:'S3 "acme-prod-backups" - publicly accessible',sub:'AWS ap-south-1 Ã‚Â· Contains DB backups + PII Ã‚Â· Fix: Enable Block Public Access immediately',action:'Fix Now'},
+      {id:'CLD-002',badge:'HIGH',    bc:'rgba(245,158,11,.2)', bcolor:'var(--amber)', title:'Azure VM RDP (3389) open to 0.0.0.0/0',sub:'vm-finance-prod Ã‚Â· East India region Ã‚Â· Fix: Restrict to Corp VPN IP range only',action:'Fix Now'},
+      {id:'CLD-003',badge:'HIGH',    bc:'rgba(245,158,11,.2)', bcolor:'var(--amber)', title:'GCP Service Account with Owner role',sub:'sa-data-pipeline@acme.iam Ã‚Â· Overprivileged Ã‚Â· Fix: Apply least-privilege IAM policy',action:'Review'},
+      {id:'CLD-004',badge:'MEDIUM',  bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',  title:'AWS CloudTrail logging disabled - 2 accounts',sub:'ap-south-1, ap-southeast-1 Ã‚Â· Compliance gap: RBI + ISO27001 Ã‚Â· Enable immediately',action:'Enable'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Zero Trust Control Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function zerotrust() {
+  const pillars=[
+    {d:'Identity',   score:82,c:'var(--green)'},
+    {d:'Device',     score:71,c:'var(--amber)'},
+    {d:'Network',    score:65,c:'var(--amber)'},
+    {d:'Application',score:78,c:'var(--green)'},
+    {d:'Data',       score:60,c:'var(--red)'},
+    {d:'Visibility', score:88,c:'var(--green)'},
+  ];
+  document.getElementById('lc').innerHTML = `
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">
+      ${[
+        {l:'ZT Maturity',    v:'74/100',  c:'var(--ice)',  s:'Level 3 - Defined'},
+        {l:'MFA Coverage',   v:'94%',     c:'var(--green)',s:'6% legacy gap'},
+        {l:'Privileged Accts',v:'23',     c:'var(--amber)',s:'4 need PAM review'},
+        {l:'Micro-segments', v:'18',      c:'var(--green)',s:'SWIFT isolated Ã¢Å“â€œ'},
+      ].map(s=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 22px;flex:1;min-width:140px"><div style="color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">${s.l}</div><div style="color:${s.c};font-size:26px;font-weight:800;margin-bottom:2px">${s.v}</div><div style="color:var(--dim);font-size:11px">${s.s}</div></div>`).join('')}
+    </div>
+    <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Zero Trust Pillars - NIST SP 800-207</div>
+    ${pillars.map(p=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:flex;align-items:center;gap:16px">
+      <div style="width:100px;color:var(--text);font-weight:600;font-size:13px">${p.d}</div>
+      <div style="flex:1;background:rgba(255,255,255,.06);border-radius:4px;height:8px"><div style="width:${p.score}%;height:100%;background:${p.c};border-radius:4px"></div></div>
+      <div style="width:38px;color:${p.c};font-weight:800;font-size:14px;text-align:right">${p.score}</div>
+      <span style="background:${p.c}22;color:${p.c};border:1px solid ${p.c}44;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;min-width:70px;text-align:center">${p.score>=80?'Strong':p.score>=70?'Good':p.score>=60?'Gap':'Critical'}</span>
+    </div>`).join('')}`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Cert Lighthouse Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function certs() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Total Certs',   val:'47', color:'var(--ice)',   sub:'Tracked across all infra'},
+      {label:'Expiring <30d', val:'3',  color:'var(--red)',   sub:'Action required now!'},
+      {label:'Expiring <90d', val:'8',  color:'var(--amber)', sub:'Schedule renewal soon'},
+      {label:'Auto-renew',    val:'34', color:'var(--green)', sub:'Via ACME/Let\'s Encrypt'},
+    ],
+    section:'Certificate Inventory - Expiry Monitor',
+    rows:[
+      {id:'CERT-001',badge:'EXPIRES 12D',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'api-gateway.acmefintech.com',sub:'Issuer: DigiCert Ã‚Â· TLS 1.3 Ã‚Â· Auto-renew: No Ã‚Â· Owner: DevOps team Ã‚Â· PCI-DSS required',action:'Renew Now'},
+      {id:'CERT-002',badge:'EXPIRES 18D',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'payment-gw.acmefintech.com - EV Certificate',sub:'Issuer: Sectigo EV Ã‚Â· Extended Validation Ã‚Â· PCI-DSS required Ã‚Â· Owner: Infra team',action:'Renew Now'},
+      {id:'CERT-003',badge:'EXPIRES 45D',bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'admin.acmefintech.com',sub:'Issuer: Let\'s Encrypt Ã‚Â· Auto-renew configured Ã‚Â· Monitoring only',action:'Verify'},
+      {id:'CERT-004',badge:'280 DAYS',   bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'*.acmefintech.com - Wildcard Ã‚Â· 12 subdomains',sub:'Issuer: GlobalSign Ã‚Â· Auto-renew via ACME Ã‚Â· Covers all subdomains',action:'Details'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Audit Maturity Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function auditmaturity() {
+  const dims=[
+    {d:'Planning & Strategy',    s:4},{d:'Risk-Based Approach',s:4},
+    {d:'Execution Quality',      s:3},{d:'Reporting & Communication',s:4},
+    {d:'Follow-up & Closure',    s:3},{d:'Technology & Automation',s:2},
+    {d:'People & Training',      s:3},{d:'Independence & Ethics',  s:5},
+  ];
+  const total=dims.reduce((a,d)=>a+d.s,0),max=dims.length*5,pct=Math.round(total/max*100);
+  document.getElementById('lc').innerHTML = `
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">
+      ${[
+        {l:'CMMI Level', v:pct>=80?'5':pct>=60?'4':'3', c:'var(--ice)',  s:pct>=80?'Optimized':pct>=60?'Managed':'Defined'},
+        {l:'Overall Score',v:pct+'%',c:'var(--green)',s:total+'/'+max+' points'},
+        {l:'Open Issues',  v:'14',   c:'var(--amber)',s:'3 overdue SLA'},
+        {l:'Audits FY25',  v:'23',   c:'var(--green)',s:'4 scheduled ahead'},
+      ].map(s=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 22px;flex:1;min-width:140px"><div style="color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">${s.l}</div><div style="color:${s.c};font-size:26px;font-weight:800;margin-bottom:2px">${s.v}</div><div style="color:var(--dim);font-size:11px">${s.s}</div></div>`).join('')}
+    </div>
+    <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">CMMI Audit Maturity - 8 Dimensions</div>
+    ${dims.map(d=>{const p=d.s/5*100,c=p>=80?'var(--green)':p>=60?'var(--amber)':'var(--red)';return`<div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 18px;margin-bottom:7px;display:flex;align-items:center;gap:14px"><div style="width:210px;color:var(--text);font-size:13px;font-weight:500">${d.d}</div><div style="flex:1;background:rgba(255,255,255,.06);border-radius:4px;height:8px"><div style="width:${p}%;height:100%;background:${c};border-radius:4px"></div></div><div style="color:${c};font-weight:800;width:40px;text-align:right">${d.s}/5</div></div>`;}).join('')}`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Ecosystem Hub Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function ecosystem() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Total Dependencies',val:'312', color:'var(--ice)',   sub:'Direct + transitive'},
+      {label:'Critical Suppliers',val:'8',   color:'var(--red)',   sub:'Single-source risk'},
+      {label:'Partner Risk Score',val:'64',  color:'var(--amber)', sub:'Ã¢â€ â€˜ needs attention'},
+      {label:'4th-Party Exposure',val:'23%', color:'var(--red)',   sub:'Unknown sub-processors'},
+    ],
+    section:'Supply Chain & Ecosystem Risk Map',
+    rows:[
+      {id:'ECO-001',badge:'CRITICAL',bc:'rgba(196,30,58,.2)',  bcolor:'var(--red)',   title:'AWS India - Single cloud provider concentration',sub:'100% prod on AWS ap-south-1 Ã‚Â· No DR fallback Ã‚Â· RBI multi-cloud guideline gap',action:'Mitigate'},
+      {id:'ECO-002',badge:'HIGH',    bc:'rgba(245,158,11,.2)', bcolor:'var(--amber)', title:'Razorpay - Payment gateway concentration (85%)',sub:'India-only provider Ã‚Â· PayU fallback: 15% only Ã‚Â· RBI payment resilience guideline',action:'Review'},
+      {id:'ECO-003',badge:'HIGH',    bc:'rgba(245,158,11,.2)', bcolor:'var(--amber)', title:'CIBIL / TransUnion - Credit bureau single source',sub:'KYC + credit scoring Ã‚Â· No alternative bureau integrated Ã‚Â· 4h SLA dependency',action:'Review'},
+      {id:'ECO-004',badge:'MEDIUM',  bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',  title:'Infosys BPO - 40% operations outsourcing',sub:'DPDP sub-processor registered Ã‚Â· Annual audit: Complete Ã‚Â· DPA: Valid until 2026',action:'Audit'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Predictive Risk Alpha Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function predictive() {
+  const forecasts=[
+    {risk:'Ransomware attack on cloud storage',prob:72,delta:'+14%',trend:'Ã¢â€ â€˜',c:'var(--red)',  drivers:'CVE-2024-3094 unpatched Ã‚Â· No immutable backups Ã‚Â· APT41 active'},
+    {risk:'SWIFT BEC / Insider fraud attempt', prob:61,delta:'+8%', trend:'Ã¢â€ â€˜',c:'var(--red)',  drivers:'Lazarus targeting Ã‚Â· Privileged access gaps Ã‚Â· Phishing rate 18%'},
+    {risk:'RBI compliance penalty (DPDP)',     prob:55,delta:'+22%',trend:'Ã¢â€ â€˜',c:'var(--amber)',drivers:'DPDP coverage 55% Ã‚Â· Section 6 consent gaps Ã‚Â· Deadline: Jul 2024'},
+    {risk:'DDoS on payment gateway',           prob:44,delta:'+5%', trend:'Ã¢â€ â€˜',c:'var(--amber)',drivers:'HTTP/2 vuln unpatched Ã‚Â· No BCP test in 6 months Ã‚Â· Monsoon DDoS season'},
+    {risk:'Third-party breach via Infosys BPO',prob:32,delta:'-3%', trend:'Ã¢â€ â€œ',c:'var(--ice)',  drivers:'Annual audit done Ã‚Â· ISO 27001 certified Ã‚Â· Data minimization applied'},
+    {risk:'Insider data exfiltration',         prob:28,delta:'+2%', trend:'Ã¢â€ â€™',c:'var(--ice)',  drivers:'2 privileged access reviews overdue Ã‚Â· DLP policy partial coverage'},
+  ];
+  document.getElementById('lc').innerHTML = `
+    <div style="background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(126,200,227,.08));border:1px solid rgba(124,58,237,.3);border-radius:12px;padding:18px 22px;margin-bottom:20px;display:flex;align-items:center;gap:16px">
+      <div style="font-size:32px">Ã°Å¸Â§Â </div>
+      <div style="flex:1">
+        <div style="color:var(--text);font-weight:700;font-size:15px;margin-bottom:3px">LUMA Predictive Engine - 90-Day Risk Forecast</div>
+        <div style="color:var(--muted);font-size:12px">ML model trained on 18 months incident data Ã‚Â· 84% confidence Ã‚Â· Last trained: 2 days ago Ã‚Â· Next: 5 days</div>
+      </div>
+      <button onclick="toast('Ã°Å¸Â§Â  LUMA retraining model on latest incident data...','i')" style="background:rgba(124,58,237,.2);color:#A78BFA;border:1px solid rgba(124,58,237,.4);border-radius:8px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer">Retrain Model</button>
+    </div>
+    <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Predicted Risk Events - 90-Day Window</div>
+    ${forecasts.map(f=>`
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <div style="flex:1;color:var(--text);font-weight:600;font-size:13px">${f.risk}</div>
+        <span style="color:${f.c};font-weight:800;font-size:18px">${f.prob}%</span>
+        <span style="color:${f.trend==='Ã¢â€ â€˜'?'var(--red)':f.trend==='Ã¢â€ â€œ'?'var(--green)':'var(--muted)'};font-size:12px;font-weight:700">${f.trend} ${f.delta}</span>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border-radius:4px;height:6px;margin-bottom:8px"><div style="width:${f.prob}%;height:100%;background:${f.c};border-radius:4px;opacity:.8"></div></div>
+      <div style="color:var(--dim);font-size:11px">Key drivers: ${f.drivers}</div>
+    </div>`).join('')}`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Board Intelligence Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function board() {
+  document.getElementById('lc').innerHTML = `
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">
+      ${[
+        {l:'Cyber Risk (Ã¢â€šÂ¹)',   v:'Ã¢â€šÂ¹12.4Cr',c:'var(--red)',   s:'Annualised Expected Loss'},
+        {l:'Board Score',      v:'7.2/10',  c:'var(--ice)',   s:'vs Industry: 6.8 avg'},
+        {l:'Cyber Insurance',  v:'Ã¢â€šÂ¹50Cr',   c:'var(--green)', s:'Covered Ã‚Â· Deductible Ã¢â€šÂ¹50L'},
+        {l:'Next Board Date',  v:'Apr 15',  c:'var(--amber)', s:'Pack due: Apr 10'},
+      ].map(s=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 22px;flex:1;min-width:140px"><div style="color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">${s.l}</div><div style="color:${s.c};font-size:26px;font-weight:800;margin-bottom:2px">${s.v}</div><div style="color:var(--dim);font-size:11px">${s.s}</div></div>`).join('')}
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px">
+        <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Top 5 Cyber Risks in Ã¢â€šÂ¹ (Board View)</div>
+        ${[
+          ['Ransomware / Data Breach','Ã¢â€šÂ¹8.2Cr','72%'],
+          ['SWIFT Fraud / BEC','Ã¢â€šÂ¹14.6Cr','61%'],
+          ['Regulatory Penalty (DPDP)','Ã¢â€šÂ¹5Cr','55%'],
+          ['DDoS Payment Downtime','Ã¢â€šÂ¹3.1Cr','44%'],
+          ['Third-party Breach','Ã¢â€šÂ¹2.8Cr','32%'],
+        ].map(([r,v,p])=>`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px"><span style="color:var(--text)">${r}</span><span style="color:var(--amber);font-weight:700">${v}</span><span style="color:var(--dim)">${p}</span></div>`).join('')}
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px">
+        <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Board Pack - Q4 FY2025</div>
+        ${[
+          ['Executive Summary','1 page Ã‚Â· Risk-in-Ã¢â€šÂ¹ overview','Ready'],
+          ['Threat Landscape','APT threats targeting sector','Ready'],
+          ['Compliance Status','5 frameworks Ã‚Â· Gap analysis','Ready'],
+          ['ROSI Investments','Ã¢â€šÂ¹13.5L invested Ã‚Â· Ã¢â€šÂ¹42.1Cr saved','Ready'],
+          ['Roadmap FY2026','Budget ask: Ã¢â€šÂ¹2.8Cr','Draft'],
+        ].map(([t,s,st])=>`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px;align-items:center"><div><div style="color:var(--text)">${t}</div><div style="color:var(--dim);font-size:10px">${s}</div></div><span style="background:${st==='Ready'?'rgba(16,185,138,.15)':'rgba(245,158,11,.15)'};color:${st==='Ready'?'var(--green)':'var(--amber)'};border-radius:4px;padding:2px 7px;font-size:10px;font-weight:700">${st}</span></div>`).join('')}
+        <button onclick="toast('Ã°Å¸â€œÅ  Board Intelligence Pack generated - PDF ready','s')" style="width:100%;background:var(--red);color:#fff;border:none;border-radius:7px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;margin-top:12px">Generate Board Pack Ã¢â€ â€™</button>
+      </div>
+    </div>\n  </div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ LUMA Academy Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function lumaacademy() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Enrolled Staff', val:'247', color:'var(--ice)',   sub:'of 312 total staff'},
+      {label:'Avg Score',      val:'78%', color:'var(--green)', sub:'Ã¢â€ â€˜ from 71% last quarter'},
+      {label:'Certifications', val:'34',  color:'var(--amber)', sub:'Issued this year'},
+      {label:'Overdue',        val:'18',  color:'var(--red)',   sub:'Mandatory training past SLA'},
+    ],
+    section:'Active Learning Paths',
+    rows:[
+      {id:'LRN-001',badge:'MANDATORY',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'DPDP Act 2023 Awareness - All Staff',sub:'2h course Ã‚Â· 247 enrolled Ã‚Â· 192 completed Ã‚Â· Deadline: Mar 31 Ã‚Â· 55 overdue',action:'Assign All'},
+      {id:'LRN-002',badge:'ROLE-BASED',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)', title:'SWIFT Security Controls - Finance Team (28 staff)',sub:'4h course Ã‚Â· Module 3 of 6 active Ã‚Â· Avg score: 84% Ã‚Â· ISO 27001 Annex A aligned',action:'View Progress'},
+      {id:'LRN-003',badge:'MANDATORY',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'Phishing & Social Engineering Awareness',sub:'45min Ã‚Â· All staff Ã‚Â· Post-simulation training Ã‚Â· 72 assigned after red team exercise',action:'Assign'},
+      {id:'LRN-004',badge:'OPTIONAL',  bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'LUMA AI Platform Certification - Security Analysts',sub:'6h course Ã‚Â· 8 modules Ã‚Â· LUMA-CERT badge on completion Ã‚Â· 12 enrolled',action:'Enroll'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Reports Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function reports() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Reports Generated',val:'142', color:'var(--ice)',   sub:'This financial year'},
+      {label:'Scheduled',        val:'8',   color:'var(--amber)', sub:'Auto-delivery active'},
+      {label:'Avg Generation',   val:'4.2s',color:'var(--green)', sub:'With LUMA AI'},
+      {label:'Formats',          val:'4',   color:'var(--dim)',   sub:'PDFÃ‚Â·DOCXÃ‚Â·CSVÃ‚Â·JSON'},
+    ],
+    section:'Available Report Templates',
+    rows:[
+      {id:'RPT-001',badge:'POPULAR',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',   title:'Executive Risk Dashboard - Board-ready PDF',sub:'1-page summary Ã‚Â· Risk in Ã¢â€šÂ¹ Ã‚Â· Compliance status Ã‚Â· ROSI Ã‚Â· Recommended for CXO',action:'Generate'},
+      {id:'RPT-002',badge:'POPULAR',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',   title:'ISO 27001 Gap Analysis Report',sub:'Control-by-control coverage Ã‚Â· Evidence links Ã‚Â· Remediation roadmap Ã‚Â· Auditor-ready',action:'Generate'},
+      {id:'RPT-003',badge:'SCHEDULED',bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'Weekly SecOps Digest - Every Monday 8:00 AM',sub:'Signal summary Ã‚Â· Remediation status Ã‚Â· MTTR Ã‚Â· Delivered to CISO + SOC lead',action:'Edit Schedule'},
+      {id:'RPT-004',badge:'NEW',bc:'rgba(124,58,237,.2)',bcolor:'#A78BFA',            title:'DPDP Compliance Readiness Report',sub:'Consent coverage Ã‚Â· Shadow PII findings Ã‚Â· Grievance status Ã‚Â· RBI submission ready',action:'Generate'},
+      {id:'RPT-005',badge:'CUSTOM',bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)',    title:'Custom Report Builder',sub:'Choose modules Ã‚Â· Date range Ã‚Â· Format Ã‚Â· Recipients Ã‚Â· One-time or scheduled delivery',action:'Build Report'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Crisis War Room Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function crisis() {
+  document.getElementById('lc').innerHTML = `
+    <div style="background:rgba(196,30,58,.1);border:1px solid rgba(196,30,58,.4);border-radius:12px;padding:16px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <div style="color:var(--red);font-weight:700;font-size:15px;margin-bottom:3px">Ã¢Å¡Â Ã¯Â¸Â No Active Incident - System Nominal</div>
+        <div style="color:var(--muted);font-size:12px">Last incident: SIG-001 Ransomware Ã‚Â· Resolved 2025-03-08 Ã‚Â· RTO: 4.2h (SLA: 6h) Ã¢Å“â€œ</div>
+      </div>
+      <button onclick="toast('Ã°Å¸â€ Ëœ Incident Response ACTIVATED - IRT notified, Slack bridge open, stakeholder comms initiated','e')" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer">Ã°Å¸â€ Ëœ Activate IR</button>
+    </div>
+    ${moduleHtml({
+      stats:[
+        {label:'MTTD (hours)',val:'2.1',color:'var(--green)',sub:'Mean time to detect'},
+        {label:'MTTR (hours)',val:'4.2',color:'var(--ice)',  sub:'Mean time to resolve'},
+        {label:'Playbooks',   val:'14', color:'var(--amber)',sub:'Across 6 threat types'},
+        {label:'IRT Members', val:'8',  color:'var(--green)',sub:'On-call 24/7'},
+      ],
+      section:'Incident Response Playbooks',
+      rows:[
+        {id:'PB-001',badge:'RANSOMWARE',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'Ransomware Response - Isolation Ã¢â€ â€™ Recovery Ã¢â€ â€™ Evidence',sub:'12 steps Ã‚Â· RTO: 6h Ã‚Â· Owner: SOC Lead Ã‚Â· Last tested: 2025-02-15 (tabletop)',action:'Execute'},
+        {id:'PB-002',badge:'DATA BREACH',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',  title:'Data Breach - Containment Ã¢â€ â€™ CERT-In 6h notification Ã¢â€ â€™ DPDP Ã‚Â§9',sub:'CERT-In 6h mandatory notify Ã‚Â· DPDP 72h data principal notice Ã‚Â· Regulator report',action:'Execute'},
+        {id:'PB-003',badge:'DDOS',bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)',      title:'DDoS on Payment Gateway - AWS Shield activation',sub:'Cloudflare scrubbing Ã¢â€ â€™ AWS Shield Ã¢â€ â€™ Failover to DR Ã‚Â· Customer comms template',action:'Execute'},
+        {id:'PB-004',badge:'INSIDER',bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)',   title:'Insider Threat - Forensic preserve Ã¢â€ â€™ HR/Legal Ã¢â€ â€™ Kill-switch',sub:'Forensic imaging Ã‚Â· Access revocation Ã‚Â· Legal hold Ã‚Â· HR escalation protocol',action:'Execute'},
+      ]
+    })}`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Nexus Command Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function nexus() {
+  document.getElementById('lc').innerHTML = `
+    <div style="color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px">Nexus Command - All Modules at a Glance</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+    ${[
+      {label:'Risk Score',     val:'6.8/10',color:'var(--amber)', sub:'3 critical',     page:'risks'},
+      {label:'Compliance',     val:'72%',    color:'var(--amber)', sub:'5 frameworks',   page:'compliance'},
+      {label:'Avg ROSI',       val:'766%',   color:'var(--green)', sub:'5 scenarios',    page:'rosi'},
+      {label:'SecOps Signals', val:'5',      color:'var(--red)',   sub:'2 critical live',page:'secops'},
+      {label:'TVM CVEs',       val:'23',     color:'var(--red)',   sub:'Critical unpatched',page:'tvm'},
+      {label:'Cloud CSPM',     val:'74/100', color:'var(--amber)', sub:'23 findings',    page:'cloud'},
+      {label:'ZT Maturity',    val:'74%',    color:'var(--ice)',   sub:'Level 3',        page:'zerotrust'},
+      {label:'Vendors High Risk',val:'2',    color:'var(--amber)', sub:'of 8 vendors',   page:'vendors'},
+      {label:'ESG Score',      val:'71/100', color:'var(--green)', sub:'Carbon: on track',page:'esg'},
+      {label:'DPDP Coverage',  val:'55%',    color:'var(--red)',   sub:'Shadow PII: 3',  page:'consent'},
+      {label:'Cert Expiry',    val:'3',      color:'var(--red)',   sub:'In <30 days',    page:'certs'},
+      {label:'Red Team',       val:'1 LIVE', color:'var(--red)',   sub:'Campaign active',page:'redteam'},
+      {label:'Predictive',     val:'72%',    color:'var(--red)',   sub:'Ransomware risk',page:'predictive'},
+      {label:'Board Pack',     val:'Apr 15', color:'var(--amber)', sub:'Draft ready',    page:'board'},
+      {label:'LUMA Academy',   val:'78%',    color:'var(--green)', sub:'Avg staff score',page:'lumaacademy'},
+      {label:'Open Tasks',     val:'8',      color:'var(--amber)', sub:'3 overdue',      page:'tasks'},
+    ].map(s=>`<div onclick="showPage('${s.page}')" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;cursor:pointer;transition:.15s" onmouseover="this.style.borderColor='var(--ice)'" onmouseout="this.style.borderColor='var(--border)'">
+      <div style="color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px">${s.label}</div>
+      <div style="color:${s.color};font-size:20px;font-weight:800;margin-bottom:2px">${s.val}</div>
+      <div style="color:var(--dim);font-size:10px">${s.sub}</div>
+    </div>`).join('')}
+    </div>\n  </div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Remediation Ops Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function remediation() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Open Tickets',   val:'47',  color:'var(--amber)', sub:'Across all modules'},
+      {label:'SLA Breached',   val:'6',   color:'var(--red)',   sub:'Escalation required'},
+      {label:'Avg Close Time', val:'8.4d',color:'var(--ice)',   sub:'Target: 5d'},
+      {label:'Closed This Month',val:'23',color:'var(--green)', sub:'Ã¢â€ â€˜ from 17 last month'},
+    ],
+    section:'Open Remediation Tickets - Priority Queue',
+    rows:[
+      {id:'REM-001',badge:'BREACH',  bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'CVE-2024-3094 - XZ backdoor on SWIFT-HSM-01',sub:'SLA: 48h Ã‚Â· Breached by 36h Ã‚Â· Assigned: Infra Team Ã‚Â· Evidence required for PCI-DSS',action:'Escalate'},
+      {id:'REM-002',badge:'HIGH',    bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'S3 bucket public access - CLD-001',sub:'SLA: 72h Ã‚Â· 18h remaining Ã‚Â· Assigned: DevOps Ã‚Â· Fix: Enable Block Public Access',action:'Update'},
+      {id:'REM-003',badge:'HIGH',    bc:'rgba(245,158,11,.2)',bcolor:'var(--amber)', title:'MFA rollout - 6% legacy users (19 accounts)',sub:'SLA: 7d Ã‚Â· 2d remaining Ã‚Â· Assigned: IT Admin Ã‚Â· User communication sent',action:'Update'},
+      {id:'REM-004',badge:'MEDIUM',  bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)', title:'DPDP consent coverage - Section 6 gap close',sub:'SLA: 14d Ã‚Â· 8d remaining Ã‚Â· Assigned: Legal + Dev Ã‚Â· 55% Ã¢â€ â€™ 80% target',action:'Update'},
+      {id:'REM-005',badge:'COMPLETE',bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'SIG-001 Ransomware - FileServer-02 recovery',sub:'Closed 2025-03-08 Ã‚Â· RTO: 4.2h (SLA: 6h) Ã¢Å“â€œ Ã‚Â· Evidence: Forensic report uploaded',action:'View'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Tenant Admin Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function tenantadmin() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Organisations', val:'3',  color:'var(--ice)',   sub:'1 enterprise, 2 SMB'},
+      {label:'Total Users',   val:'12', color:'var(--green)', sub:'Across all tenants'},
+      {label:'API Keys',      val:'5',  color:'var(--amber)', sub:'2 expiring <30d'},
+      {label:'Plan',          val:'Enterprise',color:'var(--ice)',sub:'Unlimited modules'},
+    ],
+    section:'Organisation Registry',
+    rows:[
+      {id:'ORG-001',badge:'ENTERPRISE',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',   title:'LumeraFoundry Security India Pvt. Ltd.',sub:'Admin tenant Ã‚Â· All modules Ã‚Â· 5 users Ã‚Â· Domain: lumerafoundry.com Ã‚Â· MFA: Enforced',action:'Manage'},
+      {id:'ORG-002',badge:'ENTERPRISE',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',   title:'Acme FinTech Pvt. Ltd.',sub:'Primary demo org Ã‚Â· CISO: raj@acmefintech.com Ã‚Â· 4 users Ã‚Â· FinTech vertical Ã‚Â· Active',action:'Manage'},
+      {id:'ORG-003',badge:'SMB',       bc:'rgba(16,185,138,.15)', bcolor:'var(--green)', title:'Noida Tech Solutions Ltd.',sub:'SMB plan Ã‚Â· 3 users Ã‚Â· Tech vertical Ã‚Â· Trial expires: Apr 30',action:'Upgrade'},
+    ],
+    extra:`<div style="margin-top:16px;display:flex;gap:10px">
+      <button onclick="toast('Ã¢Å¾â€¢ New organisation invitation sent','s')" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">+ Add Organisation</button>
+      <button onclick="toast('Ã°Å¸â€˜Â¤ User invitation email sent','s')" style="background:rgba(126,200,227,.1);color:var(--ice);border:1px solid rgba(126,200,227,.2);border-radius:8px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer">+ Invite User</button>
+    </div>`
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Onboarding Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function onboarding() {
+  const steps=[
+    {n:1,t:'Organisation Setup',    s:'Name Ã‚Â· Industry Ã‚Â· Domain Ã‚Â· Logo',   done:true},
+    {n:2,t:'Users & Roles',         s:'Admin Ã‚Â· CISO Ã‚Â· Analyst Ã‚Â· Auditor',   done:true},
+    {n:3,t:'Import Existing Risks', s:'CSV upload or manual entry',         done:true},
+    {n:4,t:'Connect Integrations',  s:'Jira Ã‚Â· Slack Ã‚Â· SIEM Ã‚Â· Salesforce',   done:false,active:true},
+    {n:5,t:'Configure LUMA AI',     s:'Add Gemini API key Ã‚Â· Train on org data',done:false},
+    {n:6,t:'First CCM Scan',        s:'Run automated control monitoring',   done:false},
+    {n:7,t:'Invite Team & Go Live', s:'All users onboarded Ã‚Â· LUMA active',  done:false},
+  ];
+  const done=steps.filter(s=>s.done).length;
+  document.getElementById('lc').innerHTML = `
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="color:var(--text);font-weight:700;font-size:14px">Onboarding Progress</div>
+        <div style="color:var(--ice);font-weight:800;font-size:18px">${done}/${steps.length} steps</div>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border-radius:6px;height:8px;margin-bottom:16px"><div style="width:${Math.round(done/steps.length*100)}%;height:100%;background:var(--green);border-radius:6px"></div></div>
+      ${steps.map(s=>`
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+        <div style="width:28px;height:28px;border-radius:50%;background:${s.done?'var(--green)':s.active?'var(--red)':'rgba(255,255,255,.08)'};display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:800;color:${s.done||s.active?'#fff':'var(--dim)'}">${s.done?'Ã¢Å“â€œ':s.n}</div>
+        <div style="flex:1">
+          <div style="color:${s.done?'var(--muted)':s.active?'var(--text)':'var(--dim)'};font-weight:${s.active?700:500};font-size:13px;margin-bottom:2px">${s.t}${s.active?' Ã¢â€ Â Current':''}</div>
+          <div style="color:var(--dim);font-size:11px">${s.s}</div>
+        </div>
+        ${s.active?`<button onclick="toast('Ã°Å¸â€Å’ Integration setup wizard opening...','i')" style="background:var(--red);color:#fff;border:none;border-radius:7px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer">Continue Ã¢â€ â€™</button>`:''}
+      </div>`).join('')}
+    </div>\n  </div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ RevOps Health Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function revops() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'MRR',           val:'Ã¢â€šÂ¹4.2L',  color:'var(--green)', sub:'Ã¢â€ â€˜ 18% MoM'},
+      {label:'Active Orgs',   val:'3',      color:'var(--ice)',   sub:'1 trial, 2 paid'},
+      {label:'Churn Rate',    val:'0%',     color:'var(--green)', sub:'Last 3 months'},
+      {label:'NPS Score',     val:'72',     color:'var(--ice)',   sub:'Industry avg: 45'},
+    ],
+    section:'Customer Health Scores',
+    rows:[
+      {id:'ORG-001',badge:'HEALTHY',bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'LumeraFoundry Security India - Admin',sub:'Usage: 94% feature adoption Ã‚Â· DAU: 5 Ã‚Â· LUMA queries: 847/month Ã‚Â· Risk: LOW',action:'View'},
+      {id:'ORG-002',badge:'HEALTHY',bc:'rgba(16,185,138,.15)',bcolor:'var(--green)', title:'Acme FinTech Pvt. Ltd. - Demo / Prospect',sub:'Usage: 88% Ã‚Â· Module engagement: 14/17 Ã‚Â· LUMA active Ã‚Â· Conversion probability: HIGH',action:'Convert'},
+      {id:'ORG-003',badge:'AT RISK',bc:'rgba(245,158,11,.2)', bcolor:'var(--amber)', title:'Noida Tech Solutions - Trial expiring Apr 30',sub:'Usage: 34% Ã‚Â· Only 3 modules used Ã‚Â· No LUMA integration Ã‚Â· Churn risk: MEDIUM',action:'Engage'},
+    ]
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Settings Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function platformsettings() {
+  document.getElementById('lc').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      ${[
+        {title:'Profile & Organisation',items:['Organisation: Acme FinTech Pvt. Ltd.','Industry: Financial Services','Domain: acmefintech.com','Timezone: IST (UTC+5:30)']},
+        {title:'Security',items:['MFA: Enforced (TOTP)','Session timeout: 8 hours','IP allowlist: Enabled','Audit log: 90 days retention']},
+        {title:'Notifications',items:['Critical alerts: Slack + Email','Weekly digest: Email (Monday)','Board pack: Monthly auto-generate','LUMA anomaly: Push notification']},
+        {title:'Integrations',items:['Jira: Connected Ã¢Å“â€œ','Slack: Connected Ã¢Å“â€œ','Gemini AI: Add API key Ã¢â€ â€™','SIEM (Splunk): Not connected']},
+      ].map(s=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px">
+        <div style="color:var(--text);font-weight:700;font-size:13px;margin-bottom:12px">${s.title}</div>
+        ${s.items.map(i=>`<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px;color:var(--muted)">${i.includes(':')&&!i.includes('Ã¢â€ â€™')?`<span style="color:var(--text)">${i.split(':')[0]}</span><span style="color:${i.includes('Ã¢Å“â€œ')?'var(--green)':i.includes('Not')?'var(--red)':'var(--ice)'}">${i.split(':').slice(1).join(':')}</span>`:i}</div>`).join('')}
+      </div>`).join('')}
+    </div>
+    <div style="margin-top:16px;display:flex;gap:10px">
+      <button onclick="toast('Ã¢Å“â€¦ Settings saved','s')" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">Save Changes</button>
+      <button onclick="toast('Ã°Å¸â€â€˜ API key generated','i')" style="background:rgba(126,200,227,.1);color:var(--ice);border:1px solid rgba(126,200,227,.2);border-radius:8px;padding:9px 18px;font-size:13px;cursor:pointer">Generate API Key</button>
+    </div>\n  </div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Support & FAQ Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function supportfaq() {
+  document.getElementById('lc').innerHTML = moduleHtml({
+    stats:[
+      {label:'Open Tickets',  val:'2',   color:'var(--amber)', sub:'SLA: 24h response'},
+      {label:'Docs Articles', val:'247', color:'var(--ice)',   sub:'Search available'},
+      {label:'Avg CSAT',      val:'4.8', color:'var(--green)', sub:'Out of 5.0'},
+      {label:'Status',        val:'All Systems Operational',color:'var(--green)',sub:'uptime.lumerafoundry.com'},
+    ],
+    section:'Frequently Asked Questions',
+    rows:[
+      {id:'FAQ-001',badge:'POPULAR',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',   title:'How to configure LUMA AI with Gemini API key?',sub:'Add GEMINI_API_KEY to .env file Ã¢â€ â€™ restart server Ã¢â€ â€™ LUMA switches from fallback to live mode',action:'Read Doc'},
+      {id:'FAQ-002',badge:'POPULAR',bc:'rgba(126,200,227,.15)',bcolor:'var(--ice)',   title:'How does the Consent Manager DPDP Artifact work?',sub:'Request Ã¢â€ â€™ SHA-256 hash + HMAC sign Ã¢â€ â€™ webhook to CRM/DB/GA4 Ã¢â€ â€™ immutable vault storage',action:'Read Doc'},
+      {id:'FAQ-003',badge:'BILLING',bc:'rgba(245,158,11,.2)', bcolor:'var(--amber)', title:'How to add a new organisation / tenant?',sub:'Tenant Admin Ã¢â€ â€™ Add Organisation Ã¢â€ â€™ invite users Ã¢â€ â€™ assign modules Ã¢â€ â€™ configure LUMA',action:'Read Doc'},
+      {id:'FAQ-004',badge:'TECHNICAL',bc:'rgba(196,30,58,.2)',bcolor:'var(--red)',   title:'PostgreSQL setup and migration guide',sub:'Run schema.sql Ã¢â€ â€™ configure .env Ã¢â€ â€™ start pg-server.js Ã¢â€ â€™ fallback to demo-server.js auto',action:'Read Doc'},
+    ],
+    extra:`<div style="margin-top:16px;display:flex;gap:10px">
+      <button onclick="toast('Ã°Å¸Å½Â« Support ticket submitted - SLA: 24h','s')" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">+ New Support Ticket</button>
+      <button onclick="toast('Ã°Å¸â€œâ€“ Opening documentation portal...','i')" style="background:rgba(126,200,227,.1);color:var(--ice);border:1px solid rgba(126,200,227,.2);border-radius:8px;padding:9px 18px;font-size:12px;cursor:pointer">docs.lumerafoundry.com Ã¢â€ â€™</button>
+    </div>`
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ Help Center Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+async function helpcenter() {
+  document.getElementById('lc').innerHTML = `
+    <div style="background:linear-gradient(135deg,rgba(196,30,58,.15),rgba(126,200,227,.08));border:1px solid rgba(196,30,58,.3);border-radius:12px;padding:20px 24px;margin-bottom:20px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">Ã°Å¸Å½â€œ</div>
+      <div style="color:var(--text);font-weight:700;font-size:16px;margin-bottom:4px">LF-RiskRosi Help Center</div>
+      <div style="color:var(--muted);font-size:13px;margin-bottom:16px">Everything you need to master the platform</div>
+      <div style="display:flex;gap:10px;max-width:400px;margin:0 auto">
+        <input placeholder="Search guides, tutorials, FAQs..." style="flex:1;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 14px;color:var(--text);font-size:13px">
+        <button onclick="toast('Ã°Å¸â€Â Search results loading...','i')" style="background:var(--red);color:#fff;border:none;border-radius:7px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer">Search</button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      ${[
+        {icon:'Ã°Å¸Å¡â‚¬',t:'Getting Started',items:['Platform overview (5 min)','First risk entry walkthrough','LUMA AI quickstart','Consent Manager setup']},
+        {icon:'Ã°Å¸â€œÂ¹',t:'Video Tutorials',items:['Dashboard tour (8 min)','SecOps workflow (12 min)','ROSI Calculator deep-dive','Board Intelligence pack']},
+        {icon:'Ã°Å¸â€œâ€“',t:'Documentation',items:['API Reference (REST)','PostgreSQL schema guide','Environment variables','Docker deployment']},
+        {icon:'Ã°Å¸â€Å’',t:'Integrations',items:['Jira integration guide','Slack alerts setup','SIEM connector (Splunk)','Salesforce data sync']},
+        {icon:'Ã°Å¸â€ â€¢',t:'Release Notes',items:['v3.1 - Consent Manager','v3.0 - 35-module expansion','v2.5 - LUMA AI (Gemini)','v2.0 - 3 themes + SecOps']},
+        {icon:'Ã°Å¸â€œÅ¾',t:'Contact',items:['support@lumerafoundry.com','+91 92179 62095','Live chat (Mon-Fri 9-6 IST)','Emergency: +91 98765 43210']},
+      ].map(s=>`<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px">
+        <div style="font-size:22px;margin-bottom:8px">${s.icon}</div>
+        <div style="color:var(--text);font-weight:700;font-size:13px;margin-bottom:10px">${s.t}</div>
+        ${s.items.map(i=>`<div style="color:var(--muted);font-size:12px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer" onmouseover="this.style.color='var(--ice)'" onmouseout="this.style.color='var(--muted)'">${i}</div>`).join('')}
+      </div>`).join('')}
+    </div>\n  </div>`;
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬ INIT Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+setTheme('light');\nshowPage('dashboard');
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
